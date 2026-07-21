@@ -1,12 +1,12 @@
-fetch('/tasks.json')
+fetch('tasks.json')
   .then(res => res.json())
   .then(data => render(data))
   .catch(err => {
-    document.getElementById('accordion').textContent = 'Could not load /tasks.json: ' + err.message;
+    document.getElementById('accordion').textContent = 'Could not load tasks.json: ' + err.message;
   });
 
 const ALLTASKS = {
-    CLUB: ["SDESC","FOUND","CILUX","SEASN","STADE","MANGR","CHAIR","MERGE","WOMEN","TRANS","LINKS","LHERE","REFCK","ESTIN","DESTN","ASOCE","ASOCD","PLYRS","BADGE","HYPHN","HONOR","EUROP","EUFOT","RTLLU","URLWD","FUSSB"]
+    CLUB: ["SDESC","FOUND","CILUX","SEASN","STADE","MANGR","CHAIR","MERGE","WOMEN","TRANS","LINKS","LHERE","REFCK","ESTIN","DESTN","ASOCE","ASOCD","PLYRS","BADGE","HYPHN","HONOR","EUROP","EUFOT","RTLLU","URLWD","FUSSB","TALKS"]
 };
 
 const TASKS_DESC = {
@@ -33,6 +33,7 @@ const TASKS_DESC = {
     SEASN: "Current season",
     SDESC: "Short description alignment",
     STADE: "Stadium",
+    TALKS: "Any talk page messages",
     TRANS: "Anything on LB+",
     URLWD: "URL in WikiData",
     WOMEN: "Women's team",
