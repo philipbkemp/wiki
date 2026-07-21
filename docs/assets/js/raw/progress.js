@@ -86,7 +86,6 @@ function render(data) {
 
     const aContent = document.createElement("DIV");
     aContent.classList.add("accordion-content");
-    aContent.style.display = 'none';
 
     // Body (hidden until opened)
     const body = document.createElement('ul');
@@ -117,7 +116,7 @@ function render(data) {
         const commonCell = document.createElement("TD");
         commonCell.innerHTML = `<abbr title="${TASKS_DESC[t]}">${t}</abbr>`;
         commonCell.classList.add("task__"+setTasks[t].toLowerCase());
-        if ( ! ["SKIP","DONE"].includes(setTasks[t].toUpperCase()) ) {
+        if ( ! ["SKIP","DONE","NOTDONE"].includes(setTasks[t].toUpperCase()) ) {
             commonCell.classList.add("task__unknown");
         }
         commonRow.appendChild(commonCell);
@@ -125,7 +124,16 @@ function render(data) {
     common.appendChild(commonRow);
 
     header.addEventListener('click', () => {
-      aContent.style.display = (aContent.style.display === 'none') ? 'block' : 'none';
+        if ( document.querySelector(".accordion-open") ) {
+            if ( document.querySelector(".accordion-open") === aContent ) {
+                document.querySelector(".accordion-open").classList.remove("accordion-open");
+            } else {
+                document.querySelector(".accordion-open").classList.remove("accordion-open");
+                aContent.classList.add("accordion-open");
+            }
+        } else {
+            aContent.classList.add("accordion-open");
+        }
     });
 
     aContent.appendChild(common);

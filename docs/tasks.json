@@ -38,5 +38,48 @@
             ["NOTDONE","Can anything from F91 page be added to history?"],
             ["NOTDONE","Louis Reich was president - but isn't mentioned on his page"]
         ]
+    },
+    "CA_Spora_Luxembourg": {
+        "type": "CLUB",
+        "tasks": [
+            ["DONE","SDESC"],
+            ["SKIP","FOUND"],
+            ["DONE","CILUX"],
+            ["DONE","SEASN"],
+            ["NOTDONE","STADE"],
+            ["SKIP","MANGR"],
+            ["SKIP","CHAIR"],
+            ["DONE","MERGE"],
+            ["NOTDONE","WOMEN"],
+            ["NOTDONE","TRANS"],
+            ["NOTDONE","LINKS"],
+            ["NOTDONE","LHERE"],
+            ["NOTDONE","REFCK"],
+            ["NOTDONE","ESTIN"],
+            ["NOTDONE","DESTN"],
+            ["NOTDONE","ASOCE"],
+            ["NOTDONE","ASOCD"],
+            ["NOTDONE","PLYRS"],
+            ["NOTDONE","BADGE"],
+            ["NOTDONE","HYPHN"],
+            ["NOTDONE","HONOR"],
+            ["NOTDONE","EUROP"],
+            ["NOTDONE","EUFOT"],
+            ["NOTDONE","RTLLU"],
+            ["NOTDONE","URLWD"],
+            ["NOTDONE","FUSSB"],
+            ["NOTDONE","TALKS"],
+            ["NOTDONE","Intro text to mention 'commonly referred to as Spora'?"],
+            ["NOTDONE","What was last division? Is that often shown on folded clubs?"],
+            ["NOTDONE","Any more introduction? They appear to have been quite successful."],
+            ["DONE","Source for German rename?"],
+            ["NOTDONE","1956 result is 'at the time'? Or is it still epic?"],
+            ["NOTDONE","Lots of clubs before and after - perhaps a 'family tree' is needed like F91 Dudelange?"],
+            ["NOTDONE","Luxembourg Cup seasons not linked"],
+            ["NOTDONE","Racing and Sporting don't have their own honours list? Should be 'see also'"],
+            ["DONE","European record needs revamping"],
+            ["NOTDONE","Managers list is incomplete (warning), but how to source?"],
+            ["DONE","Anything found online to add to the page?"]
+        ]
     }
 }

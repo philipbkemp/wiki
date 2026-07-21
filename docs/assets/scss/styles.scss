@@ -9,8 +9,8 @@ body {
 .accordion-opener {
     align-items: center;
     border: 1px solid #2b5873;
-    border-radius: 5px 5px 0 0;
     display: flex;
+    margin-top: 5px;
     padding: 10px;
     font-size: 1.25rem;
     cursor: pointer;
@@ -22,6 +22,7 @@ body {
 .accordion-content {
     border: 1px solid #2b5873;
     border-top: none;
+    display: none;
     padding: 10px;
     ul {
         margin: 0;
@@ -32,6 +33,9 @@ body {
                 text-decoration: line-through;
             }
         }
+    }
+    &.accordion-open {
+        display: block;
     }
 }
 
@@ -121,6 +125,7 @@ table.common-tasks {
         }
         &.task__unknown {
             color: #73232b;
+            font-weight: bold;
         }
     }
 }
