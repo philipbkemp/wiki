@@ -22,7 +22,9 @@
     ],
     "last_status": "404",
     "last_check": "2026-07-21",
-    "archive":"https://web.archive.org/web/20120117010958/http://www.passaparola.info/2012/01/10/luigirechprimosindacoitalianodudelange/"
+    "archive": "https://web.archive.org/web/20120117010958/http://www.passaparola.info/2012/01/10/luigirechprimosindacoitalianodudelange/",
+    "archive_status": "OKAY",
+    "archive_check": "2026-07-21"
   },
   {
     "url": "https://www.rsssf.org/tablesl/luxcuphist.html",
@@ -63,6 +65,8 @@
     ],
     "last_status": "OKAY",
     "last_check": "2026-07-21",
-    "archive":"https://web.archive.org/web/20180831035057/http://f91.lu/index.php/club/philosophie"
+    "archive": "https://web.archive.org/web/20180831035057/http://f91.lu/index.php/club/philosophie",
+    "archive_status": "OKAY",
+    "archive_check": "2026-07-21"
   }
 ]
