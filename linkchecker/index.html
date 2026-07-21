@@ -11,6 +11,7 @@
   .status-404 { color: #cf222e; }
   .status-ARCHIVED { color: #9a6700; }
   .status-ERROR { color: #cf222e; }
+  .status-RATE_LIMITED { color: #9a6700; }
   .citations a { margin-right: 0.3rem; }
   .meta { color: #666; font-size: 0.85em; }
 </style>
@@ -30,6 +31,7 @@ function classify(entry) {
   }
   const cssClass = entry.last_status === 'OKAY' ? 'status-OKAY'
     : entry.last_status === '404' ? 'status-404'
+    : entry.last_status === 'RATE_LIMITED' ? 'status-RATE_LIMITED'
     : 'status-ERROR';
   return { label: entry.last_status, cssClass, checkedOn: entry.last_check };
 }

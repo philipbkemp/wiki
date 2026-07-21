@@ -17,8 +17,25 @@ const TIMEOUT_MS = 15000;
 const USER_AGENT =
   'Mozilla/5.0 (compatible; LinkCheckerBot/1.0; +https://github.com/) Node.js';
 
+// Minimum gap between two requests to the SAME hostname. Keeps us polite to
+// sites that share a domain across many entries and avoids tripping bot/
+// rate-limit protection (which would otherwise look like a "broken" link).
+const SAME_HOST_DELAY_MS = 1500;
+
 function today() {
   return new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function hostOf(url) {
+  try {
+    return new URL(url).hostname;
+  } catch {
+    return null;
+  }
 }
 
 async function fetchWithTimeout(url, options) {
@@ -55,6 +72,7 @@ async function checkUrl(url) {
 
 function statusLabel(httpStatus) {
   if (httpStatus === 404) return '404';
+  if (httpStatus === 429) return 'RATE_LIMITED'; // don't treat as broken - we got throttled, not a real 404
   if (httpStatus >= 200 && httpStatus < 400) return 'OKAY';
   return `ERROR: HTTP ${httpStatus}`;
 }
@@ -63,8 +81,19 @@ async function main() {
   const raw = await fs.readFile(DATA_PATH, 'utf-8');
   const entries = JSON.parse(raw);
 
+  let lastHost = null;
+
   for (const entry of entries) {
     const target = entry.archive || entry.url;
+    const host = hostOf(target);
+
+    // Only pause when we're about to hit the same host again back-to-back;
+    // no need to slow down when moving to a different domain.
+    if (host && host === lastHost) {
+      await sleep(SAME_HOST_DELAY_MS);
+    }
+    lastHost = host;
+
     console.log(`Checking ${entry.archive ? '(archive) ' : ''}${target} ...`);
 
     const status = await checkUrl(target);
