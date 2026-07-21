@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Link Checker Status</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+  li { margin-bottom: 0.6rem; }
+  .status { font-weight: 600; }
+  .status-OKAY { color: #1a7f37; }
+  .status-404 { color: #cf222e; }
+  .status-ARCHIVED { color: #9a6700; }
+  .status-ERROR { color: #cf222e; }
+  .citations a { margin-right: 0.3rem; }
+  .meta { color: #666; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<h1>Link Checker Status</h1>
+<ul id="list"><li>Loading...</li></ul>
+
+<script>
+function classify(entry) {
+  // If there's an archive override, that's the source of truth for display.
+  if (entry.archive) {
+    if (entry.archive_status === 'OKAY') {
+      return { label: 'ARCHIVED OKAY', cssClass: 'status-ARCHIVED', checkedOn: entry.archive_check };
+    }
+    return { label: `ARCHIVED ${entry.archive_status}`, cssClass: 'status-ERROR', checkedOn: entry.archive_check };
+  }
+  const cssClass = entry.last_status === 'OKAY' ? 'status-OKAY'
+    : entry.last_status === '404' ? 'status-404'
+    : 'status-ERROR';
+  return { label: entry.last_status, cssClass, checkedOn: entry.last_check };
+}
+
+async function render() {
+  const list = document.getElementById('list');
+  let entries;
+  try {
+    const res = await fetch('./urls.json');
+    entries = await res.json();
+  } catch (err) {
+    list.innerHTML = '<li>Failed to load urls.json</li>';
+    return;
+  }
+
+  list.innerHTML = '';
+  for (const entry of entries) {
+    const { label, cssClass, checkedOn } = classify(entry);
+    const citations = entry.citations || [];
+
+    const citationLinks = citations
+      .map((c, i) => `<a href="${c}" target="_blank" rel="noopener">[${i + 1}]</a>`)
+      .join(' ');
+
+    const li = document.createElement('li');
+    li.innerHTML = `
+      <span class="status ${cssClass}">${label}</span>:
+      <a href="${entry.url}" target="_blank" rel="noopener">${entry.url}</a>
+      (${citations.length} citation${citations.length === 1 ? '' : 's'} <span class="citations">${citationLinks}</span>)
+      <span class="meta">checked ${checkedOn || 'never'}</span>
+    `;
+    list.appendChild(li);
+  }
+}
+
+render();
+</script>
+</body>
+</html>
