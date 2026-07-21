@@ -17,12 +17,12 @@ jobs:
           node-version: '20'
 
       - name: Run link check
-        run: node linkchecker/check.js
+        run: node docs/linkchecker/check.js
 
       - name: Commit updated urls.json
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add linkchecker/urls.json
+          git add docs/linkchecker/urls.json
           git diff --cached --quiet && echo "No changes" || git commit -m "Update link check results"
           git push

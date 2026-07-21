@@ -1,0 +1,27 @@
+services:
+
+  luxwiki_web:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - "9321:9321"
+    volumes:
+      - ./docs:/usr/share/nginx/html
+
+  luxwiki_sass:
+    image: node:20-alpine
+    working_dir: /workspace
+    volumes:
+      - ./docs:/workspace
+    command: sh -c "npm install -g sass && sass --watch assets/scss:assets/css --no-source-map --style=compressed --poll"
+    restart: unless-stopped
+
+  luxwiki_js:
+    image: node:20-alpine
+    working_dir: /workspace
+    volumes:
+      - ./docs:/workspace
+      - ./docker/minify-js.sh:/minify-js.sh
+    command: sh /minify-js.sh
+    restart: unless-stopped

@@ -1,6 +1,6 @@
-// linkchecker/check.js
+// docs/linkchecker/check.js
 //
-// Reads linkchecker/urls.json, checks each entry, and writes results back.
+// Reads docs/linkchecker/urls.json, checks each entry, and writes results back.
 //
 // Rule: if an entry has an "archive" field, we check THAT url instead of
 // "url", and write the result to archive_status/archive_check. Otherwise we
