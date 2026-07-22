@@ -44,5 +44,23 @@
             ["NOTDONE","Managers list is incomplete (warning), but how to source?"],
             ["DONE","Anything found online to add to the page?"]
         ]
+    },
+    "AS_Differdange": {
+        "type": "CLUB",
+        "tasks": [
+            ["SKIP","SDESC"],
+            ["SKIP","FOUND"],
+            ["DONE","CILUX"],
+            ["SKIP","SEASN"],
+            ["SKIP","STADE"],
+            ["SKIP","MANGR"],
+            ["SKIP","CHAIR"],
+            ["DONE","MERGE"],
+            ["SKIP","WOMEN"],
+            ["SKIP","TRANS"],
+            ["SKIP","LINKS"],
+            ["DONE","LHERE"],
+            ["NOTDONE","Is it worthy of its own page?"]
+        ]
     }
 }

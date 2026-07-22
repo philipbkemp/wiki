@@ -49,6 +49,8 @@ function render(data) {
     const type = entry.type || '';
     const tasks = Array.isArray(entry.tasks) ? entry.tasks : [];
     const doneCount = tasks.filter(t => (t[0] || '').toUpperCase() === 'DONE').length;
+    const skipCount = tasks.filter(t => (t[0] || '').toUpperCase() === 'SKIP').length;
+    const totalDone = doneCount + skipCount;
 
     // Progress bar using a simple <progress> element
     const progress = document.createElement('progress');
@@ -59,9 +61,9 @@ function render(data) {
         }
     });
     progress.max = totalTasks || 1;
-    progress.value = doneCount;
+    progress.value = totalDone;
 
-    const perc = ((doneCount / (totalTasks||1))*100).toFixed(1);
+    const perc = ((totalDone / (totalTasks||1))*100).toFixed(1);
 
     const progressWrap = document.createElement("DIV");
     progressWrap.classList.add("progress-wrap");
