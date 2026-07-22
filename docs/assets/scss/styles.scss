@@ -134,3 +134,23 @@ abbr {
     cursor: help;
     text-underline-offset: 4px;;
 }
+
+a[target="_blank"] {
+    text-decoration: none;
+    color: blue;
+    padding: 5px 10px;
+    float: right;
+    &:hover {
+        background-color: #0000ff1c;
+    }
+    &:after {
+        content: "";
+        display: inline-block;
+        width: 0.85em;
+        height: 0.85em;
+        margin-left: .2em;
+        vertical-align: .1em;
+        background: center/contain no-repeat
+            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='blue' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 6V13H10'/%3E%3Cpath d='M8 3H13V8'/%3E%3Cpath d='M13 3L7 9'/%3E%3C/svg%3E");
+    }
+}

@@ -108,6 +108,11 @@ function render(data) {
         }
     });
 
+    const wikiLink = document.createElement("A");
+    wikiLink.setAttribute("href","https://en.wikipedia.org/wiki/"+title);
+    wikiLink.setAttribute("target","_blank");
+    wikiLink.textContent = "wiki";
+    aContent.append(wikiLink);
 
     const common = document.createElement("TABLE");
     common.classList.add("common-tasks");
