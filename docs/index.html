@@ -10,7 +10,23 @@
 </head>
 <body>
 <h1>LuxWiki</h1>
-<div id="accordion">Loading...</div>
+
+<div class="pTotal" id="pTotal">Total<br /></div>
+
+<div class="pSummary" id="pClub">Clubs<br /></div>
+
+<div id="err" style="display:none;">loading...</div>
+
+<table id="tasktable_club" class="tasktable">
+</table>
+
+<div id="modal-overlay">
+    <div id="modal-box">
+        <button id="modal-close" aria-label="Close">&times;</button>
+        <ul id="modal-content"></ul>
+    </div>
+</div>
+
 <script src="assets/js/min/progress.min.js"></script>
 </body>
 </html>

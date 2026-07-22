@@ -79,8 +79,8 @@ progress {
 }
 
 .progress-wrap {
-    margin-right: 10px;
     position: relative;
+    width: 200px;
     .progress-label {
         font-size: 12px;
         font-weight: 600;
@@ -106,51 +106,149 @@ progress {
     }
 }
 
-table.common-tasks {
-    border-collapse: collapse;
-    margin-bottom: 10px;
-    max-width: 100%;
-    table-layout: fixed;
+.tasktable {
+    tr:nth-of-type(1) td {
+        background: white; /* important - otherwise content scrolls "through" it */
+        font-size: 0.5rem;
+        padding: 10px 0;
+        position: sticky;
+        text-align: center;
+        top: 0;
+        z-index: 1;
+    }
     td {
-        border: 1px solid #2b587333;
-        padding: 10px;
-        font-size: 0.75rem;
-        &.task__done {
-            background: #2b7323;
-            color: #ffffff;
+        &:nth-of-type(2) {
+            min-width: 370px;
         }
-        &.task__skip {
-            background: #ccc;
-            color: #2b5873;
-        }
-        &.task__unknown {
-            color: #73232b;
-            font-weight: bold;
+        &.task-status {
+            font-size: 0.75rem;
+            border: 1px solid #2b587333;
+            min-width: 10px;
+            padding: 10px;
+            &__done {
+                background: #2b7323;
+                color: #ffffff;
+            }
+            &__skip {
+                background: #2b732366;
+                color: #2b5873;
+            }
+            &__unknown {
+                color: #73232b;
+                font-weight: bold;
+            }
+            &__more {
+                text-align: center;
+            }
         }
     }
 }
 
 abbr {
     cursor: help;
-    text-underline-offset: 4px;;
+    text-underline-offset: 2px;
 }
 
 a[target="_blank"] {
-    text-decoration: none;
     color: blue;
+    display: block;
     padding: 5px 10px;
-    float: right;
+    text-decoration: none;
+    width: 90%;
     &:hover {
         background-color: #0000ff1c;
     }
     &:after {
+        background: center/contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='blue' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 6V13H10'/%3E%3Cpath d='M8 3H13V8'/%3E%3Cpath d='M13 3L7 9'/%3E%3C/svg%3E");
         content: "";
         display: inline-block;
-        width: 0.85em;
         height: 0.85em;
         margin-left: .2em;
+        position: relative;
+        top: 2px;
         vertical-align: .1em;
-        background: center/contain no-repeat
-            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='blue' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 6V13H10'/%3E%3Cpath d='M8 3H13V8'/%3E%3Cpath d='M13 3L7 9'/%3E%3C/svg%3E");
+        width: 0.85em;
     }
+}
+
+.pSummary {
+    display: inline-block;
+    margin-right: 5px;
+    text-align: center;
+}
+
+#pTotal {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 500px;
+    .progress-wrap {
+        width: 500px;
+        progress {
+            width: 500px;
+        }
+    }
+}
+
+[data-modal-key] {
+    cursor: pointer;
+    &:hover {
+        background: #e0e0e0;
+    }
+}
+#modal-overlay {
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    &.open {
+        display: flex;
+    }
+    #modal-box {
+        background: #fff;
+        border-radius: 6px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        max-height: 80vh;
+        max-width: 50vw;
+        min-height: 50vh;
+        overflow-y: auto;
+        padding: 20px;
+        position: relative;
+        width: 90%;
+    }
+    #modal-close {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        line-height: 1;
+        padding: 4px;
+        position: absolute;
+        right: 12px;
+        top: 8px;
+    }
+    #modal-content {
+        margin: 0;
+        padding: 0;
+        li {
+            list-style-type: none;
+            margin-bottom: 10px;
+            &.task-status__done {
+                text-decoration: line-through;
+            }
+            &.task-status__skip {
+                text-decoration: line-through;
+                font-style: italic;
+            }
+        }
+    }
+}
+body.modal-open {
+    overflow: hidden;
 }

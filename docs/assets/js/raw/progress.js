@@ -1,24 +1,25 @@
 fetch('tasks.json')
-  .then(res => res.json())
-  .then(data => render(data))
-  .catch(err => {
-    document.getElementById('accordion').textContent = err.message;
-    console.error(err);
-  });
+    .then(res => res.json())
+    .then(data => render(data))
+    .catch(err => {
+        document.getElementById("err").textContent = err.message;
+        document.getElementById("err").style.display = "block";
+        console.error(err);
+    });
 
 const ALLTASKS = {
-    CLUB: ["SDESC","FOUND","CILUX","SEASN","STADE","MANGR","CHAIR","MERGE","WOMEN","TRANS","LINKS","LHERE","REFCK","ESTIN","DESTN","ASOCE","ASOCD","PLYRS","BADGE","HYPHN","HONOR","EUROP","EUFOT","RTLLU","URLWD","FUSSB","TALKS"]
+    CLUB: ["SDESC","FOUND","CILUX","SEASN","STADE","MANGR","CHAIR","MERGE","WOMEN","TRANS","LINKS","LHERE","REFCK","ESTIN","DESTN","ASOCE","ASOCD","PLYRS","BADGE","HYPHN","HONOR","EUROP","EUFOT","MONDE","RTLLU","URLWD","FUSSB","TALKS"]
 };
 
 const TASKS_DESC = {
-    ASOCD: "Category: Association football clubs disbanded in __",
-    ASOCE: "Category: Association football clubs established in __",
+    ASOCD: "Category: Association_football_clubs_disestablished_in_YYYY",
+    ASOCE: "Category: Association_football_clubs_established_in_YYYY",
     BADGE: "Badge size",
     CHAIR: "Current Chairman/President",
     CILUX: "Clubs in Luxembourg page listing",
-    DESTN: "Category: Disbanded in Luxmebourg in __",
-    ESTIN: "Category: Established in Luxembourg in __",
-    EUFOT: "EU Football profile",
+    DESTN: "Category: YYYY_disestablishments_in_Luxembourg",
+    ESTIN: "Category: YYYY_establishments_in_Luxembourg",
+    EUFOT: "EU Football profile (eg https://eu-football.info/_club.php?id=1166)",
     EUROP: "European record",
     FOUND: "Year founded",
     FUSSB: "Fussball-lux profile",
@@ -28,9 +29,10 @@ const TASKS_DESC = {
     LINKS: "Links on page",
     MANGR: "Current manager",
     MERGE: "Club mergers",
-    PLYRS: "Category: Players of __",
+    MONDE: "Mondefootball.fr profile (eg https://www.mondefootball.fr/teams/te18512/spora-luxemburg/)",
+    PLYRS: "Category: CLUB_players",
     REFCK: "Load references into linkchecker",
-    RTLLU: "RTL profile",
+    RTLLU: "RTL profile (eg https://www.rtl.lu/sport/futtball/resultater/teams?c=381)",
     SEASN: "Current season",
     SDESC: "Short description alignment",
     STADE: "Stadium",
@@ -40,35 +42,195 @@ const TASKS_DESC = {
     WOMEN: "Women's team",
 };
 
+let thedata = null;
+let modalContent = {};
+
 function render(data) {
-  const container = document.getElementById('accordion');
-  container.innerHTML = '';
+    thedata = data;
+    const tblClub = document.getElementById("tasktable_club");
+    let totalClub = 0;
+    let doneClub = 0;
 
-  Object.keys(data).forEach(title => {
-    const entry = data[title] || {};
-    const type = entry.type || '';
-    const tasks = Array.isArray(entry.tasks) ? entry.tasks : [];
-    const doneCount = tasks.filter(t => (t[0] || '').toUpperCase() === 'DONE').length;
-    const skipCount = tasks.filter(t => (t[0] || '').toUpperCase() === 'SKIP').length;
-    const totalDone = doneCount + skipCount;
+    const tblClubRow = document.createElement("TR");
+    [0,1].forEach(padding=>{
+        const setTaskCol = document.createElement("TD");
+        setTaskCol.innerHTML = "&nbsp;";
+        tblClubRow.appendChild(setTaskCol);
+    });
+    ALLTASKS["CLUB"].forEach(setTask=>{
+        const setTaskCol = document.createElement("TD");
+        const setTaskAttr = document.createElement("ABBR");
+        setTaskAttr.setAttribute("title",TASKS_DESC[setTask]);
+        setTaskAttr.textContent = setTask;
+        setTaskCol.appendChild(setTaskAttr);
+        tblClubRow.appendChild(setTaskCol);
+    });
+    [2].forEach(padding=>{
+        const setTaskCol = document.createElement("TD");
+        setTaskCol.innerHTML = "More";
+        tblClubRow.appendChild(setTaskCol);
+    });
+    tblClub.appendChild(tblClubRow);
 
-    // Progress bar using a simple <progress> element
-    const progress = document.createElement('progress');
-    let totalTasks = ALLTASKS[type].length;
-    tasks.forEach(([status, label]) => {
-        if ( ! ALLTASKS[type].includes(label) ) {
-            totalTasks++;
+    Object.keys(data).forEach(page => {
+        const item = data[page];
+        const pageType = item.type;
+        const tasks = item.tasks;
+        const doneCount = tasks.filter(t => (t[0] || '').toUpperCase() === 'DONE').length;
+        const skipCount = tasks.filter(t => (t[0] || '').toUpperCase() === 'SKIP').length;
+        const totalDone = doneCount + skipCount;
+        let totalTasks = ALLTASKS[pageType].length;
+        tasks.forEach(([status, label]) => {
+            if ( ! ALLTASKS[pageType].includes(label) ) {
+                totalTasks++;
+            }
+        });
+        totalClub += totalTasks;
+        doneClub += totalDone;
+        const perc = ((totalDone / (totalTasks||1))*100).toFixed(1);
+
+        let target = null;
+        switch ( pageType ) {
+            case "CLUB": target = tblClub;
+        }
+
+        const itemRow = document.createElement("TR");
+        const itemColPercent = document.createElement("TD");
+        const itemColPage = document.createElement("TD");
+
+        itemRow.setAttribute("data-percent",perc);
+
+        const progress = document.createElement('progress');
+        progress.max = totalTasks || 1;
+        progress.value = totalDone;
+        const progressWrap = document.createElement("DIV");
+        progressWrap.classList.add("progress-wrap");
+        progressWrap.append(progress);
+        const progressLabel = document.createElement("DIV");
+        progressLabel.classList.add("progress-label");
+        progressLabel.style.setProperty("--progress",`${perc}%`);
+        const progFill = document.createElement("SPAN");
+        progFill.classList.add("progress-label__fill");
+        progFill.textContent = `${perc}%`;
+        const progTrack = document.createElement("SPAN");
+        progTrack.classList.add("progress-label__track");
+        progTrack.textContent = `${perc}%`;
+        progressLabel.appendChild(progFill);
+        progressLabel.appendChild(progTrack);
+        progressWrap.appendChild(progressLabel);
+        itemColPercent.appendChild(progressWrap);
+
+        const wikiLink = document.createElement("A");
+        wikiLink.setAttribute("href","https://en.wikipedia.org/wiki/"+page);
+        wikiLink.setAttribute("target","_blank");
+        wikiLink.textContent = `${page.replace(/_/g, ' ')}`;
+        itemColPage.appendChild(wikiLink);
+
+        let myTasks = {"_MOREDONE":0,"_MOREPENDING":0};
+        modalContent[page] = [];
+        item.tasks.forEach(([tStatus,tLabel])=>{
+            if ( ALLTASKS[pageType].includes(tLabel) ) {
+                myTasks[tLabel] = tStatus
+            } else {
+                if ( ["SKIP","DONE"].includes(tStatus) ) {
+                    myTasks["_MOREDONE"]++;
+                } else {
+                    myTasks["_MOREPENDING"]++;
+                }
+                modalContent[page].push([tStatus,tLabel]);
+            }
+        });
+
+        itemRow.appendChild(itemColPercent);
+        itemRow.appendChild(itemColPage);
+
+        ALLTASKS[pageType].forEach(setTask=>{
+            const setTaskCol = document.createElement("TD");
+            setTaskCol.innerHTML = "&nbsp;";
+            setTaskCol.classList.add("task-status");
+            if ( myTasks[setTask] ) {
+                setTaskCol.classList.add("task-status__"+myTasks[setTask].toLowerCase());
+            }
+            itemRow.appendChild(setTaskCol);
+        });
+        const setTaskCol = document.createElement("TD");
+        setTaskCol.setAttribute("data-modal-key",page);
+        setTaskCol.innerHTML = myTasks["_MOREPENDING"] === 0 ? (myTasks["_MOREDONE"] === 0 ? "" : myTasks["_MOREDONE"] ) : myTasks["_MOREPENDING"];
+        setTaskCol.classList.add("task-status","task-status__more");
+        if ( myTasks["_MOREPENDING"] === 0 && myTasks["_MOREDONE"] === 0 ) {
+            setTaskCol.classList.add("task-status__skip");
+        } else if ( myTasks["_MOREPENDING"] === 0 ) {
+            setTaskCol.classList.add("task-status__done");
+        }
+        itemRow.appendChild(setTaskCol);
+
+        target.appendChild(itemRow);
+    });
+
+    document.getElementById("pClub").appendChild(drawPercent(doneClub,totalClub));
+
+    document.getElementById("pTotal").appendChild(drawPercent(doneClub,totalClub,3));
+
+    sortTableRows(tblClub);
+
+    initModal();
+}
+
+const overlay = document.getElementById("modal-overlay");
+const closeBtn = document.getElementById("modal-close");
+const content = document.getElementById("modal-content");
+
+function initModal() {
+    document.querySelectorAll("[data-modal-key]").forEach(btn => {
+        btn.addEventListener("click", () => openModal(btn.dataset.modalKey));
+    });
+    closeBtn.addEventListener("click", closeModal);
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && overlay.classList.contains("open")) {
+            closeModal();
         }
     });
-    progress.max = totalTasks || 1;
-    progress.value = totalDone;
+}
 
-    const perc = ((totalDone / (totalTasks||1))*100).toFixed(1);
+function openModal(key) {
+    console.log(modalContent[key]);
+    modalContent[key].forEach(([tStatus,tLabel])=>{
+        const taskLi = document.createElement("LI");
+        taskLi.textContent = tLabel;
+        taskLi.classList.add("task-status__"+tStatus.toLowerCase());
+        content.appendChild(taskLi);
+    });
+    overlay.classList.add("open");
+    document.body.classList.add("modal-open");
+}
 
+function closeModal() {
+    overlay.classList.remove("open");
+    content.innerHTML = "";
+    document.body.classList.remove("modal-open");
+}
+
+function sortTableRows(table) {
+    const rows = Array.from(table.querySelectorAll("tr"));
+    const noPercent = rows.filter(r => r.getAttribute('data-percent') === null);
+    const withPercent = rows.filter(r => r.getAttribute('data-percent') !== null);
+    withPercent.sort((a,b)=>{
+        const percentA = parseFloat(a.getAttribute('data-percent')) || 0;
+        const percentB = parseFloat(b.getAttribute('data-percent')) || 0;
+        return percentB - percentA;
+    });
+    [...noPercent, ...withPercent].forEach(row => table.appendChild(row));
+}
+
+function drawPercent(done,total,fixed=2) {
+    const perc = ((done / total)*100).toFixed(fixed);
+
+    const progress = document.createElement('progress');
+    progress.max = total || 1;
+    progress.value = done;
     const progressWrap = document.createElement("DIV");
     progressWrap.classList.add("progress-wrap");
     progressWrap.append(progress);
-
     const progressLabel = document.createElement("DIV");
     progressLabel.classList.add("progress-label");
     progressLabel.style.setProperty("--progress",`${perc}%`);
@@ -82,81 +244,5 @@ function render(data) {
     progressLabel.appendChild(progTrack);
     progressWrap.appendChild(progressLabel);
 
-    // Header (always visible, click to toggle)
-    const header = document.createElement('div');
-    header.classList.add("accordion-opener");
-    header.appendChild(progressWrap);
-
-    const headerTitle = document.createElement("SPAN");
-    headerTitle.textContent = `${title.replace(/_/g, ' ')}`
-    header.appendChild(headerTitle);
-
-    const aContent = document.createElement("DIV");
-    aContent.classList.add("accordion-content");
-
-    // Body (hidden until opened)
-    const body = document.createElement('ul');
-
-    let setTasks = [];
-
-    tasks.forEach(([status, label]) => {
-        const isDone = (status || '').toUpperCase() === 'DONE';
-
-        if ( ALLTASKS[type].includes(label) ) {
-            setTasks[label] = status;
-        } else {
-
-            const li = document.createElement('li');
-            li.textContent = label;
-            if ( isDone ) {
-                li.classList.add("task-done");
-            }
-            body.appendChild(li);
-        }
-    });
-
-    const wikiLink = document.createElement("A");
-    wikiLink.setAttribute("href","https://en.wikipedia.org/wiki/"+title);
-    wikiLink.setAttribute("target","_blank");
-    wikiLink.textContent = "wiki";
-    aContent.append(wikiLink);
-
-    const common = document.createElement("TABLE");
-    common.classList.add("common-tasks");
-    const commonRow = document.createElement("TR");
-    ALLTASKS[type].forEach(t=>{
-        const commonCell = document.createElement("TD");
-        commonCell.innerHTML = `<abbr title="${TASKS_DESC[t]}">${t}</abbr>`;
-        if ( setTasks[t] ) {
-            commonCell.classList.add("task__"+setTasks[t].toLowerCase());
-            if ( ! ["SKIP","DONE","NOTDONE"].includes(setTasks[t].toUpperCase()) ) {
-                commonCell.classList.add("task__unknown");
-            }
-        }
-        commonRow.appendChild(commonCell);
-    });
-    common.appendChild(commonRow);
-
-    header.addEventListener('click', () => {
-        if ( document.querySelector(".accordion-open") ) {
-            if ( document.querySelector(".accordion-open") === aContent ) {
-                document.querySelector(".accordion-open").classList.remove("accordion-open");
-            } else {
-                document.querySelector(".accordion-open").classList.remove("accordion-open");
-                aContent.classList.add("accordion-open");
-            }
-        } else {
-            aContent.classList.add("accordion-open");
-        }
-    });
-
-    aContent.appendChild(common);
-    aContent.appendChild(body);
-
-    const item = document.createElement('div');
-    item.appendChild(header);
-    item.appendChild(aContent);
-
-    container.appendChild(item);
-  });
+    return progressWrap;
 }
