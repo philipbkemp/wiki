@@ -2,7 +2,8 @@ fetch('tasks.json')
   .then(res => res.json())
   .then(data => render(data))
   .catch(err => {
-    document.getElementById('accordion').textContent = 'Could not load tasks.json: ' + err.message;
+    document.getElementById('accordion').textContent = err.message;
+    console.error(err);
   });
 
 const ALLTASKS = {
@@ -47,16 +48,20 @@ function render(data) {
     const entry = data[title] || {};
     const type = entry.type || '';
     const tasks = Array.isArray(entry.tasks) ? entry.tasks : [];
-    const total = tasks.length;
     const doneCount = tasks.filter(t => (t[0] || '').toUpperCase() === 'DONE').length;
-    const pct = total > 0 ? Math.round((doneCount / total) * 100) : 0;
 
     // Progress bar using a simple <progress> element
     const progress = document.createElement('progress');
-    progress.max = total || 1;
+    let totalTasks = ALLTASKS[type].length;
+    tasks.forEach(([status, label]) => {
+        if ( ! ALLTASKS[type].includes(label) ) {
+            totalTasks++;
+        }
+    });
+    progress.max = totalTasks || 1;
     progress.value = doneCount;
 
-    const perc = ((doneCount / (total||1))*100).toFixed(1);
+    const perc = ((doneCount / (totalTasks||1))*100).toFixed(1);
 
     const progressWrap = document.createElement("DIV");
     progressWrap.classList.add("progress-wrap");
@@ -120,9 +125,11 @@ function render(data) {
     ALLTASKS[type].forEach(t=>{
         const commonCell = document.createElement("TD");
         commonCell.innerHTML = `<abbr title="${TASKS_DESC[t]}">${t}</abbr>`;
-        commonCell.classList.add("task__"+setTasks[t].toLowerCase());
-        if ( ! ["SKIP","DONE","NOTDONE"].includes(setTasks[t].toUpperCase()) ) {
-            commonCell.classList.add("task__unknown");
+        if ( setTasks[t] ) {
+            commonCell.classList.add("task__"+setTasks[t].toLowerCase());
+            if ( ! ["SKIP","DONE","NOTDONE"].includes(setTasks[t].toUpperCase()) ) {
+                commonCell.classList.add("task__unknown");
+            }
         }
         commonRow.appendChild(commonCell);
     });
