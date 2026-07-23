@@ -50,53 +50,11 @@ let modalContent = {};
 function render(data) {
     thedata = data;
 
-    const tblClub = document.getElementById("tasktable_club");
+    const tbl = document.getElementById("tasktable_all");
     let totalClub = 0;
     let doneClub = 0;
-    const tblClubRow = document.createElement("TR");
-    [0,1].forEach(padding=>{
-        const setTaskCol = document.createElement("TD");
-        setTaskCol.innerHTML = "&nbsp;";
-        tblClubRow.appendChild(setTaskCol);
-    });
-    ALLTASKS["CLUB"].forEach(setTask=>{
-        const setTaskCol = document.createElement("TD");
-        const setTaskAttr = document.createElement("ABBR");
-        setTaskAttr.setAttribute("title",TASKS_DESC[setTask]);
-        setTaskAttr.textContent = setTask;
-        setTaskCol.appendChild(setTaskAttr);
-        tblClubRow.appendChild(setTaskCol);
-    });
-    [2].forEach(padding=>{
-        const setTaskCol = document.createElement("TD");
-        setTaskCol.innerHTML = "More";
-        tblClubRow.appendChild(setTaskCol);
-    });
-    tblClub.appendChild(tblClubRow);
-
-    const tblLeague = document.getElementById("tasktable_league");
     let totalLeague = 0;
     let doneLeague = 0;
-    const tblLeagueRow = document.createElement("TR");
-    [0,1].forEach(padding=>{
-        const setTaskCol = document.createElement("TD");
-        setTaskCol.innerHTML = "&nbsp;";
-        tblLeagueRow.appendChild(setTaskCol);
-    });
-    ALLTASKS["LEAGUE"].forEach(setTask=>{
-        const setTaskCol = document.createElement("TD");
-        const setTaskAttr = document.createElement("ABBR");
-        setTaskAttr.setAttribute("title",TASKS_DESC[setTask]);
-        setTaskAttr.textContent = setTask;
-        setTaskCol.appendChild(setTaskAttr);
-        tblLeagueRow.appendChild(setTaskCol);
-    });
-    [2].forEach(padding=>{
-        const setTaskCol = document.createElement("TD");
-        setTaskCol.innerHTML = "More";
-        tblLeagueRow.appendChild(setTaskCol);
-    });
-    tblLeague.appendChild(tblLeagueRow);
 
     Object.keys(data).forEach(page => {
         const item = data[page];
@@ -124,11 +82,7 @@ function render(data) {
 
         const perc = ((totalDone / (totalTasks||1))*100).toFixed(1);
 
-        let target = null;
-        switch ( pageType ) {
-            case "CLUB": target = tblClub; break;
-            case "LEAGUE": target = tblLeague; break;
-        }
+        let target = tbl;
 
         const itemRow = document.createElement("TR");
         const itemColPercent = document.createElement("TD");
@@ -180,15 +134,6 @@ function render(data) {
         itemRow.appendChild(itemColPercent);
         itemRow.appendChild(itemColPage);
 
-        ALLTASKS[pageType].forEach(setTask=>{
-            const setTaskCol = document.createElement("TD");
-            setTaskCol.innerHTML = "&nbsp;";
-            setTaskCol.classList.add("task-status");
-            if ( myTasks[setTask] ) {
-                setTaskCol.classList.add("task-status__"+myTasks[setTask].toLowerCase());
-            }
-            itemRow.appendChild(setTaskCol);
-        });
         const setTaskCol = document.createElement("TD");
         setTaskCol.setAttribute("data-modal-key",page);
         setTaskCol.innerHTML = myTasks["_MOREPENDING"] === 0 ? (myTasks["_MOREDONE"] === 0 ? "" : myTasks["_MOREDONE"] ) : myTasks["_MOREPENDING"];
@@ -199,6 +144,21 @@ function render(data) {
             setTaskCol.classList.add("task-status__done");
         }
         itemRow.appendChild(setTaskCol);
+
+        ALLTASKS[pageType].forEach(setTask=>{
+            const setTaskCol = document.createElement("TD");
+
+            const setTaskAttr = document.createElement("ABBR");
+            setTaskAttr.setAttribute("title",TASKS_DESC[setTask]);
+            setTaskAttr.textContent = setTask;
+            setTaskCol.appendChild(setTaskAttr);
+
+            setTaskCol.classList.add("task-status");
+            if ( myTasks[setTask] ) {
+                setTaskCol.classList.add("task-status__"+myTasks[setTask].toLowerCase());
+            }
+            itemRow.appendChild(setTaskCol);
+        });
 
         target.appendChild(itemRow);
     });
@@ -214,8 +174,7 @@ function render(data) {
     parseCheckSquads();
     parseCheckLinks();
 
-    sortTableRows(tblClub);
-    sortTableRows(tblLeague);
+    sortTableRows(tbl);
 
     initModal();
 }
