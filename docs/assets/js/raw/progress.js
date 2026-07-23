@@ -176,6 +176,7 @@ function render(data) {
         {fixed:3}));
 
     parseCheckSquads();
+    parseCheckLinks();
 
     sortTableRows(tblClub);
 
@@ -202,7 +203,7 @@ function openModal(key) {
     if ( modalContent[key] && modalContent[key].length !== 0 ) {
         modalContent[key].forEach(([tStatus,tLabel])=>{
             const taskLi = document.createElement("LI");
-            taskLi.textContent = tLabel;
+            taskLi.innerHTML = tLabel;
             taskLi.classList.add("task-status__"+tStatus.toLowerCase());
             content.appendChild(taskLi);
         });
@@ -266,7 +267,7 @@ function drawPercent(done,total,options={}) {
 function parseCheckSquads() {
     fetch('/squadchecker/squads.json')
         .then(res => res.json())
-        .then(data => renderSquads(data))
+        .then(data => renderSquadChecker(data))
         .catch(err => {
             document.getElementById("err").textContent = err.message;
             document.getElementById("err").style.display = "block";
@@ -274,7 +275,18 @@ function parseCheckSquads() {
         });
 }
 
-function renderSquads(data) {
+function parseCheckLinks() {
+    fetch('/linkchecker/urls.json')
+        .then(res => res.json())
+        .then(data => renderLinkChecker(data))
+        .catch(err => {
+            document.getElementById("err").textContent = err.message;
+            document.getElementById("err").style.display = "block";
+            console.error(err);
+        });
+}
+
+function renderSquadChecker(data) {
     squadsTotal = 0;
     squadsPassed = 0;
     modalContent.check_squad = [];
@@ -290,4 +302,28 @@ function renderSquads(data) {
         document.querySelector("#pCheckSquads [data-modal-key]").removeAttribute("data-modal-key");
     }
     document.getElementById("pCheckSquads").appendChild(drawPercent(squadsPassed,squadsTotal,{allOrNothing:true}));
+}
+
+function renderLinkChecker(data) {
+    linksTotal = 0;
+    linksPassed = 0;
+    modalContent.check_links = [];
+    data.forEach(link=>{
+        linksTotal++;
+        if ( link.archive_status ) {
+            if ( link.archive_status === "OKAY" ) {
+                linksPassed++;
+            } else {
+                modalContent.check_links.push(["NOTDONE","Archive " + link.archive_status + " -> " + link.url + "<br/>Used on:<br/>- " + link.citations.join("<br />- ")]);
+            }
+        } else if ( link.last_status === "OKAY" ) {
+            linksPassed++;
+        } else {
+            modalContent.check_links.push(["NOTDONE",link.last_status + " -> " + link.url + "<br/>Used on:<br/>- " + link.citations.join("<br />- ")]);
+        }
+    });
+    if ( modalContent.check_links.length === 0 ) {
+        document.querySelector("#pCheckLinks [data-modal-key]").removeAttribute("data-modal-key");
+    }
+    document.getElementById("pCheckLinks").appendChild(drawPercent(linksPassed,linksTotal,{allOrNothing:true}));
 }
