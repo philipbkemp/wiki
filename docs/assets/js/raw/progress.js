@@ -8,37 +8,49 @@ fetch('tasks.json')
     });
 
 const ALLTASKS = {
-    CLUB: ["SDESC","FOUND","CILUX","SEASN","STADE","MANGR","CHAIR","MERGE","WOMEN","TRANS","LINKS","LHERE","REFCK","SQUAD","ESTIN","DESTN","ASOCE","ASOCD","PLYRS","BADGE","HYPHN","HONOR","EUROP","EUFOT","MONDE","RTLLU","URLWD","FUSSB","TALKS"],
-    LEAGUE: ["SDESC","TRANS","LHERE","LINKS","HYPHN","REFCK","TALKS"]
+    CLUB: ["SDESC","FOUND","CLIST","SEASN","STADE","MANGR","CHAIR","MERGE","WOMEN","CATEG","TRANS","LINKS","LHERE","REFCK","SQUAD","ESTIN","DESTN","ASOCE","ASOCD","PLYRS","BADGE","HYPHN","HONOR","EUROP","EUFOT","MONDE","RTLLU","URLWD","FUSSB","TALKS"],
+    LEAGUE: ["SDESC","TRANS","LHERE","LINKS","HYPHN","REFCK","TALKS","CATEG"],
+    STADIUM: ["SDESC","SLIST","CDATE","PHOTO","LOMAP","CAPAC","GRASS","TENNT","STADB","HOSTD","COORD","TRANS","LINKS","LHERE","HYPHN","REFCK","TALKS","CATEG"]
 };
 
 const TASKS_DESC = {
     ASOCD: "Category: Association_football_clubs_disestablished_in_YYYY",
     ASOCE: "Category: Association_football_clubs_established_in_YYYY",
     BADGE: "Badge size",
+    CAPAC: "Capacity, with source",
+    CATEG: "Categories review",
+    CDATE: "Construction date(s)",
     CHAIR: "Current Chairman/President",
-    CILUX: "Clubs in Luxembourg page listing",
+    CLIST: "Clubs in Luxembourg page listing",
+    COORD: "Coordinates of location",
     DESTN: "Category: YYYY_disestablishments_in_Luxembourg",
     ESTIN: "Category: YYYY_establishments_in_Luxembourg",
     EUFOT: "EU Football profile (eg https://eu-football.info/_club.php?id=1166)",
     EUROP: "European record",
     FOUND: "Year founded",
     FUSSB: "Fussball-lux profile",
+    GRASS: "Grass or artificial",
     HONOR: "Honours",
+    HOSTD: "Hosted any international or UEFA or notable matches",
     HYPHN: "Hyphen (season) checks",
     LHERE: "What links here",
     LINKS: "Links on page",
+    LOMAP: "Location map",
     MANGR: "Current manager",
     MERGE: "Club mergers",
     MONDE: "Mondefootball.fr profile (eg https://www.mondefootball.fr/teams/te18512/spora-luxemburg/)",
+    PHOTO: "Main photo",
     PLYRS: "Category: CLUB_players",
     REFCK: "Load references into linkchecker",
     RTLLU: "RTL profile (eg https://www.rtl.lu/sport/futtball/resultater/teams?c=381)",
     SEASN: "Current season",
     SDESC: "Short description alignment",
+    SLIST: "List of stadiums in Luxembourg page",
     SQUAD: "Load team into Squad checker",
+    STADB: "StadiumDB.com reference",
     STADE: "Stadium",
     TALKS: "Any talk page messages",
+    TENNT: "Current Tennant",
     TRANS: "Anything on LB+",
     URLWD: "URL in WikiData",
     WOMEN: "Women's team",
@@ -55,6 +67,8 @@ function render(data) {
     let doneClub = 0;
     let totalLeague = 0;
     let doneLeague = 0;
+    let totalStadium = 0;
+    let doneStadium = 0;
 
     Object.keys(data).forEach(page => {
         const item = data[page];
@@ -77,6 +91,10 @@ function render(data) {
             case "LEAGUE":
                 totalLeague += totalTasks;
                 doneLeague += totalDone;
+                break;
+            case "STADIUM":
+                totalStadium += totalTasks;
+                doneStadium += totalDone;
                 break;
         }
 
@@ -165,10 +183,11 @@ function render(data) {
 
     document.getElementById("pClub").appendChild(drawPercent(doneClub,totalClub));
     document.getElementById("pLeague").appendChild(drawPercent(doneLeague,totalLeague));
+    document.getElementById("pStadium").appendChild(drawPercent(doneStadium,totalStadium));
 
     document.getElementById("pTotal").appendChild(drawPercent(
-        doneClub+doneLeague,
-        totalClub+totalLeague,
+        doneClub+doneLeague+doneStadium,
+        totalClub+totalLeague+totalStadium,
         {fixed:3}));
 
     parseCheckSquads();

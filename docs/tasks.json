@@ -2,7 +2,7 @@
     "Alliance_Dudelange":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["SKIP","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","SEASN"],
         ["DONE","STADE"],
         ["SKIP","MANGR"],
@@ -22,7 +22,7 @@
     "AS_Differdange":{"type":"CLUB","tasks":[
         ["SKIP","SDESC"],
         ["SKIP","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["SKIP","SEASN"],
         ["SKIP","STADE"],
         ["SKIP","MANGR"],
@@ -37,7 +37,7 @@
     "CA_Spora_Luxembourg":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["SKIP","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","SEASN"],
         ["SKIP","MANGR"],
         ["SKIP","CHAIR"],
@@ -57,7 +57,7 @@
     "CS_Alliance_01":{"type":"CLUB","tasks":[
         ["SKIP","SDESC"],
         ["SKIP","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["SKIP","SEASN"],
         ["SKIP","STADE"],
         ["SKIP","MANGR"],
@@ -72,7 +72,7 @@
     "CS_Fola_Esch":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","SEASN"],
         ["DONE","CHAIR"],
         ["SKIP","MERGE"],
@@ -113,7 +113,7 @@
     "CS_Grevenmacher":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","SEASN"],
         ["DONE","STADE"],
         ["DONE","MANGR"],
@@ -142,7 +142,7 @@
     "CS_Hobscheid":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["SKIP","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["SKIP","MANGR"],
         ["SKIP","CHAIR"],
         ["DONE","MERGE"],
@@ -157,14 +157,14 @@
     "CS_Muhlenbach_Lusitanos":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["SKIP","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["SKIP","MANGR"],
         ["NOTDONE","Redirect to FC Blue Boys Muhlenbach - but could be its own page?"]
     ]},
     "CS_Oberkorn":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","STADE"],
         ["SKIP","MERGE"],
         ["DONE","TRANS"],
@@ -182,7 +182,7 @@
     "CS_Pétange":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["SKIP","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","STADE"],
         ["SKIP","MANGR"],
         ["SKIP","CHAIR"],
@@ -211,7 +211,7 @@
     "F91_Dudelange":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","STADE"],
         ["DONE","MANGR"],
         ["DONE","CHAIR"],
@@ -263,7 +263,7 @@
     "F.C._Luxembourg_City":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","STADE"],
         ["SKIP","WOMEN"],
         ["NOTDONE","Why 'F.C.' and not 'FC' like the rest of Luxembourgish clubs?"],
@@ -285,7 +285,7 @@
     "FA_Red_Boys_Differdange":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["SKIP","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","STADE"],
         ["SKIP","MANGR"],
         ["SKIP","CHAIR"],
@@ -302,7 +302,7 @@
     "FC_Alisontia_Steinsel":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","STADE"],
         ["DONE","MANGR"],
         ["DONE","CHAIR"],
@@ -324,7 +324,7 @@
     "FC_Alliance_Äischdall":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","STADE"],
         ["DONE","MERGE"],
         ["DONE","LINKS"],
@@ -342,7 +342,7 @@
     "FC_Aris_Bonnevoie":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["SKIP","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["SKIP","MANGR"],
         ["SKIP","CHAIR"],
         ["DONE","TRANS"],
@@ -362,7 +362,7 @@
     "FC_Atert_Bissen":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","CHAIR"],
         ["DONE","LINKS"],
         ["DONE","Create page"],
@@ -372,7 +372,7 @@
     "FC_Avenir_Beggen":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","STADE"],
         ["DONE","MANGR"],
         ["DONE","CHAIR"],
@@ -408,7 +408,7 @@
     "FC_Blue_Boys_Muhlenbach":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["SKIP","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","STADE"],
         ["SKIP","MANGR"],
         ["SKIP","CHAIR"],
@@ -430,7 +430,7 @@
     "FC_CeBra_01":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["SKIP","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["SKIP","MANGR"],
         ["SKIP","CHAIR"],
         ["SKIP","WOMEN"],
@@ -449,7 +449,7 @@
     "FC_Differdange_03":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","STADE"],
         ["DONE","MANGR"],
         ["DONE","CHAIR"],
@@ -485,7 +485,7 @@
     "FC_Erpeldange_72":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","MANGR"],
         ["DONE","Trell is a blue link in infobox, but not a link in intro"],
         ["NOTDONE","Trell stadium not on List of Stadiums page"],
@@ -503,7 +503,7 @@
     "FC_Etzella_Ettelbruck":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["NOTDONE","Anything on https://today.rtl.lu/sport/local/fc-etzella-ettelbruck-1872697"],
         ["NOTDONE","Intro text include league and stadium?"],
         ["DONE","Stadium cite"],
@@ -523,7 +523,7 @@
     "FC_Green_Boys_77_Harlange-Tarchamps":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","TRANS"],
         ["DONE","Is there a badge?"],
         ["NOTDONE","Why two stadiums in infobox?"],
@@ -544,7 +544,7 @@
     "FC_Jeunesse_Canach":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","Should two founding dates be listed in the infobox?"],
         ["NOTDONE","Promoted in 09-10? No, in 24-25"],
         ["DONE","Why a photo of the stadium?"],
@@ -561,7 +561,7 @@
     "FC_Kehlen":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","Official url missing from infobox"],
         ["DONE","Official website is wrong spelling"],
         ["DONE","Why the links to RED and BLACK? Seems overkill to explain what they are"],
@@ -576,7 +576,7 @@
     "FC_Koeppchen_Wormeldange":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","STADE"],
         ["DONE","MANGR"],
         ["DONE","CHAIR"],
@@ -593,7 +593,7 @@
     "FC_Mamer_32":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","No website in infobox?"],
         ["NOTDONE","What can be cited?"],
         ["NOTDONE","Why stadium photo?"],
@@ -611,7 +611,7 @@
     "FC_Minerva_Lintgen":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","MANGR"],
         ["NOTDONE","No squad list?"],
         ["DONE","External link should be 'Official website'"],
@@ -623,7 +623,7 @@
     "FC_Mondercange":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","STADE"],
         ["DONE","CHAIR"],
         ["DONE","TRANS"],
@@ -645,7 +645,7 @@
     "FC_Progrès_Niederkorn":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","STADE"],
         ["DONE","MANGR"],
         ["DONE","CHAIR"],
@@ -681,7 +681,7 @@
     "FC_RM_Hamm_Benfica":{"type":"CLUB","tasks":[
         ["SKIP","SDESC"],
         ["SKIP","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["SKIP","STADE"],
         ["SKIP","MANGR"],
         ["SKIP","CHAIR"],
@@ -694,7 +694,7 @@
     "FC_Rodange_91":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","STADE"],
         ["DONE","MANGR"],
         ["DONE","CHAIR"],
@@ -716,7 +716,7 @@
     "FC_Schifflange_95":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","STADE"],
         ["DONE","MANGR"],
         ["DONE","CHAIR"],
@@ -740,7 +740,7 @@
     "FC_Swift_Hesperange":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","STADE"],
         ["DONE","MANGR"],
         ["NOTDONE","Anything on https://today.rtl.lu/sport/local/fc-swift-hesperange-1898796"],
@@ -771,14 +771,14 @@
     "FC_Titus_Lamadelaine":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["SKIP","STADE"],
         ["NOTDONE","Does enough exist to merit its own article? Or should it redirect to UTP?"]
     ]},
     "FC_UNA_Strassen":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","MANGR"],
         ["NOTDONE","Anything on https://today.rtl.lu/sport/local/fc-una-strassen-1882097"],
         ["DONE","Fix 'current season' template issue"],
@@ -805,7 +805,7 @@
     "FC_Victoria_Rosport":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["NOTDONE","Anything on https://today.rtl.lu/sport/local/fc-victoria-rosport-1877615"],
         ["DONE","Official link in footer is malformed"],
         ["DONE","Too many commas when talking about their European match in the intro?"],
@@ -822,7 +822,7 @@
     "FC_Wiltz_71":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","WOMEN"],
         ["DONE","TRANS"],
         ["NOTDONE","Anything on https://today.rtl.lu/sport/local/fc-wiltz-71-1876765"],
@@ -848,7 +848,7 @@
     "FCM_Young_Boys_Diekirch":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","MANGR"],
         ["DONE","CHAIR"],
         ["DONE","LINKS"],
@@ -869,7 +869,7 @@
     "FF_Norden_02":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","STADE"],
         ["DONE","TRANS"],
         ["DONE","LHERE"],
@@ -890,7 +890,7 @@
     "Jeunesse_Esch":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","STADE"],
         ["DONE","CHAIR"],
         ["SKIP","MERGE"],
@@ -918,7 +918,7 @@
     "Jeunesse_Hautcharage":{"type":"CLUB","tasks":[
         ["SKIP","SDESC"],
         ["SKIP","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["SKIP","STADE"],
         ["SKIP","MANGR"],
         ["SKIP","WOMEN"],
@@ -929,7 +929,7 @@
     "Jeunesse_Junglinster":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","Infobox should be men's recent season"],
         ["NOTDONE","Website missing from infobox"],
         ["NOTDONE","Squad list from 22/23 season"],
@@ -942,7 +942,7 @@
     "Marisca_Mersch":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["NOTDONE","Is there a badge?"],
         ["DONE","Capacity should use NTS template"],
         ["DONE","'are a Luxembourg football club' -> 'is a Luxembourgish football club'"],
@@ -959,7 +959,7 @@
     "Racing_Club_Luxembourg":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
 	    ["NOTDONE","Racing Union family tree"],
         ["NOTDONE","LuxFoot has 1x league and 1x cup title, so Honours section?"],
         ["NOTDONE","Anything worthy about them to keep the page alive?"],
@@ -969,7 +969,7 @@
     "Racing_FC_Union_Luxembourg":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","STADE"],
         ["DONE","CHAIR"],
         ["DONE","MERGE"],
@@ -996,7 +996,7 @@
     "SC_Bettembourg":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","Useful to have a link to the women's team in the header?"],
         ["DONE","Club website is wrong"],
         ["NOTDONE","Very short intro text, what to add?"],
@@ -1010,7 +1010,7 @@
     "SC_Bettembourg_Féminine":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","Logo (same as men's?)"],
         ["DONE","Club founded in 1908 - that's the MEN'S team?"],
         ["DONE","Link to source for 2012 is not valid page anymore"],
@@ -1032,7 +1032,7 @@
     "SC_Ell":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","Update infobox with men's league/position and current women's league/position"],
         ["DONE","Why the football in Luxembourg template?"],
         ["DONE","Badge?"],
@@ -1048,7 +1048,7 @@
     "SC_Luxembourg":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["NOTDONE","Honours section - they did win stuff..."],
         ["DONE","Luxembourgian -> Luxembourgish"],
         ["NOTDONE","Really? Nothing exists about them?"],
@@ -1057,7 +1057,7 @@
     "SC_Steinfort":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","Luxembourg Division 1 18-19-20 redlink?"],
         ["NOTDONE","It's known as 'FC Stengefort' now? Source, or more details? Could require move?"],
         ["NOTDONE","Source for merger?"],
@@ -1074,7 +1074,7 @@
     "Sporting_Club_Luxembourg":{"type":"CLUB","tasks":[
         ["SKIP","SDESC"],
         ["SKIP","FOUND"],
-        ["SKIP","CILUX"],
+        ["SKIP","CLIST"],
         ["SKIP","STADE"],
         ["SKIP","MANGR"],
         ["SKIP","CHAIR"],
@@ -1086,7 +1086,7 @@
     "Sporting_Mertzig":{"type":"CLUB","tasks":[
         ["SKIP","SDESC"],
         ["SKIP","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["SKIP","STADE"],
         ["SKIP","MANGR"],
         ["SKIP","CHAIR"],
@@ -1097,7 +1097,7 @@
     "Stade_Dudelange":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","STADE"],
         ["NOTDONE","Originally named 'Gallia Dudelange' - according to fussball-lux, but anyone else confirms?"],
         ["DONE","Incorrect season format in infobox (check position?)"],
@@ -1113,7 +1113,7 @@
     "UN_Käerjéng_97":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","STADE"],
         ["DONE","CHAIR"],
         ["DONE","Is there a badge anywhere?"],
@@ -1136,7 +1136,7 @@
     "Union_05_Kayl-Tétange":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","CHAIR"],
         ["DONE","TRANS"],
         ["NOTDONE","Anything on https://today.rtl.lu/sport/local/union-titus-petange-1876955"],
@@ -1157,7 +1157,7 @@
     "Union_Luxembourg":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["SKIP","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["SKIP","MANGR"],
         ["DONE","MERGE"],
     	["NOTDONE","Citations needed"],
@@ -1176,7 +1176,7 @@
     "Union Titus Pétange":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["NOTDONE","'Professional' needs removing"],
         ["NOTDONE","European record style update"],
         ["NOTDONE","Did CS Petange or Titus play in Europe?"],
@@ -1188,7 +1188,7 @@
     "US_Dudelange":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["SKIP","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","MERGE"],
         ["DONE","LHERE"],
         ["DONE","More citations?"],
@@ -1204,7 +1204,7 @@
     "US_Esch":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","STADE"],
         ["DONE","TRANS"],
         ["DONE","LHERE"],
@@ -1223,7 +1223,7 @@
     "US_Hollerich_Bonnevoie":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","Note that it has gone on to be part of Racing Union"],
         ["DONE","Honours section needs bold winners?"],
         ["NOTDONE","Additional citations for verification"],
@@ -1237,7 +1237,7 @@
     "US_Hostert":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["NOTDONE","Anything on https://today.rtl.lu/sport/local/us-hostert-1876879"],
         ["DONE","Why mention ASBL part in intro?"],
         ["NOTDONE","Highest tier => National Division with link"],
@@ -1252,7 +1252,7 @@
     "US_Mondorf-les-Bains":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","MANGR"],
         ["DONE","CHAIR"],
         ["DONE","TRANS"],
@@ -1273,7 +1273,7 @@
     "US_Rumelange":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["SKIP","MERGE"],
         ["DONE","TRANS"],
         ["DONE","Introduction normally states the league and stadium"],
@@ -1296,7 +1296,7 @@
     "US_Sandweiler":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
-        ["DONE","CILUX"],
+        ["DONE","CLIST"],
         ["DONE","MANGR"],
         ["DONE","CHAIR"],
         ["DONE","WOMEN"],
@@ -1436,5 +1436,139 @@
         ["NOTDONE","ES+NL+DE: Top scorers"],
         ["DONE","DE: Record apps"],
         ["DONE","There is a note attached to Red Boys in the list of winners. Why? Doesn't make much sense."]
-    ]}
+    ]},
+    "Op_Flohr_Stadion":{"type":"STADIUM","tasks":[
+        ["DONE","SDESC"],
+        ["NOTDONE","Stadium source is dead - new site?"],
+        ["NOTDONE","Intro says one capacity, infobox another"],
+        ["NOTDONE","World Stadium external link is wayback, but not stated as such"],
+        ["NOTDONE","It has a running track. Worth mentioning?"],
+        ["NOTDONE","Anything exist about it?"],
+        ["NOTDONE","Any more gallery photos?"],
+        ["NOTDONE","Anything from Grevenmacher's page?"]
+    ]},
+    "Stade_Achille_Hammerel":{"type":"STADIUM","tasks":[
+        ["DONE","SDESC"],
+        ["NOTDONE","Why second photo? Should be gallery - any more to add there?"],
+        ["NOTDONE","Overlink in intro"],
+        ["NOTDONE","Racing's full name - use short/common"],
+        ["NOTDONE","Anything from Racing's page?"],
+        ["NOTDONE","Anything more than a stub exists about it?"],
+        ["NOTDONE","Why is buildings of LuxCity template expanded by default?"],
+        ["NOTDONE","World Stadiums link is to 404"]
+    ]},
+    "Stade_Alphonse_Theis":{"type":"STADIUM","tasks":[
+        ["DONE","SDESC"],
+        ["DONE","Photo of stadium"],
+        ["NOTDONE","World Stadiums link is 404"],
+        ["NOTDONE","So much stub - anything exists?"]
+    ]},
+    "Stade_Am_Deich":{"type":"STADIUM","tasks":[
+        ["DONE","SDESC"],
+        ["DONE","Reference is actually an External link"],
+        ["NOTDONE","No red border on map"],
+        ["NOTDONE","overlinking of FOOTBALL, STADIUM"],
+        ["NOTDONE","Capacity is 'about' - find exact"],
+        ["NOTDONE","Additional photos on right, or dedicated section?"],
+        ["NOTDONE","Citation is archived, but not stated. Is there a current link?"],
+        ["NOTDONE","So much stub - anything exists?"]
+    ]},
+    "Stade_Am_Pëtz":{"type":"STADIUM","tasks":[]},
+    "Stade_An_Der_Trell":{"type":"STADIUM","tasks":[
+        ["DONE","SDESC"],
+        ["DONE","Redirection link for Erpeldange"],
+        ["NOTDONE","Red box not present on map"],
+        ["NOTDONE","Reference link is out of date"],
+        ["NOTDONE","So much stub - anything exists?"],
+        ["NOTDONE","Is the COVID Rules photo still relevant in a post-COVID world?"]
+    ]},
+    "Stade_Boy_Konen":{"type":"STADIUM","tasks":[]},
+    "Stade_Communal,_Mondercange":{"type":"STADIUM","tasks":[]},
+    "Stade_de_la_Frontière":{"type":"STADIUM","tasks":[
+        ["DONE","SDESC"],
+        ["NOTDONE","Overlink of 'football' 'stadium' in intro"],
+        ["NOTDONE","Odd choice of source for 'home of Jeunesse Esch'"],
+        ["NOTDONE","Image captions are .. generic"],
+        ["NOTDONE","1920/first stadiums source?"],
+        ["NOTDONE","Hosted the U21 - in what capacity?"],
+        ["NOTDONE","External links to Stadium DB / Europlan / etc?"],
+        ["NOTDONE","Translations of references"],
+        ["NOTDONE","One references is a 404"]
+    ]},
+    "Stade_de_Luxembourg":{"type":"STADIUM","tasks":[
+        ["DONE","SDESC"],
+        ["NOTDONE","'Coupe de Luxembourg' should be 'Luxembourg Cup' in English"],
+        ["NOTDONE","Josy Barthel is due to be demolished? A quick scan of the source doesn't mention that"],
+        ["NOTDONE","Source 2 is dead (5minutes.rtl.lu)?"],
+        ["NOTDONE","Source 9 includes 'Lancement officiel', which is the category, not the title"]
+    ]},
+    "Stade_Demy_Steichen":{"type":"STADIUM","tasks":[]},
+    "Stade_du_Thillenberg":{"type":"STADIUM","tasks":[
+        ["DONE","SDESC"],
+        ["NOTDONE","Red border seems to be misaligned?"],
+        ["NOTDONE","Stub - anything to write?"],
+        ["NOTDONE","World Stadiums page is 404"]
+    ]},
+    "Stade_Émile_Mayrisch":{"type":"STADIUM","tasks":[
+        ["DONE","SDESC"],
+        ["NOTDONE","football, athletics, stadium - too many links?"],
+        ["NOTDONE","Emile is LuxembourgISH"],
+        ["NOTDONE","Red border is applied to more than the stadium?"],
+        ["NOTDONE","Stub - anything to write?"],
+        ["NOTDONE","World Stadiums link is dead"],
+        ["NOTDONE","Source for original capacity?"],
+        ["NOTDONE","Should Emile's article reference this?"]
+    ]},
+    "Stade_François_Trausch":{"type":"STADIUM","tasks":[
+        ["DONE","SDESC"],
+        ["NOTDONE","Overlink of FOOTBALL and STADIUM?"],
+        ["NOTDONE","Use Mamer 32, not FC..."],
+        ["NOTDONE","Link to world stadiums is 404"],
+        ["NOTDONE","Link to club website is 404"],
+        ["NOTDONE","Stub (but no stub template) so what exists?"]
+    ]},
+    "Stade_Géitz":{"type":"STADIUM","tasks":[]},
+    "Stade_Jos_Haupert":{"type":"STADIUM","tasks":[
+        ["DONE","SDESC"],
+        ["DONE","References should be External links"],
+        ["NOTDONE","Overlink of FOOTBALL and STADIUM?"],
+        ["NOTDONE","Red map marker covers more than that stadium? It's an odd shape"],
+        ["NOTDONE","Source for capacity and of which are seats?"],
+        ["NOTDONE","First 'reference' is malformed?"],
+        ["NOTDONE","Second 'reference' is 404"],
+        ["NOTDONE","Stub - anything to write?"]
+    ]},
+    "Stade_Jos_Nosbaum":{"type":"STADIUM","tasks":[
+        ["DONE","SDESC"],
+        ["NOTDONE","According to the source, the stadium capacity is way more. But not the External Links"],
+        ["NOTDONE","Overlink of FOOTBALL and STADIUM?"],
+        ["NOTDONE","Source for US Dudelange home stadium? Is there a 'former tenants' field for infobox?"],
+        ["NOTDONE","World Stadiums link is 404"],
+        ["NOTDONE","What's the standard for additional photos? Right column, or Photos section?"]
+    ]},
+    "Stade_Josy_Barthel":{"type":"STADIUM","tasks":[
+        ["DONE","SDESC"],
+        ["DONE","New stadium is 'currently due to open' in 2021."],
+        ["NOTDONE","Has the demolition started?"],
+        ["NOTDONE","Colon should be semi-colon when referring to 'only gold medalist'?"],
+        ["NOTDONE","Is it still the stadium of the CAL Spora athletics teams?"],
+        ["NOTDONE","Capacity in history is 7k, but infobox is 8k - which one? The cited source states neither"],
+        ["NOTDONE","Source for 2014 history entry"],
+        ["NOTDONE","Infobox says it has been 'reopened'? What's that about"],
+        ["NOTDONE","Racing's external link is from webarchive. Is there a way to note this?"]
+    ]},
+    "Stade_Municipal_(Oberkorn)":{"type":"STADIUM","tasks":[
+        ["DONE","SDESC"],
+        ["NOTDONE","No red box in map"],
+        ["NOTDONE","World Stadiums reference is 404"],
+        ["NOTDONE","Really small stub - what exists?"],
+        ["NOTDONE","Consistency with other 'stade municipal's"]
+    ]},
+    "Stade_Municipal,_Pétange":{"type":"STADIUM","tasks":[]},
+    "Stade_Municipal,_Rumelange":{"type":"STADIUM","tasks":[]},
+    "Stade_Municipal_de_la_Ville_de_Differdange":{"type":"STADIUM","tasks":[]},
+    "Stade_Rue_de_Lenningen":{"type":"STADIUM","tasks":[]},
+    "Stade_rue_Henri_Dunant":{"type":"STADIUM","tasks":[]},
+    "Stade_um_Bëchel":{"type":"STADIUM","tasks":[]},
+    "VictoriArena":{"type":"STADIUM","tasks":[]}
 }
