@@ -1,4 +1,4 @@
-// squadchecker/squad-check.js
+// squadchecker/check.js
 //
 // For each club:
 //  1. Fetch entry.url and follow redirects. If the FINAL url doesn't match
