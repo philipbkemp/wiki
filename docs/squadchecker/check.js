@@ -145,6 +145,7 @@ async function main() {
 
     entry.last_status = status;
     entry.last_check = today();
+    entry.last_reason = reasons.length > 0 ? reasons.join("; ") : null;
 
     console.log(`  -> ${status}`);
     for (const r of reasons) console.log(`     - ${r}`);
