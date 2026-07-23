@@ -17,8 +17,7 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        working-directory: squadchecker
-        run: npm install
+        run: npm install --prefix squadchecker
 
       - name: Run squad check
         run: node squadchecker/squad-check.js
