@@ -8,7 +8,8 @@ fetch('tasks.json')
     });
 
 const ALLTASKS = {
-    CLUB: ["SDESC","FOUND","CILUX","SEASN","STADE","MANGR","CHAIR","MERGE","WOMEN","TRANS","LINKS","LHERE","REFCK","SQUAD","ESTIN","DESTN","ASOCE","ASOCD","PLYRS","BADGE","HYPHN","HONOR","EUROP","EUFOT","MONDE","RTLLU","URLWD","FUSSB","TALKS"]
+    CLUB: ["SDESC","FOUND","CILUX","SEASN","STADE","MANGR","CHAIR","MERGE","WOMEN","TRANS","LINKS","LHERE","REFCK","SQUAD","ESTIN","DESTN","ASOCE","ASOCD","PLYRS","BADGE","HYPHN","HONOR","EUROP","EUFOT","MONDE","RTLLU","URLWD","FUSSB","TALKS"],
+    LEAGUE: ["SDESC","TRANS","LHERE","LINKS","HYPHN","REFCK","TALKS"]
 };
 
 const TASKS_DESC = {
@@ -48,10 +49,10 @@ let modalContent = {};
 
 function render(data) {
     thedata = data;
+
     const tblClub = document.getElementById("tasktable_club");
     let totalClub = 0;
     let doneClub = 0;
-
     const tblClubRow = document.createElement("TR");
     [0,1].forEach(padding=>{
         const setTaskCol = document.createElement("TD");
@@ -73,6 +74,30 @@ function render(data) {
     });
     tblClub.appendChild(tblClubRow);
 
+    const tblLeague = document.getElementById("tasktable_league");
+    let totalLeague = 0;
+    let doneLeague = 0;
+    const tblLeagueRow = document.createElement("TR");
+    [0,1].forEach(padding=>{
+        const setTaskCol = document.createElement("TD");
+        setTaskCol.innerHTML = "&nbsp;";
+        tblLeagueRow.appendChild(setTaskCol);
+    });
+    ALLTASKS["LEAGUE"].forEach(setTask=>{
+        const setTaskCol = document.createElement("TD");
+        const setTaskAttr = document.createElement("ABBR");
+        setTaskAttr.setAttribute("title",TASKS_DESC[setTask]);
+        setTaskAttr.textContent = setTask;
+        setTaskCol.appendChild(setTaskAttr);
+        tblLeagueRow.appendChild(setTaskCol);
+    });
+    [2].forEach(padding=>{
+        const setTaskCol = document.createElement("TD");
+        setTaskCol.innerHTML = "More";
+        tblLeagueRow.appendChild(setTaskCol);
+    });
+    tblLeague.appendChild(tblLeagueRow);
+
     Object.keys(data).forEach(page => {
         const item = data[page];
         const pageType = item.type;
@@ -86,13 +111,23 @@ function render(data) {
                 totalTasks++;
             }
         });
-        totalClub += totalTasks;
-        doneClub += totalDone;
+        switch ( pageType ) {
+            case "CLUB":
+                totalClub += totalTasks;
+                doneClub += totalDone;
+                break;
+            case "LEAGUE":
+                totalLeague += totalTasks;
+                doneLeague += totalDone;
+                break;
+        }
+
         const perc = ((totalDone / (totalTasks||1))*100).toFixed(1);
 
         let target = null;
         switch ( pageType ) {
-            case "CLUB": target = tblClub;
+            case "CLUB": target = tblClub; break;
+            case "LEAGUE": target = tblLeague; break;
         }
 
         const itemRow = document.createElement("TR");
@@ -169,16 +204,18 @@ function render(data) {
     });
 
     document.getElementById("pClub").appendChild(drawPercent(doneClub,totalClub));
+    document.getElementById("pLeague").appendChild(drawPercent(doneLeague,totalLeague));
 
     document.getElementById("pTotal").appendChild(drawPercent(
-        doneClub,
-        totalClub,
+        doneClub+doneLeague,
+        totalClub+totalLeague,
         {fixed:3}));
 
     parseCheckSquads();
     parseCheckLinks();
 
     sortTableRows(tblClub);
+    sortTableRows(tblLeague);
 
     initModal();
 }
