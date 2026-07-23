@@ -17,15 +17,15 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: npm install --prefix squadchecker
+        run: npm install --prefix docs/squadchecker
 
       - name: Run squad check
-        run: node squadchecker/squad-check.js
+        run: node docs/squadchecker/squad-check.js
 
       - name: Commit updated squads.json
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add squadchecker/squads.json
+          git add docs/squadchecker/squads.json
           git diff --cached --quiet && echo "No changes" || git commit -m "Update squad check results"
           git push
