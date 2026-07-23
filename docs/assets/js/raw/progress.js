@@ -265,7 +265,7 @@ function drawPercent(done,total,options={}) {
 }
 
 function parseCheckSquads() {
-    fetch('/squadchecker/squads.json')
+    fetch('squadchecker/squads.json')
         .then(res => res.json())
         .then(data => renderSquadChecker(data))
         .catch(err => {
@@ -276,7 +276,7 @@ function parseCheckSquads() {
 }
 
 function parseCheckLinks() {
-    fetch('/linkchecker/urls.json')
+    fetch('linkchecker/urls.json')
         .then(res => res.json())
         .then(data => renderLinkChecker(data))
         .catch(err => {
