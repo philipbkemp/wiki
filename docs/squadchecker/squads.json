@@ -5,7 +5,7 @@
     "redirect": "https://www.f91.lu/kader-90630v4/groups/50/seasons/220",
     "selector": "h4.mui-1tt7evh",
     "last_check": "2026-07-23",
-    "last_status": "FAIL",
+    "last_status": "OKAY",
     "players": [
       "Rodrigo Goncalves Tavares",
       "Ivan Englaro",
@@ -36,6 +36,6 @@
       "Frank Krämer",
       "Sven Spanier"
     ],
-    "last_reason": "PATCH"
+    "last_reason": null
   }
 ]
