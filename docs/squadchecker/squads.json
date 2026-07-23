@@ -7,23 +7,23 @@
     "last_check": "2026-07-23",
     "last_status": "FAIL",
     "players": [
-        "Rodrigo Tavares",
-        "Ivan Englaro",
-        "Diogo Monteiro",
-        "Leandro Matos",
-        "Samuel Almeida",
-        "Eldin Latik",
-        "Valentino Tallarico",
-        "Charles Morren",
-        "Isaque Gavioli",
-        "Dzenis Novalic",
-        "Belmin Muratovic",
-        "Chris Stumpf",
-        "Wilson Kamavuaka",
-        "Enzo Lima",
-        "Hanibal Solomon",
-        "Aldo Josué Gomes Soares"
+      "Rodrigo Tavares",
+      "Ivan Englaro",
+      "Diogo Monteiro",
+      "Leandro Matos",
+      "Samuel Almeida",
+      "Eldin Latik",
+      "Valentino Tallarico",
+      "Charles Morren",
+      "Isaque Gavioli",
+      "Dzenis Novalic",
+      "Belmin Muratovic",
+      "Chris Stumpf",
+      "Wilson Kamavuaka",
+      "Enzo Lima",
+      "Hanibal Solomon",
+      "Aldo Josué Gomes Soares"
     ],
-    "last_reason": "PATCH"
+    "last_reason": "Missing from page: Rodrigo Tavares, Diogo Monteiro, Leandro Matos, Samuel Almeida, Enzo Lima, Aldo Josué Gomes Soares; Found on page but not in players list: Rodrigo Goncalves Tavares, Diogo Monteiro De Oliveira, Leandro Da Silva Matos, Samuel Sansiviero Almeida, Enzo Fonseca Lima, Aldo Josué \"Dinho\" Gomes Soares, Hugo Bove, Mike Daubenfeld, Dylan Ferreira, Ralph Birchem, Rodrigue Dikaba, Claudio Englaro, Nico Rischard, Manuel Severino Santos, Claudio Lombardelli, Valentin Bove, Frank Krämer, Sven Spanier"
   }
 ]
