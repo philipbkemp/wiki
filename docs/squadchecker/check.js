@@ -1,4 +1,4 @@
-// squadchecker/squad-check.js
+// squadchecker/check.js
 //
 // For each club:
 //  1. Load entry.url in a real (headless) browser and wait a couple of

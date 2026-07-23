@@ -23,7 +23,7 @@ jobs:
         run: npx --prefix docs/squadchecker playwright install --with-deps chromium
 
       - name: Run squad check
-        run: node docs/squadchecker/squad-check.js
+        run: node docs/squadchecker/check.js
 
       - name: Commit updated squads.json
         run: |
