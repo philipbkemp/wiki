@@ -1,27 +1,25 @@
-// squadchecker/check.js
+// squadchecker/squad-check.js
 //
 // For each club:
-//  1. Fetch entry.url and follow redirects. If the FINAL url doesn't match
-//     entry.redirect, flag as FAIL immediately (redirect changed - season
-//     rollover, URL restructure, etc.) and skip the player check.
-//  2. Otherwise, parse the final page's HTML, select all elements matching
-//     entry.selector, and compare the text found against entry.players.
-//     Any mismatch in either direction (missing player, or an extra name on
-//     the page not in our list) is a FAIL.
-//
-// NOTE: this only sees what's in the raw HTML response. If the site renders
-// the squad list via client-side JS, the names won't be in the fetched HTML
-// and this approach won't work - you'd need a headless browser instead.
+//  1. Load entry.url in a real (headless) browser and wait a couple of
+//     seconds for the page's own JS to run - some sites navigate to a new
+//     URL client-side after a short delay, rather than via an HTTP redirect,
+//     so a plain fetch() would never see it. If the URL after the wait
+//     doesn't match entry.redirect, flag as FAIL and skip the player check.
+//  2. Otherwise, read all elements matching entry.selector and compare the
+//     text found against entry.players. Any mismatch in either direction
+//     (missing player, or an extra name on the page not in our list) is FAIL.
 
 import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import * as cheerio from 'cheerio';
+import { chromium } from 'playwright';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_PATH = path.join(__dirname, 'squads.json');
 
-const TIMEOUT_MS = 20000;
+const NAV_TIMEOUT_MS = 20000;
+const POST_LOAD_WAIT_MS = 2000; // give the page's own JS time to trigger its URL change
 const USER_AGENT =
   'Mozilla/5.0 (compatible; SquadCheckerBot/1.0; +https://github.com/) Node.js';
 
@@ -44,16 +42,6 @@ function hostOf(url) {
   }
 }
 
-async function fetchWithTimeout(url, options) {
-  const controller = new AbortController();
-  const id = setTimeout(() => controller.abort(), TIMEOUT_MS);
-  try {
-    return await fetch(url, { ...options, signal: controller.signal });
-  } finally {
-    clearTimeout(id);
-  }
-}
-
 function normalizeUrl(url) {
   // Ignore trailing slash and query string differences when comparing.
   try {
@@ -71,84 +59,92 @@ function normalizeName(name) {
   return name.replace(/\s+/g, ' ').trim().toLowerCase();
 }
 
-async function checkClub(entry) {
+async function checkClub(entry, browser) {
   const reasons = [];
+  const context = await browser.newContext({ userAgent: USER_AGENT });
+  const page = await context.newPage();
 
-  let res;
   try {
-    res = await fetchWithTimeout(entry.url, {
-      method: 'GET',
-      headers: { 'User-Agent': USER_AGENT },
-      redirect: 'follow',
-    });
-  } catch (err) {
-    return { status: 'FAIL', reasons: [`Request failed: ${err.message || 'network error'}`] };
+    let res;
+    try {
+      res = await page.goto(entry.url, {
+        waitUntil: 'domcontentloaded',
+        timeout: NAV_TIMEOUT_MS,
+      });
+    } catch (err) {
+      return { status: 'FAIL', reasons: [`Navigation failed: ${err.message || 'unknown error'}`] };
+    }
+
+    if (res && !res.ok()) {
+      return { status: 'FAIL', reasons: [`HTTP ${res.status()} fetching ${entry.url}`] };
+    }
+
+    // Give the page's own JS time to fire its delayed navigation.
+    await page.waitForTimeout(POST_LOAD_WAIT_MS);
+
+    // Step 1: URL check, read AFTER the wait so a JS-triggered navigation has happened
+    const finalUrl = page.url();
+    if (normalizeUrl(finalUrl) !== normalizeUrl(entry.redirect)) {
+      return {
+        status: 'FAIL',
+        reasons: [`Redirect mismatch: expected "${entry.redirect}", got "${finalUrl}"`],
+      };
+    }
+
+    // Step 2: player list check (only runs if the URL matched)
+    const onPage = (await page.$$eval(entry.selector, (els) => els.map((el) => el.textContent)))
+      .map((t) => (t || '').replace(/\s+/g, ' ').trim())
+      .filter(Boolean);
+
+    const expectedSet = new Set(entry.players.map(normalizeName));
+    const onPageSet = new Set(onPage.map(normalizeName));
+
+    const missing = entry.players.filter((p) => !onPageSet.has(normalizeName(p)));
+    const unexpected = onPage.filter((p) => !expectedSet.has(normalizeName(p)));
+
+    if (missing.length > 0) {
+      reasons.push(`Missing from page: ${missing.join(', ')}`);
+    }
+    if (unexpected.length > 0) {
+      reasons.push(`Found on page but not in players list: ${unexpected.join(', ')}`);
+    }
+    if (onPage.length === 0) {
+      reasons.push(`Selector "${entry.selector}" matched no elements - check it's still correct`);
+    }
+
+    return { status: reasons.length === 0 ? 'OKAY' : 'FAIL', reasons };
+  } finally {
+    await context.close();
   }
-
-  if (!res.ok) {
-    return { status: 'FAIL', reasons: [`HTTP ${res.status} fetching ${entry.url}`] };
-  }
-
-  // Step 1: redirect check
-  const finalUrl = res.url; // fetch sets this to the final URL after following redirects
-  if (normalizeUrl(finalUrl) !== normalizeUrl(entry.redirect)) {
-    return {
-      status: 'FAIL',
-      reasons: [`Redirect mismatch: expected "${entry.redirect}", got "${finalUrl}"`],
-    };
-  }
-
-  // Step 2: player list check (only runs if redirect matched)
-  const html = await res.text();
-  const $ = cheerio.load(html);
-
-  const onPage = $(entry.selector)
-    .map((_, el) => $(el).text())
-    .get()
-    .map((t) => t.replace(/\s+/g, ' ').trim())
-    .filter(Boolean);
-
-  const expectedSet = new Set(entry.players.map(normalizeName));
-  const onPageSet = new Set(onPage.map(normalizeName));
-
-  const missing = entry.players.filter((p) => !onPageSet.has(normalizeName(p)));
-  const unexpected = onPage.filter((p) => !expectedSet.has(normalizeName(p)));
-
-  if (missing.length > 0) {
-    reasons.push(`Missing from page: ${missing.join(', ')}`);
-  }
-  if (unexpected.length > 0) {
-    reasons.push(`Found on page but not in players list: ${unexpected.join(', ')}`);
-  }
-  if (onPage.length === 0) {
-    reasons.push(`Selector "${entry.selector}" matched no elements - check it's still correct`);
-  }
-
-  return { status: reasons.length === 0 ? 'OKAY' : 'FAIL', reasons };
 }
 
 async function main() {
   const raw = await fs.readFile(DATA_PATH, 'utf-8');
   const entries = JSON.parse(raw);
 
+  const browser = await chromium.launch();
   let lastHost = null;
 
-  for (const entry of entries) {
-    const host = hostOf(entry.url);
-    if (host && host === lastHost) {
-      await sleep(SAME_HOST_DELAY_MS);
+  try {
+    for (const entry of entries) {
+      const host = hostOf(entry.url);
+      if (host && host === lastHost) {
+        await sleep(SAME_HOST_DELAY_MS);
+      }
+      lastHost = host;
+
+      console.log(`Checking ${entry.club} (${entry.url}) ...`);
+      const { status, reasons } = await checkClub(entry, browser);
+
+      entry.last_status = status;
+      entry.last_check = today();
+      entry.last_reason = reasons.length > 0 ? reasons.join('; ') : null;
+
+      console.log(`  -> ${status}`);
+      for (const r of reasons) console.log(`     - ${r}`);
     }
-    lastHost = host;
-
-    console.log(`Checking ${entry.club} (${entry.url}) ...`);
-    const { status, reasons } = await checkClub(entry);
-
-    entry.last_status = status;
-    entry.last_check = today();
-    entry.last_reason = reasons.length > 0 ? reasons.join("; ") : null;
-
-    console.log(`  -> ${status}`);
-    for (const r of reasons) console.log(`     - ${r}`);
+  } finally {
+    await browser.close();
   }
 
   await fs.writeFile(DATA_PATH, JSON.stringify(entries, null, 2) + '\n', 'utf-8');

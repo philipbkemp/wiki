@@ -19,8 +19,11 @@ jobs:
       - name: Install dependencies
         run: npm install --prefix docs/squadchecker
 
+      - name: Install Playwright browser
+        run: npx --prefix docs/squadchecker playwright install --with-deps chromium
+
       - name: Run squad check
-        run: node docs/squadchecker/check.js
+        run: node docs/squadchecker/squad-check.js
 
       - name: Commit updated squads.json
         run: |
