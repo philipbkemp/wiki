@@ -8,7 +8,7 @@ fetch('tasks.json')
     });
 
 const ALLTASKS = {
-    CLUB: ["SDESC","FOUND","CILUX","SEASN","STADE","MANGR","CHAIR","MERGE","WOMEN","TRANS","LINKS","LHERE","REFCK","ESTIN","DESTN","ASOCE","ASOCD","PLYRS","BADGE","HYPHN","HONOR","EUROP","EUFOT","MONDE","RTLLU","URLWD","FUSSB","TALKS"]
+    CLUB: ["SDESC","FOUND","CILUX","SEASN","STADE","MANGR","CHAIR","MERGE","WOMEN","TRANS","LINKS","LHERE","REFCK","SQUAD","ESTIN","DESTN","ASOCE","ASOCD","PLYRS","BADGE","HYPHN","HONOR","EUROP","EUFOT","MONDE","RTLLU","URLWD","FUSSB","TALKS"]
 };
 
 const TASKS_DESC = {
@@ -35,6 +35,7 @@ const TASKS_DESC = {
     RTLLU: "RTL profile (eg https://www.rtl.lu/sport/futtball/resultater/teams?c=381)",
     SEASN: "Current season",
     SDESC: "Short description alignment",
+    SQUAD: "Load team into Squad checker",
     STADE: "Stadium",
     TALKS: "Any talk page messages",
     TRANS: "Anything on LB+",
