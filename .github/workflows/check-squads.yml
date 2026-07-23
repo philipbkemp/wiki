@@ -1,4 +1,4 @@
-name: Check links
+name: Check squads
 
 on:
   workflow_dispatch: {} # click "Run workflow" in the Actions tab to trigger this manually
@@ -16,13 +16,17 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Run link check
-        run: node docs/linkchecker/check.js
+      - name: Install dependencies
+        working-directory: squadchecker
+        run: npm install
 
-      - name: Commit updated urls.json
+      - name: Run squad check
+        run: node squadchecker/squad-check.js
+
+      - name: Commit updated squads.json
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/linkchecker/urls.json
-          git diff --cached --quiet && echo "No changes" || git commit -m "Update link check results"
+          git add squadchecker/squads.json
+          git diff --cached --quiet && echo "No changes" || git commit -m "Update squad check results"
           git push
