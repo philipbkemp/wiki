@@ -76,6 +76,49 @@ progress {
         background-color: #2b5873;
         border-radius: 10px;
     }
+    &.progress-allin {
+        border: 1px solid #73232b;
+        &::-webkit-progress-bar {
+            background-color: #73232b33;
+        }
+        &::-webkit-progress-value {
+            background-color: #73232b;
+        }
+        &::-moz-progress-bar {
+            background-color: #73232b;
+        }
+        &:indeterminate {
+            &::-webkit-progress-value {
+                background-color: #73232b;
+            }
+            &::-moz-progress-bar {
+                background-color: #73232b;
+            }
+        }
+        &::-ms-fill {
+            background-color: #73232b;
+        }
+        &__success {
+            border: 1px solid #2b7323;
+            &::-webkit-progress-value {
+                background-color: #2b7323;
+            }
+            &::-moz-progress-bar {
+                background-color: #2b7323;
+            }
+            &:indeterminate {
+                &::-webkit-progress-value {
+                    background-color: #2b7323;
+                }
+                &::-moz-progress-bar {
+                    background-color: #2b7323;
+                }
+            }
+            &::-ms-fill {
+                background-color: #2b7323;
+            }
+        }
+    }
 }
 
 .progress-wrap {
@@ -171,10 +214,15 @@ a[target="_blank"] {
     }
 }
 
-.pSummary {
+.pSummary,
+.pTotal {
     display: inline-block;
     margin-right: 5px;
     text-align: center;
+    [data-modal-key] {
+        display: inline-block;
+        width: 100%;
+    }
 }
 
 #pTotal {

@@ -170,7 +170,12 @@ function render(data) {
 
     document.getElementById("pClub").appendChild(drawPercent(doneClub,totalClub));
 
-    document.getElementById("pTotal").appendChild(drawPercent(doneClub,totalClub,3));
+    document.getElementById("pTotal").appendChild(drawPercent(
+        doneClub,
+        totalClub,
+        {fixed:3}));
+
+    parseCheckSquads();
 
     sortTableRows(tblClub);
 
@@ -194,15 +199,16 @@ function initModal() {
 }
 
 function openModal(key) {
-    console.log(modalContent[key]);
-    modalContent[key].forEach(([tStatus,tLabel])=>{
-        const taskLi = document.createElement("LI");
-        taskLi.textContent = tLabel;
-        taskLi.classList.add("task-status__"+tStatus.toLowerCase());
-        content.appendChild(taskLi);
-    });
-    overlay.classList.add("open");
-    document.body.classList.add("modal-open");
+    if ( modalContent[key] && modalContent[key].length !== 0 ) {
+        modalContent[key].forEach(([tStatus,tLabel])=>{
+            const taskLi = document.createElement("LI");
+            taskLi.textContent = tLabel;
+            taskLi.classList.add("task-status__"+tStatus.toLowerCase());
+            content.appendChild(taskLi);
+        });
+        overlay.classList.add("open");
+        document.body.classList.add("modal-open");
+    }
 }
 
 function closeModal() {
@@ -223,10 +229,19 @@ function sortTableRows(table) {
     [...noPercent, ...withPercent].forEach(row => table.appendChild(row));
 }
 
-function drawPercent(done,total,fixed=2) {
+function drawPercent(done,total,options={}) {
+    const fixed = options.fixed ?? 2;
+    const allOrNothing = options.allOrNothing ?? false;
+
     const perc = ((done / total)*100).toFixed(fixed);
 
     const progress = document.createElement('progress');
+    if ( allOrNothing ) {
+        progress.classList.add("progress-allin");
+        if ( done === total ) {
+            progress.classList.add("progress-allin__success");
+        }
+    }
     progress.max = total || 1;
     progress.value = done;
     const progressWrap = document.createElement("DIV");
@@ -246,4 +261,33 @@ function drawPercent(done,total,fixed=2) {
     progressWrap.appendChild(progressLabel);
 
     return progressWrap;
+}
+
+function parseCheckSquads() {
+    fetch('/squadchecker/squads.json')
+        .then(res => res.json())
+        .then(data => renderSquads(data))
+        .catch(err => {
+            document.getElementById("err").textContent = err.message;
+            document.getElementById("err").style.display = "block";
+            console.error(err);
+        });
+}
+
+function renderSquads(data) {
+    squadsTotal = 0;
+    squadsPassed = 0;
+    modalContent.check_squad = [];
+    data.forEach(club=>{
+        squadsTotal++;
+        if ( club.last_status === "OKAY" ) {
+            squadsPassed++;
+        } else {
+            modalContent.check_squad.push(["NOTDONE",club.club + " -> " + club.last_reason]);
+        }
+    });
+    if ( modalContent.check_squad.length === 0 ) {
+        document.querySelector("#pCheckSquads [data-modal-key]").removeAttribute("data-modal-key");
+    }
+    document.getElementById("pCheckSquads").appendChild(drawPercent(squadsPassed,squadsTotal,{allOrNothing:true}));
 }
