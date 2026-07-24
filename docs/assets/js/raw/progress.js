@@ -57,6 +57,16 @@ const TASKS_DESC = {
     WOMEN: "Women's team",
 };
 
+const randomTask = {
+    HIGH: {value:0,list:[]},
+    LOW: {value:100,list:[]},
+    MOST: {value:0,list:[]},
+    CLUB: {list:[]},
+    LEAGUE: {list:[]},
+    STADIUM: {list:[]},
+    NATIONAL: {list:[]}
+};
+
 let thedata = null;
 let modalContent = {};
 
@@ -80,12 +90,30 @@ function render(data) {
         const doneCount = tasks.filter(t => (t[0] || '').toUpperCase() === 'DONE').length;
         const skipCount = tasks.filter(t => (t[0] || '').toUpperCase() === 'SKIP').length;
         const totalDone = doneCount + skipCount;
+        let notDoneList = [];
+        let doneSetList = [];
+
         let totalTasks = ALLTASKS[pageType].length;
         tasks.forEach(([status, label]) => {
             if ( ! ALLTASKS[pageType].includes(label) ) {
                 totalTasks++;
+            } else {
+                doneSetList.push(label);
+            }
+            if ( status === "NOTDONE" ) {
+                notDoneList.push([pageType,page,label]);
             }
         });
+        ALLTASKS[pageType].forEach(setTask=>{
+            if ( ! doneSetList.includes(setTask) ) {
+                notDoneList.push([pageType,page,setTask]);
+            }
+        });
+
+        if ( totalDone === 0 ) {
+            notDoneList = [ [pageType,page,"SDESC"] ];
+        }
+
         switch ( pageType ) {
             case "CLUB":
                 totalClub += totalTasks;
@@ -103,8 +131,30 @@ function render(data) {
                 totalNational += totalTasks;
                 doneNational += totalDone;
         }
+        randomTask[pageType].list = [...randomTask[pageType].list,...notDoneList];
 
-        const perc = ((totalDone / (totalTasks||1))*100).toFixed(1);
+        const perc = ((totalDone / (totalTasks||1))*100);
+
+        if ( perc === randomTask.HIGH.value ) {
+            randomTask.HIGH.list = [...randomTask.HIGH.list,...notDoneList];
+        } else if ( perc > randomTask.HIGH.value ) {
+            randomTask.HIGH.value = perc;
+            randomTask.HIGH.list = [...notDoneList];
+        }
+
+        if ( perc === randomTask.LOW.value ) {
+            randomTask.LOW.list = [...randomTask.LOW.list,...notDoneList];
+        } else if ( perc < randomTask.LOW.value ) {
+            randomTask.LOW.value = perc;
+            randomTask.LOW.list = [...notDoneList];
+        }
+
+        if ( notDoneList.length === randomTask.MOST.value ) {
+            randomTask.MOST.list = [...randomTask.MOST.list,...notDoneList];
+        } else if ( notDoneList.length > randomTask.MOST.value ) {
+            randomTask.MOST.value = notDoneList.length;
+            randomTask.MOST.list = [...notDoneList];
+        }
 
         let target = tbl;
 
@@ -112,7 +162,7 @@ function render(data) {
         const itemColPercent = document.createElement("TD");
         const itemColPage = document.createElement("TD");
 
-        itemRow.setAttribute("data-percent",perc);
+        itemRow.setAttribute("data-percent",perc.toFixed(1));
 
         const progress = document.createElement('progress');
         progress.max = totalTasks || 1;
@@ -122,13 +172,13 @@ function render(data) {
         progressWrap.append(progress);
         const progressLabel = document.createElement("DIV");
         progressLabel.classList.add("progress-label");
-        progressLabel.style.setProperty("--progress",`${perc}%`);
+        progressLabel.style.setProperty("--progress",`${perc.toFixed(1)}%`);
         const progFill = document.createElement("SPAN");
         progFill.classList.add("progress-label__fill");
-        progFill.textContent = `${perc}%`;
+        progFill.textContent = `${perc.toFixed(1)}%`;
         const progTrack = document.createElement("SPAN");
         progTrack.classList.add("progress-label__track");
-        progTrack.textContent = `${perc}%`;
+        progTrack.textContent = `${perc.toFixed(1)}%`;
         progressLabel.appendChild(progFill);
         progressLabel.appendChild(progTrack);
         progressWrap.appendChild(progressLabel);
@@ -203,6 +253,8 @@ function render(data) {
     sortTableRows(tbl);
 
     initModal();
+
+    pickRandomTasks();
 }
 
 const overlay = document.getElementById("modal-overlay");
@@ -256,12 +308,12 @@ function drawPercent(done,total,options={}) {
     const fixed = options.fixed ?? 2;
     const allOrNothing = options.allOrNothing ?? false;
 
-    const perc = ((done / total)*100).toFixed(fixed);
+    const perc = ((done / total)*100);
 
     const progress = document.createElement('progress');
     if ( allOrNothing ) {
         progress.classList.add("progress-allin");
-        if ( done === total ) {
+        if ( perc === 100 ) {
             progress.classList.add("progress-allin__success");
         }
     }
@@ -272,13 +324,13 @@ function drawPercent(done,total,options={}) {
     progressWrap.append(progress);
     const progressLabel = document.createElement("DIV");
     progressLabel.classList.add("progress-label");
-    progressLabel.style.setProperty("--progress",`${perc}%`);
+    progressLabel.style.setProperty("--progress",`${perc.toFixed(fixed)}%`);
     const progFill = document.createElement("SPAN");
     progFill.classList.add("progress-label__fill");
-    progFill.textContent = `${perc}%`;
+    progFill.textContent = `${perc.toFixed(fixed)}%`;
     const progTrack = document.createElement("SPAN");
     progTrack.classList.add("progress-label__track");
-    progTrack.textContent = `${perc}%`;
+    progTrack.textContent = `${perc.toFixed(fixed)}%`;
     progressLabel.appendChild(progFill);
     progressLabel.appendChild(progTrack);
     progressWrap.appendChild(progressLabel);
@@ -348,4 +400,14 @@ function renderLinkChecker(data) {
         document.querySelector("#pCheckLinks [data-modal-key]").removeAttribute("data-modal-key");
     }
     document.getElementById("pCheckLinks").appendChild(drawPercent(linksPassed,linksTotal,{allOrNothing:true}));
+}
+
+function pickRandomTasks() {
+    let chosenTasks = [];
+    Object.keys(randomTask).forEach(cat=>{
+        const randomTaskIndex = Math.floor(Math.random() * randomTask[cat].list.length);
+        const thisChosenTask = randomTask[cat].list[randomTaskIndex];
+        chosenTasks.push(["NOTDONE",thisChosenTask.join(": ")]);
+    });
+    modalContent["_random"] = chosenTasks;
 }
