@@ -219,6 +219,7 @@
         ["DONE","WOMEN"],
         ["DONE","TRANS"],
         ["DONE","SQUAD"],
+        ["SKIP","ASOCD"],
         ["NOTDONE","Anything on https://today.rtl.lu/sport/local/f91-dudelange-1900920"],
         ["NOTDONE","Are they 'professional'?"],
         ["NOTDONE","Citation needed: women's team league"],
@@ -676,7 +677,9 @@
     ]},
     "FC_Résidence_Walferdange":{"type":"CLUB","tasks":[
         ["DONE","Create page"],
-        ["NOTDONE","Get page approved before new season starts"]
+        ["NOTDONE","Get page approved before new season starts"],
+        ["NOTDONE","Link should be added on Walferdange Sports section once approved"],
+        ["DONE","TALKS"]
     ]},
     "FC_RM_Hamm_Benfica":{"type":"CLUB","tasks":[
         ["SKIP","SDESC"],
@@ -1407,7 +1410,7 @@
         ["NOTDONE","ZH: Has map, which could be useful for some pins?"],
         ["NOTDONE","LT: Has historical names for the division, but no sources - cite?"],
         ["DONE","Sticky header for winners table"],
-        ["NOTDONE","Winners table, no link to 'promotion groups' section"]
+        ["DONE","Winners table, no link to 'promotion groups' section"]
     ]},
     "Luxembourg_National_Division":{"type":"LEAGUE","tasks":[
         ["DONE","SDESC"],
@@ -1527,12 +1530,21 @@
         ["NOTDONE","Link to club website is 404"],
         ["NOTDONE","Stub (but no stub template) so what exists?"]
     ]},
-    "Stade_Géitz":{"type":"STADIUM","tasks":[]},
+    "Stade_Géitz":{"type":"STADIUM","tasks":[
+        ["DONE","SDESC"],
+        ["NOTDONE","Is the page still relevant? It's the OLD stadium of Wiltz"],
+        ["NOTDONE","It used to be Wiltz's stadium - between what years?"],
+        ["NOTDONE","When did they move to the Petz stadium?"],
+        ["NOTDONE","Infobox is missing"],
+        ["NOTDONE","It is now a housing estate/building development"],
+        ["NOTDONE","Overlink of 'football' 'stadium' in introduction"],
+        ["NOTDONE","World Stadiums link is 404"]
+    ]},
     "Stade_Jos_Haupert":{"type":"STADIUM","tasks":[
         ["DONE","SDESC"],
         ["DONE","References should be External links"],
         ["NOTDONE","Overlink of FOOTBALL and STADIUM?"],
-        ["NOTDONE","Red map marker covers more than that stadium? It's an odd shape"],
+        ["SKIP","Red map marker covers more than that stadium? It's an odd shape (NOTE: combines all three pitches)"],
         ["NOTDONE","Source for capacity and of which are seats?"],
         ["NOTDONE","First 'reference' is malformed?"],
         ["NOTDONE","Second 'reference' is 404"],
@@ -1626,7 +1638,8 @@
         ["NOTDONE","Find more sources / Remove the lack of sources warning?"],
         ["NOTDONE","Latest selection from https://clubee-storage-prod.s3.eu-central-1.amazonaws.com/4880/files/application/68e3cf82c71ff.pdf"],
         ["NOTDONE","Caps? From Fussball-lux"],
-        ["NOTDONE","Single source warning box needs dealing with"]
+        ["NOTDONE","Single source warning box needs dealing with"],
+        ["DONE","REFCK"]
     ]},
     "Luxembourg_national_under-21_football_team":{"type":"NATIONAL","tasks":[
         ["DONE","SDESC"],

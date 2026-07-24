@@ -68,5 +68,13 @@
     "archive": "https://web.archive.org/web/20180831035057/http://f91.lu/index.php/club/philosophie",
     "archive_status": "OKAY",
     "archive_check": "2026-07-24"
+  },
+  {
+    "url": "https://www.flf.lu/u18-19-leiwen-346836v4",
+    "citations": [
+      "Luxembourg_national_under-19_football_team"
+    ],
+    "last_status": "OKAY",
+    "last_check": "MANUAL"
   }
 ]
