@@ -1531,7 +1531,6 @@
         ["NOTDONE","Stub (but no stub template) so what exists?"]
     ]},
     "Stade_Géitz":{"type":"STADIUM","tasks":[
-        ["DONE","SDESC"],
         ["NOTDONE","Is the page still relevant? It's the OLD stadium of Wiltz"],
         ["NOTDONE","It used to be Wiltz's stadium - between what years?"],
         ["NOTDONE","When did they move to the Petz stadium?"],
