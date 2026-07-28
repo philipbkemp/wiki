@@ -4,8 +4,8 @@
     "url": "https://www.f91.lu/kader-90630v4",
     "redirect": "https://www.f91.lu/kader-90630v4/groups/50/seasons/220",
     "selector": "h4.mui-1tt7evh",
-    "last_check": "2026-07-27",
-    "last_status": "OKAY",
+    "last_check": "2026-07-28",
+    "last_status": "FAIL",
     "players": [
       "Rodrigo Goncalves Tavares",
       "Ivan Englaro",
@@ -36,6 +36,6 @@
       "Frank Krämer",
       "Sven Spanier"
     ],
-    "last_reason": null
+    "last_reason": "Missing from page: Aldo Josué \"Dinho\" Gomes Soares"
   }
 ]
