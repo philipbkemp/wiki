@@ -4,7 +4,7 @@
     "url": "https://www.f91.lu/kader-90630v4",
     "redirect": "https://www.f91.lu/kader-90630v4/groups/50/seasons/220",
     "selector": "h4.mui-1tt7evh",
-    "last_check": "2026-07-29",
+    "last_check": "2026-07-30",
     "last_status": "FAIL",
     "players": [
       "Rodrigo Goncalves Tavares",
@@ -36,6 +36,6 @@
       "Frank Krämer",
       "Sven Spanier"
     ],
-    "last_reason": "Missing from page: Aldo Josué \"Dinho\" Gomes Soares; Found on page but not in players list: Gédéon Dimbu Nsiala, Dylan Magalhaes Lucas, Mirza Rasiti, Joris Belgacem, Igor Teles Santos, Herman Moussaki, Redouane Boulbrachène, Conrad Azong, Bruno Correia Mendes Ramirez, Martim Elmano Mendes Marcelino, Leny Tela, Enzo Esposito"
+    "last_reason": "Missing from page: Aldo Josué \"Dinho\" Gomes Soares, Mike Daubenfeld, Nico Rischard, Frank Krämer, Sven Spanier; Found on page but not in players list: Gédéon Dimbu Nsiala, Dylan Magalhaes Lucas, Mirza Rasiti, Joris Belgacem, Igor Teles Santos, Herman Moussaki, Redouane Boulbrachène, Conrad Azong, Bruno Correia Mendes Ramirez, Martim Elmano Mendes Marcelino, Leny Tela, Enzo Esposito"
   }
 ]
