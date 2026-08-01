@@ -4,8 +4,8 @@
     "url": "https://www.f91.lu/kader-90630v4",
     "redirect": "https://www.f91.lu/kader-90630v4/groups/50/seasons/220",
     "selector": "h4.mui-1tt7evh",
-    "last_check": "2026-07-31",
-    "last_status": "FAIL",
+    "last_check": "2026-08-01",
+    "last_status": "OKAY",
     "players": [
       "Rodrigo Goncalves Tavares",
       "Ivan Englaro",
@@ -43,6 +43,6 @@
       "Leny Tela",
       "Enzo Esposito"
     ],
-    "last_reason": "MANUAL"
+    "last_reason": null
   }
 ]
