@@ -11,7 +11,8 @@ const ALLTASKS = {
     CLUB: ["SDESC","FOUND","CLIST","SEASN","STADE","MANGR","CHAIR","MERGE","WOMEN","CATEG","TRANS","LINKS","LHERE","REFCK","SQUAD","ESTIN","DESTN","ASOCE","ASOCD","PLYRS","BADGE","HYPHN","HONOR","EUROP","EUFOT","MONDE","RTLLU","URLWD","FUSSB","TALKS"],
     LEAGUE: ["SDESC","TRANS","LHERE","LINKS","HYPHN","REFCK","TALKS","CATEG"],
     STADIUM: ["SDESC","SLIST","CDATE","PHOTO","LOMAP","CAPAC","GRASS","TENNT","STADB","HOSTD","COORD","TRANS","LINKS","LHERE","HYPHN","REFCK","TALKS","CATEG"],
-    NATIONAL: ["SDESC","LINKS","TRANS","LHERE","CATEG","HYPHN","MANGR","REFCK","TALKS"]
+    NATIONAL: ["SDESC","LINKS","TRANS","LHERE","CATEG","HYPHN","MANGR","REFCK","TALKS"],
+    OTHER: ["SDESC","LINKS","TRANS","LHERE","CATEG","HYPHN","RERCK","TALKS"]
 };
 
 const TASKS_DESC = {
@@ -64,7 +65,8 @@ const randomTask = {
     CLUB: {list:[]},
     LEAGUE: {list:[]},
     STADIUM: {list:[]},
-    NATIONAL: {list:[]}
+    NATIONAL: {list:[]},
+    OTHER: {list:[]}
 };
 
 let thedata = null;
@@ -82,6 +84,8 @@ function render(data) {
     let doneStadium = 0;
     let totalNational = 0;
     let doneNational = 0;
+    let totalOther = 0;
+    let doneOther = 0;
 
     Object.keys(data).forEach(page => {
         const item = data[page];
@@ -130,6 +134,9 @@ function render(data) {
             case "NATIONAL":
                 totalNational += totalTasks;
                 doneNational += totalDone;
+            case "OTHER":
+                totalOther += totalTasks;
+                doneOther += totalDone;
         }
         randomTask[pageType].list = [...randomTask[pageType].list,...notDoneList];
 
@@ -241,10 +248,11 @@ function render(data) {
     document.getElementById("pLeague").appendChild(drawPercent(doneLeague,totalLeague));
     document.getElementById("pStadium").appendChild(drawPercent(doneStadium,totalStadium));
     document.getElementById("pNational").appendChild(drawPercent(doneNational,totalNational));
+    document.getElementById("pOther").appendChild(drawPercent(doneOther,totalOther));
 
     document.getElementById("pTotal").appendChild(drawPercent(
-        doneClub+doneLeague+doneStadium+doneNational,
-        totalClub+totalLeague+totalStadium+totalNational,
+        doneClub+doneLeague+doneStadium+doneNational+doneOther,
+        totalClub+totalLeague+totalStadium+totalNational+totalOther,
         {fixed:3}));
 
     parseCheckSquads();
