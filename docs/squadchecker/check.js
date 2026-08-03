@@ -124,6 +124,7 @@ async function main() {
 
   const browser = await chromium.launch();
   let lastHost = null;
+  let changes = false;
 
   try {
     for (const entry of entries) {
@@ -136,9 +137,12 @@ async function main() {
       console.log(`Checking ${entry.club} (${entry.url}) ...`);
       const { status, reasons } = await checkClub(entry, browser);
 
-      entry.last_status = status;
-      entry.last_check = today();
-      entry.last_reason = reasons.length > 0 ? reasons.join('; ') : null;
+      if ( status !== entry.last_status ) {
+        entry.last_status = status;
+        entry.last_check = today();
+        entry.last_reason = reasons.length > 0 ? reasons.join('; ') : null;
+        changes = true;
+      }
 
       console.log(`  -> ${status}`);
       for (const r of reasons) console.log(`     - ${r}`);
@@ -147,8 +151,12 @@ async function main() {
     await browser.close();
   }
 
-  await fs.writeFile(DATA_PATH, JSON.stringify(entries, null, 2) + '\n', 'utf-8');
-  console.log('squads.json updated.');
+  if ( changes ) {
+    await fs.writeFile(DATA_PATH, JSON.stringify(entries, null, 2) + '\n', 'utf-8');
+    console.log('squads.json updated.');
+  } else {
+    console.log("No changes detected");
+  }
 }
 
 main().catch((err) => {

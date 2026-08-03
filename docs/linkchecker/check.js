@@ -82,6 +82,7 @@ async function main() {
   const entries = JSON.parse(raw);
 
   let lastHost = null;
+  let changes = false;
 
   for (const entry of entries) {
     const target = entry.archive || entry.url;
@@ -99,18 +100,28 @@ async function main() {
     const status = await checkUrl(target);
 
     if (entry.archive) {
-      entry.archive_status = status;
-      entry.archive_check = today();
+      if ( status !== entry.archive_status ) {
+        entry.archive_status = status;
+        entry.archive_check = today();
+        changes = true;
+      }
     } else {
-      entry.last_status = status;
-      entry.last_check = today();
+      if ( status !== entry.last_status ) {
+        entry.last_status = status;
+        entry.last_check = today();
+        changes = true;
+      }
     }
 
     console.log(`  -> ${status}`);
   }
 
-  await fs.writeFile(DATA_PATH, JSON.stringify(entries, null, 2) + '\n', 'utf-8');
-  console.log('urls.json updated.');
+  if ( changes ) {
+    await fs.writeFile(DATA_PATH, JSON.stringify(entries, null, 2) + '\n', 'utf-8');
+    console.log('urls.json updated.');
+  } else {
+    console.log("No status changes");
+  }
 }
 
 main().catch((err) => {
