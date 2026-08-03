@@ -347,6 +347,7 @@
         ["SKIP","MANGR"],
         ["SKIP","CHAIR"],
         ["DONE","TRANS"],
+        ["DONE","STADE"],
         ["DONE","Does a logo exist?"],
         ["NOTDONE","No link to last season?"],
         ["NOTDONE","All time table is from 2002/03 - fussball lux has a more up to date one?"],
@@ -1342,7 +1343,7 @@
         ["NOTDONE","Source for winners table"],
         ["NOTDONE","Map of current clubs"],
         ["NOTDONE","Progres Listed as niederKorn and niederCorn - K or C?"],
-        ["NOTDONE","'Soccer' is mentioned"],
+        ["SKIP","'Soccer' is mentioned"],
         ["NOTDONE","DE: Has previous seasons - could that go somewhere?"],
         ["NOTDONE","LT: Details changes for 24-25 season onwards"],
         ["NOTDONE","Other languages mention (in passing) that the winner doesn't always compete in Europe. Can this be checked/cited?"],
@@ -1531,6 +1532,7 @@
         ["NOTDONE","Stub (but no stub template) so what exists?"]
     ]},
     "Stade_Géitz":{"type":"STADIUM","tasks":[
+        ["DONE","SDESC"],
         ["NOTDONE","Is the page still relevant? It's the OLD stadium of Wiltz"],
         ["NOTDONE","It used to be Wiltz's stadium - between what years?"],
         ["NOTDONE","When did they move to the Petz stadium?"],
@@ -1559,6 +1561,7 @@
     ]},
     "Stade_Josy_Barthel":{"type":"STADIUM","tasks":[
         ["DONE","SDESC"],
+        ["DONE","SLIST"],
         ["DONE","New stadium is 'currently due to open' in 2021."],
         ["NOTDONE","Has the demolition started?"],
         ["NOTDONE","Colon should be semi-colon when referring to 'only gold medalist'?"],
@@ -1661,7 +1664,7 @@
     "Luxembourg_women's_national_football_team":{"type":"NATIONAL","tasks":[
         ["DONE","SDESC"],
 	    ["NOTDONE","Very short history section - worth using 'beginning' subtitle?"],
-        ["NOTDONE","Different badge to Men's team - which is right?"],
+        ["DONE","Different badge to Men's team - which is right?"],
         ["DONE","Add nickname"],
         ["DONE","Is there a captain?"],
         ["DONE","Is the national stadium the home stadium?"],
@@ -1785,6 +1788,7 @@
         ["DONE","TRANS"],
         ["DONE","LHERE"],
         ["DONE","LINKS"],
+        ["DONE","CATEG"],
         ["DONE","Complete draft page and copy to article space"],
         ["DONE","Check reference to/in List of women's footballers with 100 or more international goals"],
         ["DONE","Check reference to/in List of women's footballers with 100 or more international caps"],
@@ -1883,6 +1887,7 @@
     ]},
     "Progrès_Niederkorn_2–0_Rangers":{"type":"OTHER","tasks":[
         ["DONE","LHERE"],
+        ["DONE","CATEG"],
         ["NOTDONE","Football in Luxembourg template"],
         ["NOTDONE","Can Rangers match template be closed by default?"],
         ["DONE","All references still 200 OK?"],
