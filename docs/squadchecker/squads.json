@@ -5,7 +5,7 @@
     "redirect": "https://www.f91.lu/kader-90630v4/groups/50/seasons/220",
     "selector": "h4.mui-1tt7evh",
     "last_check": "2026-08-03",
-    "last_status": "OKAY",
+    "last_status": "FAIL",
     "players": [
       "Rodrigo Goncalves Tavares",
       "Ivan Englaro",
@@ -43,6 +43,6 @@
       "Leny Tela",
       "Enzo Esposito"
     ],
-    "last_reason": null
+    "last_reason": "Found on page but not in players list: Ismaël Dumont"
   }
 ]
