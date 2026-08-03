@@ -1582,6 +1582,7 @@
     "Stade_rue_Henri_Dunant":{"type":"STADIUM","tasks":[]},
     "Stade_um_Bëchel":{"type":"STADIUM","tasks":[]},
     "VictoriArena":{"type":"STADIUM","tasks":[]},
+    "Stade_Municipal,_Schifflange":{"type":"STADIUM","tasks":[]},
     "Luxembourg_national_football_team":{"type":"NATIONAL","tasks":[
         ["DONE","SDESC"],
         ["DONE","Captain and head coach are still correct?"],
