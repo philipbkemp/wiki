@@ -259,7 +259,8 @@
         ["NOTDONE","ES: Sources for some managers"],
         ["NOTDONE","SV: Two-time League Cup winners? What competition is/was that?"],
         ["NOTDONE","Mentioned on Dudelange - check stat"],
-        ["NOTDONE","Team won 'team of the year' a couple of times - worthy of note here?"]
+        ["NOTDONE","Team won 'team of the year' a couple of times - worthy of note here?"],
+        ["DONE","ASOCE"]
     ]},
     "F.C._Luxembourg_City":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
@@ -889,7 +890,8 @@
         ["NOTDONE","DE: Short histories of former clubs - worth copying/sourcing?"],
         ["NOTDONE","DE+LB: Lists former players, including Lux top caps L Jans"],
         ["DONE","DE: has unsourced information about the two former clubs"],
-        ["NOTDONE","Fussball-lux has info (brief) about former clubs"]
+        ["NOTDONE","Fussball-lux has info (brief) about former clubs"],
+        ["SKIP","EUROP"]
     ]},
     "Jeunesse_Esch":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
@@ -1439,7 +1441,8 @@
         ["NOTDONE","ES+NL+CY+DE+PL: Competition system"],
         ["NOTDONE","ES+NL+DE: Top scorers"],
         ["DONE","DE: Record apps"],
-        ["DONE","There is a note attached to Red Boys in the list of winners. Why? Doesn't make much sense."]
+        ["DONE","There is a note attached to Red Boys in the list of winners. Why? Doesn't make much sense."],
+        ["DONE","HYPHN"]
     ]},
     "Op_Flohr_Stadion":{"type":"STADIUM","tasks":[
         ["DONE","SDESC"],
@@ -1707,7 +1710,16 @@
         ["DONE","2025 qualification is over"],
         ["NOTDONE","Anything to copy from the men's team page?"]
     ]},
-    "BGL_Ligue":{"type":"OTHER","tasks":[]},
+    "BGL_Ligue":{"type":"OTHER","tasks":[
+        ["SKIP","SDESC"],
+        ["SKIP","LINKS"],
+        ["SKIP","TRANS"],
+        ["SKIP","CATEG"],
+        ["SKIP","HYPHN"],
+        ["SKIP","REFCK"],
+        ["SKIP","TALKS"],
+        ["DONE","Page is a redirect to non-sponsored league name"]
+    ]},
     "Football_in_Luxembourg":{"type":"OTHER","tasks":[
         ["DONE","SDESC"],
         ["DONE","TRANS"],
@@ -1755,7 +1767,8 @@
         ["DONE","2025-26 clubs (inc changes)"],
         ["DONE","Add all stadiums to todo list"],
         ["NOTDONE","What happened to Vinesca Ehnen?"],
-        ["NOTDONE","Defunct table needs a 'since/year' column to provide order/history"]
+        ["NOTDONE","Defunct table needs a 'since/year' column to provide order/history"],
+        ["DONE","CATEG"]
     ]},
     "List_of_football_stadiums_in_Luxembourg":{"type":"OTHER","tasks":[
         ["SKIP","SDESC"],
@@ -1793,7 +1806,8 @@
         ["DONE","Check reference to/in List of women's footballers with 100 or more international goals"],
         ["DONE","Check reference to/in List of women's footballers with 100 or more international caps"],
         ["DONE","Check reference to/in List of top international women's football goalscorers by country"],
-        ["DONE","One source is fine for DE page and Men's page, but not women's?"]
+        ["DONE","One source is fine for DE page and Men's page, but not women's?"],
+        ["DONE","HYPHN"]
     ]},
     "Luxembourg_Cup":{"type":"OTHER","tasks":[
         ["DONE","SDESC"],
