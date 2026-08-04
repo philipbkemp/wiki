@@ -4,5 +4,7 @@
     "RAC_KAE=5-1",
     "MON_DIF=3-2",
     "RUM_SWI=1-0",
-    "WAL_HOS=3-2"
+    "WAL_HOS=3-2",
+    "BIS_DUD=2-0",
+    "UNA_VIC=4-0"
 ]
