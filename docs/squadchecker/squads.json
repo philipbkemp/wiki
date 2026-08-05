@@ -5,7 +5,7 @@
     "redirect": "https://www.f91.lu/kader-90630v4/groups/50/seasons/220",
     "selector": "h4.mui-1tt7evh",
     "last_check": "2026-08-05",
-    "last_status": "FAIL",
+    "last_status": "OKAY",
     "players": [
       "Rodrigo Goncalves Tavares",
       "Ivan Englaro",
@@ -46,6 +46,6 @@
       "Vin Schmit",
       "Alexis Rigoulot"
     ],
-    "last_reason": "PENDING"
+    "last_reason": null
   }
 ]
