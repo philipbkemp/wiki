@@ -191,9 +191,12 @@ abbr {
 a[target="_blank"] {
     color: blue;
     display: block;
+    max-width: 450px;
+    overflow: hidden;
     padding: 5px 10px;
     text-decoration: none;
-    width: 90%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     &:hover {
         background-color: #0000ff1c;
     }
