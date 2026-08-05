@@ -159,7 +159,7 @@ function render(data) {
     document.getElementById("losing_streak").textContent = streakLosses.count + " match" + (streakLosses.count !== 1 ? "es" : "");
     document.getElementById("losing_streak2").textContent = streakLosses.list.length + " clubs: " + streakLosses.list.join("; ");
 
-    document.getElementById("home_win").textContent = biggestHome.match.length !== 0 ? biggestHome.match.join("<br />") : "---";
-    document.getElementById("away_win").textContent = biggestAway.match.length !== 0 ? biggestAway.match.join("<br />") : "---";
-    document.getElementById("high_score").textContent = highestScoring.match.length !== 0 ? highestScoring.match.join("<br />") : "---";
+    document.getElementById("home_win").innerHTML = biggestHome.match.length !== 0 ? biggestHome.match.join("<br />") : "---";
+    document.getElementById("away_win").innerHTML = biggestAway.match.length !== 0 ? biggestAway.match.join("<br />") : "---";
+    document.getElementById("high_score").innerHTML = highestScoring.match.length !== 0 ? highestScoring.match.join("<br />") : "---";
 }
