@@ -31,6 +31,12 @@ if ( ! knownLinks ) {
             } else {
                 if ( href.startsWith("/w/index.php?title=") && href.indexOf("&action=edit&section=") !== -1 ) {
                     // edit a section, ignore
+                } else if ( href.startsWith("/w/index.php?title=") && href.endsWith("&redirect=no") ) {
+                    href = href.replace("/w/index.php?title=","").replace("&redirect=no","");
+                    if ( ! knownLinks.includes(href) ) {
+                        console.log("REDIRECT",href);
+                        found++;
+                    }
                 } else {
                     console.warn(href);
                     found++;
@@ -38,4 +44,8 @@ if ( ! knownLinks ) {
             }
         }
     });
+}
+
+if ( found === 0 ) {
+    console.warn("No new links found");
 }
