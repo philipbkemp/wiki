@@ -4,8 +4,8 @@
     "url": "https://www.f91.lu/kader-90630v4",
     "redirect": "https://www.f91.lu/kader-90630v4/groups/50/seasons/220",
     "selector": "h4.mui-1tt7evh",
-    "last_check": "2026-08-03",
-    "last_status": "OKAY",
+    "last_check": "2026-08-05",
+    "last_status": "FAIL",
     "players": [
       "Rodrigo Goncalves Tavares",
       "Ivan Englaro",
@@ -44,6 +44,6 @@
       "Enzo Esposito",
       "Ismaël Dumont"
     ],
-    "last_reason": null
+    "last_reason": "Found on page but not in players list: Vin Schmit, Alexis Rigoulot"
   }
 ]
