@@ -12,7 +12,8 @@ const ALLTASKS = {
     LEAGUE: ["SDESC","TRANS","LHERE","LINKS","HYPHN","REFCK","TALKS","CATEG"],
     STADIUM: ["SDESC","SLIST","CDATE","PHOTO","LOMAP","CAPAC","GRASS","TENNT","STADB","HOSTD","COORD","TRANS","LINKS","LHERE","HYPHN","REFCK","TALKS","CATEG"],
     NATIONAL: ["SDESC","LINKS","TRANS","LHERE","CATEG","HYPHN","MANGR","REFCK","TALKS"],
-    OTHER: ["SDESC","LINKS","TRANS","LHERE","CATEG","HYPHN","REFCK","TALKS"]
+    OTHER: ["SDESC","LINKS","TRANS","LHERE","CATEG","HYPHN","REFCK","TALKS"],
+    CATEG: ["SDESC","LINKS","LHERE"]
 };
 
 const TASKS_DESC = {
@@ -66,7 +67,8 @@ const randomTask = {
     LEAGUE: {list:[]},
     STADIUM: {list:[]},
     NATIONAL: {list:[]},
-    OTHER: {list:[]}
+    OTHER: {list:[]},
+    CATEG: {list:[]}
 };
 
 let thedata = null;
@@ -86,6 +88,8 @@ function render(data) {
     let doneNational = 0;
     let totalOther = 0;
     let doneOther = 0;
+    let totalCateg = 0;
+    let doneCateg = 0;
 
     Object.keys(data).forEach(page => {
         const item = data[page];
@@ -134,9 +138,15 @@ function render(data) {
             case "NATIONAL":
                 totalNational += totalTasks;
                 doneNational += totalDone;
+                break;
             case "OTHER":
                 totalOther += totalTasks;
                 doneOther += totalDone;
+                break;
+            case "CATEG":
+                totalCateg += totalTasks;
+                doneCateg += totalDone;
+                break;
         }
         randomTask[pageType].list = [...randomTask[pageType].list,...notDoneList];
 
@@ -249,10 +259,11 @@ function render(data) {
     document.getElementById("pStadium").appendChild(drawPercent(doneStadium,totalStadium));
     document.getElementById("pNational").appendChild(drawPercent(doneNational,totalNational));
     document.getElementById("pOther").appendChild(drawPercent(doneOther,totalOther));
+    document.getElementById("pCateg").appendChild(drawPercent(doneCateg,totalCateg));
 
     document.getElementById("pTotal").appendChild(drawPercent(
-        doneClub+doneLeague+doneStadium+doneNational+doneOther,
-        totalClub+totalLeague+totalStadium+totalNational+totalOther,
+        doneClub+doneLeague+doneStadium+doneNational+doneOther+doneCateg,
+        totalClub+totalLeague+totalStadium+totalNational+totalOther+totalCateg,
         {fixed:3}));
 
     parseCheckSquads();
