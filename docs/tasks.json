@@ -234,7 +234,7 @@
         ["NOTDONE","Were easily beaten - by what score?"],
         ["NOTDONE","First time in club history 3rd round of the competition - also for Luxembourg?"],
         ["NOTDONE","2013-14 win over Fola - surely a citation needed?"],
-        ["NOTDONE","'The men from the Grand Duchy' sounds too much like journalism, should be factually correct. Same with 'the Luxembourgers..' shortly after."],
+        ["DONE","'The men from the Grand Duchy' sounds too much like journalism, should be factually correct. Same with 'the Luxembourgers..' shortly after."],
         ["NOTDONE","Citation needed in Hitsory section, since January 2025"],
         ["NOTDONE","Paragraphs after getting into 2nd successive group stage, should be combined with previous as they discuss same topic."],
         ["NOTDONE","Coach resigned 2 days prior => citation?"],
@@ -622,7 +622,8 @@
         ["NOTDONE","Badge on website looks slightly different?"],
         ["NOTDONE","Any history?"],
         ["NOTDONE","They had a decent cup run in 2024-25, maybe worth mentioning?"],
-        ["NOTDONE","Anything about them on the interweb?"]
+        ["NOTDONE","Anything about them on the interweb?"],
+        ["SKIP","RTLLU"]
     ]},
     "FC_Mondercange":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
@@ -1929,7 +1930,7 @@
     "Category:Football in Luxembourg": {"type":"CATEG","tasks":[]},
     "Category:French expatriate sportspeople in Luxembourg": {"type":"CATEG","tasks":[]},
     "Category:International association football competitions hosted by Luxembourg": {"type":"CATEG","tasks":[]},
-    "Category:Lists of Luxembourgian sportspeople": {"type":"CATEG","tasks":[]},
+    "Category:Lists of Luxembourgian sportspeople": {"type":"CATEG","tasks":[["DONE","SDESC"],["NOTDONE","Move to LuxembourgISH?"]]},
     "Category:Lists of Luxembourgian women": {"type":"CATEG","tasks":[]},
     "Category:Lists of organisations based in Luxembourg": {"type":"CATEG","tasks":[]},
     "Category:Lists of women's association football players by national team": {"type":"CATEG","tasks":[]},
