@@ -152,9 +152,9 @@ function render(data) {
 
         const perc = ((totalDone / (totalTasks||1))*100);
 
-        if ( perc === randomTask.HIGH.value ) {
+        if ( perc === randomTask.HIGH.value && perc !== 100 ) {
             randomTask.HIGH.list = [...randomTask.HIGH.list,...notDoneList];
-        } else if ( perc > randomTask.HIGH.value ) {
+        } else if ( perc > randomTask.HIGH.value && perc !== 100 ) {
             randomTask.HIGH.value = perc;
             randomTask.HIGH.list = [...notDoneList];
         }

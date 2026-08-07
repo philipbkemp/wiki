@@ -299,3 +299,15 @@ a[target="_blank"] {
 body.modal-open {
     overflow: hidden;
 }
+
+tr[data-percent="100.0"] {
+    opacity: 0.3;
+    progress {
+        border: #2b7323;
+        &::-webkit-progress-value { background: #2b7323;}
+        &::-moz-progress-bar { background: #2b7323;}
+        &:indeterminate::-webkit-progress-value { background-color: #2b7323; }
+        &:indeterminate::-moz-progress-bar { background-color: #2b7323; }
+        &::-ms-fill { background-color: #2b7323; }
+    }
+}
