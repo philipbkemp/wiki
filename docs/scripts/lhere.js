@@ -21,7 +21,9 @@ if ( ! knownLinks ) {
                         found++;
                     }
                 } else {
-                    if ( ! knownLinks.includes(href) ) {
+                    if ( href.startsWith("Category_talk:") ) {
+                        // category talk page, ignore
+                    } else if ( ! knownLinks.includes(href) ) {
                         console.log(href);
                         found++;
                     }

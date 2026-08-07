@@ -237,7 +237,7 @@
         ["DONE","'The men from the Grand Duchy' sounds too much like journalism, should be factually correct. Same with 'the Luxembourgers..' shortly after."],
         ["NOTDONE","Citation needed in Hitsory section, since January 2025"],
         ["NOTDONE","Paragraphs after getting into 2nd successive group stage, should be combined with previous as they discuss same topic."],
-        ["NOTDONE","Coach resigned 2 days prior => citation?"],
+        ["DONE","Coach resigned 2 days prior => citation?"],
         ["NOTDONE","Honours - see also the other clubs honours sections?"],
         ["NOTDONE","Missing (red) links to early cup win/runners-up"],
         ["NOTDONE","European Record in new format"],
@@ -310,8 +310,8 @@
         ["DONE","CHAIR"],
         ["SKIP","MERGE"],
         ["DONE","LHERE"],
-        ["NOTDONE","Introduction include current division"],
-        ["NOTDONE","Introduction include current stadium"],
+        ["DONE","Introduction include current division"],
+        ["DONE","Introduction include current stadium"],
         ["NOTDONE","Website uses Official Website instead of Official URL"],
         ["NOTDONE","League (and last season) don't need 'Luxembourg'"],
         ["NOTDONE","Source for founding"],
@@ -1415,7 +1415,8 @@
         ["NOTDONE","ZH: Has map, which could be useful for some pins?"],
         ["NOTDONE","LT: Has historical names for the division, but no sources - cite?"],
         ["DONE","Sticky header for winners table"],
-        ["DONE","Winners table, no link to 'promotion groups' section"]
+        ["DONE","Winners table, no link to 'promotion groups' section"],
+        ["DONE","HYPHN"]
     ]},
     "Luxembourg_National_Division":{"type":"LEAGUE","tasks":[
         ["DONE","SDESC"],
@@ -1574,7 +1575,8 @@
         ["NOTDONE","Capacity in history is 7k, but infobox is 8k - which one? The cited source states neither"],
         ["NOTDONE","Source for 2014 history entry"],
         ["NOTDONE","Infobox says it has been 'reopened'? What's that about"],
-        ["NOTDONE","Racing's external link is from webarchive. Is there a way to note this?"]
+        ["NOTDONE","Racing's external link is from webarchive. Is there a way to note this?"],
+        ["DONE","TENNT"]
     ]},
     "Stade_Municipal_(Oberkorn)":{"type":"STADIUM","tasks":[
         ["DONE","SDESC"],
@@ -1648,7 +1650,10 @@
         ["NOTDONE","Latest selection from https://clubee-storage-prod.s3.eu-central-1.amazonaws.com/4880/files/application/68e3cf82c71ff.pdf"],
         ["NOTDONE","Caps? From Fussball-lux"],
         ["NOTDONE","Single source warning box needs dealing with"],
-        ["DONE","REFCK"]
+        ["DONE","REFCK"],
+        ["NOTDONE","DE+NL+PL: Qualification record"],
+        ["NOTDONE","UK: Talks about the U18 version of the team - but not the same thing?"],
+        ["DONE","TRANS"]
     ]},
     "Luxembourg_national_under-21_football_team":{"type":"NATIONAL","tasks":[
         ["DONE","SDESC"],
@@ -1722,7 +1727,8 @@
         ["SKIP","HYPHN"],
         ["SKIP","REFCK"],
         ["SKIP","TALKS"],
-        ["DONE","Page is a redirect to non-sponsored league name"]
+        ["DONE","Page is a redirect to non-sponsored league name"],
+        ["DONE","LHERE"]
     ]},
     "Football_in_Luxembourg":{"type":"OTHER","tasks":[
         ["DONE","SDESC"],
@@ -1845,7 +1851,7 @@
         ["DONE","LHERE"],
         ["DONE","Update external links"],
         ["DONE","List all previous Presidents for future review"],
-        ["NOTDONE","It's very much a stub. Is there anything from anywhere to make it into more than just a list of presidents?"],
+        ["SKIP","It's very much a stub. Is there anything from anywhere to make it into more than just a list of presidents? DRAFT PENDING"],
         ["NOTDONE","Do any of the previous Presidents deserve pages, or should the red-links be removed?"],
         ["DONE","Found in 1908, but first President started in 1903? Profootball.lu says Max Metz started in 1908"],
         ["DONE","J. Geschwind - what's the J for?"]
@@ -1927,10 +1933,14 @@
     "Category:Football clubs in Luxembourg": {"type":"CATEG","tasks":[]},
     "Category:Football competitions in Luxembourg": {"type":"CATEG","tasks":[]},
     "Category:Football leagues in Luxembourg": {"type":"CATEG","tasks":[]},
-    "Category:Football in Luxembourg": {"type":"CATEG","tasks":[]},
+    "Category:Football in Luxembourg": {"type":"CATEG","tasks":[["DONE","SDESC"]]},
     "Category:French expatriate sportspeople in Luxembourg": {"type":"CATEG","tasks":[]},
     "Category:International association football competitions hosted by Luxembourg": {"type":"CATEG","tasks":[]},
-    "Category:Lists of Luxembourgian sportspeople": {"type":"CATEG","tasks":[["DONE","SDESC"],["NOTDONE","Move to LuxembourgISH?"]]},
+    "Category:Lists of Luxembourgian sportspeople": {"type":"CATEG","tasks":[
+        ["DONE","SDESC"],
+        ["NOTDONE","Move to LuxembourgISH?"],
+        ["DONE","LHERE"]
+    ]},
     "Category:Lists of Luxembourgian women": {"type":"CATEG","tasks":[]},
     "Category:Lists of organisations based in Luxembourg": {"type":"CATEG","tasks":[]},
     "Category:Lists of women's association football players by national team": {"type":"CATEG","tasks":[]},
