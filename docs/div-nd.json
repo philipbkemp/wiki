@@ -6,5 +6,14 @@
     "RUM_SWI=1-0",
     "WAL_HOS=3-2",
     "BIS_DUD=2-0",
-    "UNA_VIC=4-0"
+    "UNA_VIC=4-0",
+
+    "DIF_RUM=2-0",
+    "DUD_UNA=0-2",
+    "ETZ_RAC=0-1",
+    "KAE_HOS=4-2",
+    "VIC_MON=2-3",
+    "WAL_PRO=0-1",
+    "SWI_WIL=2-7",
+    "JEU_BIS=0-2"
 ]
