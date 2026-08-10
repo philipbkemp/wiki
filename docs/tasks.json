@@ -232,7 +232,7 @@
         ["DONE","Took a while to challenge - is that citable?"],
         ["NOTDONE","1999/00 league title should like to season in place of citation."],
         ["NOTDONE","Were easily beaten - by what score?"],
-        ["NOTDONE","First time in club history 3rd round of the competition - also for Luxembourg?"],
+        ["SKIP","First time in club history 3rd round of the competition - also for Luxembourg?: Unclear"],
         ["NOTDONE","2013-14 win over Fola - surely a citation needed?"],
         ["DONE","'The men from the Grand Duchy' sounds too much like journalism, should be factually correct. Same with 'the Luxembourgers..' shortly after."],
         ["NOTDONE","Citation needed in Hitsory section, since January 2025"],
@@ -1265,7 +1265,7 @@
         ["DONE","CHAIR"],
         ["DONE","TRANS"],
         ["NOTDONE","Anything on https://today.rtl.lu/sport/local/us-mondorf-les-bains-1872821"],
-        ["NOTDONE","Top flight stadium, listed on stadium list page?"],
+        ["SKIP","Top flight stadium, listed on stadium list page?: No point listing redlink pages"],
         ["NOTDONE","Age group 5? Earliest is U7. Surely tweak that. According to source, that's correct for AGE, not for CATEGORY"],
         ["NOTDONE","Malformed part of references? Suggests domain is .luhistorie"],
         ["NOTDONE","Only one line of history?"],
@@ -1410,7 +1410,7 @@
         ["NOTDONE","Article is a stub, so what else can we find?"],
         ["NOTDONE","Can there be a history section that talks about the different names/sizes/series of the 2nd tier?"],
         ["NOTDONE","There's no trophy, so why do Mamer have '1st title' - there's no title, only promotion."],
-        ["NOTDONE","Worth adding all the missing seasons? Probably not.."],
+        ["SKIP","Worth adding all the missing seasons? Probably not..: No, they can be linked in the list of winners"],
         ["NOTDONE","Stub with just tables - what can be said about it?"],
         ["NOTDONE","ZH: Has map, which could be useful for some pins?"],
         ["NOTDONE","LT: Has historical names for the division, but no sources - cite?"],
@@ -1490,7 +1490,8 @@
         ["NOTDONE","Red box not present on map"],
         ["NOTDONE","Reference link is out of date"],
         ["NOTDONE","So much stub - anything exists?"],
-        ["NOTDONE","Is the COVID Rules photo still relevant in a post-COVID world?"]
+        ["NOTDONE","Is the COVID Rules photo still relevant in a post-COVID world?"],
+        ["SKIP","STADB"]
     ]},
     "Stade_Boy_Konen":{"type":"STADIUM","tasks":[]},
     "Stade_Communal,_Mondercange":{"type":"STADIUM","tasks":[]},
@@ -1589,7 +1590,10 @@
     "Stade_Municipal,_Pétange":{"type":"STADIUM","tasks":[]},
     "Stade_Municipal,_Rumelange":{"type":"STADIUM","tasks":[]},
     "Stade_Municipal_de_la_Ville_de_Differdange":{"type":"STADIUM","tasks":[]},
-    "Stade_Rue_de_Lenningen":{"type":"STADIUM","tasks":[]},
+    "Stade_Rue_de_Lenningen":{"type":"STADIUM","tasks":[
+        ["SKIP","SDESC"],
+        ["DONE","Redirection to page with stadium's new name"]
+    ]},
     "Stade_rue_Henri_Dunant":{"type":"STADIUM","tasks":[]},
     "Stade_um_Bëchel":{"type":"STADIUM","tasks":[]},
     "VictoriArena":{"type":"STADIUM","tasks":[]},
@@ -1635,7 +1639,8 @@
         ["DONE","404 for U17 Red Lions page in references"],
         ["NOTDONE","Shirts should match main men's team?"],
         ["DONE","UEFA and Wikipedia have different coaches listed - who is right?"],
-        ["DONE","Consistency between all teams' Association in infobox"]
+        ["DONE","Consistency between all teams' Association in infobox"],
+        ["DONE","MANGR"]
     ]},
     "Luxembourg_national_under-19_football_team":{"type":"NATIONAL","tasks":[
         ["DONE","SDESC"],
@@ -1818,7 +1823,8 @@
         ["DONE","Check reference to/in List of women's footballers with 100 or more international caps"],
         ["DONE","Check reference to/in List of top international women's football goalscorers by country"],
         ["DONE","One source is fine for DE page and Men's page, but not women's?"],
-        ["DONE","HYPHN"]
+        ["DONE","HYPHN"],
+        ["DONE","TALKS"]
     ]},
     "Luxembourg_Cup":{"type":"OTHER","tasks":[
         ["DONE","SDESC"],
@@ -1908,7 +1914,11 @@
         ["NOTDONE","Would it be useful to have a table of winners (D Turpel: 2) or by club (F91: 11) or nation (BIH: 1)"],
         ["NOTDONE","I read somewhere it was 'Monsieur Football' for a while?"],
         ["NOTDONE","Is it still active?"],
-        ["NOTDONE","English player of the season indicates with colours if they were top scorer, or league winner that season"]
+        ["NOTDONE","English player of the season indicates with colours if they were top scorer, or league winner that season"],
+        ["NOTDONE","DE: Has Mr Football award? NL has some of these"],
+        ["NOTDONE","DE: Has Ladies version"],
+        ["NOTDONE","DE: Refers to a page on fussball-lux about it"],
+        ["DONE","TRANS"]
     ]},
     "Progrès_Niederkorn_2–0_Rangers":{"type":"OTHER","tasks":[
         ["DONE","LHERE"],
@@ -1933,7 +1943,10 @@
     "Category:Football clubs in Luxembourg": {"type":"CATEG","tasks":[]},
     "Category:Football competitions in Luxembourg": {"type":"CATEG","tasks":[]},
     "Category:Football leagues in Luxembourg": {"type":"CATEG","tasks":[]},
-    "Category:Football in Luxembourg": {"type":"CATEG","tasks":[["DONE","SDESC"]]},
+    "Category:Football in Luxembourg": {"type":"CATEG","tasks":[
+        ["DONE","SDESC"],
+        ["DONE","LHERE"]
+    ]},
     "Category:French expatriate sportspeople in Luxembourg": {"type":"CATEG","tasks":[]},
     "Category:International association football competitions hosted by Luxembourg": {"type":"CATEG","tasks":[]},
     "Category:Lists of Luxembourgian sportspeople": {"type":"CATEG","tasks":[
