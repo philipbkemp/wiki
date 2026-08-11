@@ -108,7 +108,8 @@
         ["NOTDONE","TRA.ES: Fola = FOotball + LAwn tennis; source?"],
         ["NOTDONE","TRA.FR+PT+NL+KK+AZ+IT+PT+PL+HE+AZ: Significant History"],
         ["NOTDONE","TRA.CA+ARZ: Photo of former players"],
-        ["NOTDONE","TRA.NO: Photos of the stadium"]
+        ["NOTDONE","TRA.NO: Photos of the stadium"],
+        ["DONE","HYPHN"]
     ]},
     "CS_Grevenmacher":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
@@ -907,7 +908,7 @@
 	    ["NOTDONE","EU Football profile page?"],
         ["NOTDONE","RTL football profile page?"],
         ["NOTDONE","stadium photo copy on stadium page?"],
-        ["NOTDONE","Still 28 titles? Still the most."],
+        ["DONE","Still 28 titles? Still the most."],
         ["NOTDONE","Source for first history paragraph? fussball-lux?"],
         ["NOTDONE","RBDF/DIFF count as 14 luxembourg cups? or should that increase now because some totals combine it."],
         ["NOTDONE","Still 8 doubles? Is that the most (not mentioned, but worth mentioning?)"],
@@ -1412,7 +1413,7 @@
         ["NOTDONE","There's no trophy, so why do Mamer have '1st title' - there's no title, only promotion."],
         ["SKIP","Worth adding all the missing seasons? Probably not..: No, they can be linked in the list of winners"],
         ["NOTDONE","Stub with just tables - what can be said about it?"],
-        ["NOTDONE","ZH: Has map, which could be useful for some pins?"],
+        ["SKIP","ZH: Has map, which could be useful for some pins? :Should be on season, not league"],
         ["NOTDONE","LT: Has historical names for the division, but no sources - cite?"],
         ["DONE","Sticky header for winners table"],
         ["DONE","Winners table, no link to 'promotion groups' section"],
@@ -1449,7 +1450,7 @@
     ]},
     "Op_Flohr_Stadion":{"type":"STADIUM","tasks":[
         ["DONE","SDESC"],
-        ["NOTDONE","Stadium source is dead - new site?"],
+        ["SKIP","Stadium source is dead - new site? :Archive link exists"],
         ["NOTDONE","Intro says one capacity, infobox another"],
         ["NOTDONE","World Stadium external link is wayback, but not stated as such"],
         ["NOTDONE","It has a running track. Worth mentioning?"],
@@ -1824,7 +1825,8 @@
         ["DONE","Check reference to/in List of top international women's football goalscorers by country"],
         ["DONE","One source is fine for DE page and Men's page, but not women's?"],
         ["DONE","HYPHN"],
-        ["DONE","TALKS"]
+        ["DONE","TALKS"],
+        ["DONE","REFCK"]
     ]},
     "Luxembourg_Cup":{"type":"OTHER","tasks":[
         ["DONE","SDESC"],
@@ -1956,7 +1958,9 @@
     ]},
     "Category:Lists of Luxembourgian women": {"type":"CATEG","tasks":[]},
     "Category:Lists of organisations based in Luxembourg": {"type":"CATEG","tasks":[]},
-    "Category:Lists of women's association football players by national team": {"type":"CATEG","tasks":[]},
+    "Category:Lists of women's association football players by national team": {"type":"CATEG","tasks":[
+        ["SKIP","SDESC"]
+    ]},
     "Category:Luxembourg Cup": {"type":"CATEG","tasks":[]},
     "Category:Luxembourg Cup seasons": {"type":"CATEG","tasks":[]},
     "Category:Luxembourg Division of Honour players": {"type":"CATEG","tasks":[]},

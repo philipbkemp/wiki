@@ -76,5 +76,29 @@
     ],
     "last_status": "OKAY",
     "last_check": "2026-08-03"
+  },
+  {
+    "url": "https://www.uefa.com/womenseuropeanqualifiers/match/85082--slovakia-vs-luxembourg/",
+    "citations": [
+      "List_of_Luxembourg_women's_international_footballers"
+    ],
+    "last_status": "PENDING",
+    "last_check": "____-__-__"
+  },
+  {
+    "url": "https://www.fussball-lux.lu/Nationalspielerinnen1.html",
+    "citations": [
+      "List_of_Luxembourg_women's_international_footballers"
+    ],
+    "last_status": "PENDING",
+    "last_check": "____-__-__"
+  },
+  {
+    "url": "https://www.soccerway.com/team/luxembourg/Gzy5vMCN/",
+    "citations": [
+      "List_of_Luxembourg_women's_international_footballers"
+    ],
+    "last_status": "PENDING",
+    "last_check": "____-__-__"
   }
 ]
