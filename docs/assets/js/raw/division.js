@@ -1,4 +1,11 @@
-fetch('div-nd.json')
+let target = "";
+if ( window.location.href.indexOf("national-division") !== -1 ) {
+    target = "div-nd";
+} else if ( window.location.href.indexOf("division-honour") !== -1 ) {
+    target = "div-dh";
+}
+
+fetch(`${target}.json`)
     .then(res => res.json())
     .then(data => render(data))
     .catch(err => {
