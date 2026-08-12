@@ -52,7 +52,8 @@
         ["NOTDONE","Racing and Sporting don't have their own honours list? Should be 'see also'"],
         ["DONE","European record needs revamping"],
         ["NOTDONE","Managers list is incomplete (warning), but how to source?"],
-        ["DONE","Anything found online to add to the page?"]
+        ["DONE","Anything found online to add to the page?"],
+        ["DONE","ESTIN"]
     ]},
     "CS_Alliance_01":{"type":"CLUB","tasks":[
         ["SKIP","SDESC"],
@@ -246,7 +247,7 @@
         ["NOTDONE","Managers missing sources"],
         ["NOTDONE","Managers not matching infobox as 'present' manager is not on F91's website"],
         ["NOTDONE","Check all references"],
-        ["NOTDONE","Says official site is in LB, but it's mainly FR?"],
+        ["DONE","Says official site is in LB, but it's mainly FR?"],
         ["NOTDONE","Should Facebook/Instagram be External Links?"],
         ["NOTDONE","What about proper external links - fussball lux, RTL, Fupa, UEFA"],
         ["DONE","Talk: f91 Dudelange.gif"],
@@ -1494,7 +1495,6 @@
         ["NOTDONE","Is the COVID Rules photo still relevant in a post-COVID world?"],
         ["SKIP","STADB"]
     ]},
-    "Stade_Boy_Konen":{"type":"STADIUM","tasks":[]},
     "Stade_Communal,_Mondercange":{"type":"STADIUM","tasks":[]},
     "Stade_de_la_Frontière":{"type":"STADIUM","tasks":[
         ["DONE","SDESC"],
@@ -1594,6 +1594,16 @@
     "Stade_Rue_de_Lenningen":{"type":"STADIUM","tasks":[
         ["SKIP","SDESC"],
         ["DONE","Redirection to page with stadium's new name"]
+    ]},
+    "Stade_Fernand_Weber":{"type":"STADIUM","tasks":[
+        ["DONE","SDESC"],
+        ["DONE","COORD"],
+        ["NOTDONE","Overlinking of football+stadium in intro"],
+        ["NOTDONE","Source for rename to Fernand Weber?"],
+        ["NOTDONE","Previous name was... immediately after bolding what it used to be called"],
+        ["NOTDONE","Stub?"],
+        ["NOTDONE","Map doesn't have red border"],
+        ["NOTDONE","Archived link to terrain goes to wrong page?"]
     ]},
     "Stade_rue_Henri_Dunant":{"type":"STADIUM","tasks":[]},
     "Stade_um_Bëchel":{"type":"STADIUM","tasks":[]},
@@ -1784,6 +1794,7 @@
         ["DONE","Add all stadiums to todo list"],
         ["NOTDONE","What happened to Vinesca Ehnen?"],
         ["NOTDONE","Defunct table needs a 'since/year' column to provide order/history"],
+        ["NOTDONE","Did AS Luxembourg really use Stade Boy Konan? It's presented as a Rugby Stadium"],
         ["DONE","CATEG"]
     ]},
     "List_of_football_stadiums_in_Luxembourg":{"type":"OTHER","tasks":[

@@ -3,7 +3,7 @@ console.clear();
 if ( ! knownLinks ) {
     console.error("Did not load known links");
 } else {
-    links = document.querySelectorAll("#bodyContent a:not(.external)");
+    links = document.querySelectorAll(".mw-category a:not(.CategoryTreeToggle)");
 
     found = 0;
 
@@ -45,8 +45,8 @@ if ( ! knownLinks ) {
                     } else if ( href === "/wiki/Help:Category" ) {
                         // ignore
                     } else {
-                        if ( href.startsWith("/wiki/Category:") ) {
-                            href = href.replace("/wiki/Category:","Category:");
+                        if ( href.startsWith("/wiki/") ) {
+                            href = href.replace("/wiki/","");
                             if ( ! knownLinks.includes(href) ) {
                                 console.log(href);
                                 found++;
