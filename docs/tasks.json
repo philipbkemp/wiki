@@ -94,7 +94,7 @@
         ["NOTDONE","No history since 2016?"],
         ["NOTDONE","Bullet list history should be sourced, and shouldn't be list?"],
         ["NOTDONE","Link to 'Double' doesn't go to Luxembourg. Also note it was the first one in Luxembourg."],
-        ["NOTDONE","1955 lean period - did they win the cup again?"],
+        ["DONE","1955 lean period - did they win the cup again?"],
         ["NOTDONE","Luxembourg cup honours don't link to seasons"],
         ["DONE","Coefficient should have a title"],
         ["NOTDONE","European record correct?"],
@@ -625,7 +625,8 @@
         ["NOTDONE","Any history?"],
         ["NOTDONE","They had a decent cup run in 2024-25, maybe worth mentioning?"],
         ["NOTDONE","Anything about them on the interweb?"],
-        ["SKIP","RTLLU"]
+        ["SKIP","RTLLU"],
+        ["SKIP","EUFOT"]
     ]},
     "FC_Mondercange":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
@@ -1411,7 +1412,7 @@
         ["DONE","Link to fupa?"],
         ["NOTDONE","Article is a stub, so what else can we find?"],
         ["NOTDONE","Can there be a history section that talks about the different names/sizes/series of the 2nd tier?"],
-        ["NOTDONE","There's no trophy, so why do Mamer have '1st title' - there's no title, only promotion."],
+        ["DONE","There's no trophy, so why do Mamer have '1st title' - there's no title, only promotion."],
         ["SKIP","Worth adding all the missing seasons? Probably not..: No, they can be linked in the list of winners"],
         ["NOTDONE","Stub with just tables - what can be said about it?"],
         ["SKIP","ZH: Has map, which could be useful for some pins? :Should be on season, not league"],
@@ -1457,7 +1458,8 @@
         ["NOTDONE","It has a running track. Worth mentioning?"],
         ["NOTDONE","Anything exist about it?"],
         ["NOTDONE","Any more gallery photos?"],
-        ["NOTDONE","Anything from Grevenmacher's page?"]
+        ["NOTDONE","Anything from Grevenmacher's page?"],
+        ["DONE","CDATE"]
     ]},
     "Stade_Achille_Hammerel":{"type":"STADIUM","tasks":[
         ["DONE","SDESC"],
@@ -1631,7 +1633,8 @@
         ["DONE","There is something off about the staff table - HR instead of cells? The lines don't go all the way across (see roles with 2+ staff)"],
         ["DONE","Squad for SWE and SUI friendlies announced on FLF.lu on Thursday evening"],
         ["NOTDONE","Can the top capped players and scorers be dynamically built from the list of players page?"],
-        ["NOTDONE","Why does footnotes have two notelist templates included?"]
+        ["NOTDONE","Why does footnotes have two notelist templates included?"],
+        ["DONE","TALKS"]
     ]},
     "Luxembourg_national_under-17_football_team":{"type":"NATIONAL","tasks":[
         ["DONE","SDESC"],
@@ -1908,7 +1911,7 @@
     "Luxembourg_women's_national_football_team_results":{"type":"OTHER","tasks":[
         ["NOTDONE","All goalscorers correctly listed?"],
         ["NOTDONE","All results appear on opponents' lists?"],
-        ["NOTDONE","any missing players?"],
+        ["DONE","any missing players?"],
         ["DONE","Luxembourg women's national football team results (2000–2019)"],
         ["NOTDONE","Luxembourg women's national football team results (2020–present)"],
         ["DONE","Template:Luxembourg women's national football team results"],
@@ -1958,7 +1961,8 @@
     "Category:Football leagues in Luxembourg": {"type":"CATEG","tasks":[]},
     "Category:Football in Luxembourg": {"type":"CATEG","tasks":[
         ["DONE","SDESC"],
-        ["DONE","LHERE"]
+        ["DONE","LHERE"],
+        ["DONE","LINKS"]
     ]},
     "Category:French expatriate sportspeople in Luxembourg": {"type":"CATEG","tasks":[]},
     "Category:International association football competitions hosted by Luxembourg": {"type":"CATEG","tasks":[]},
@@ -1994,10 +1998,19 @@
     "Category:Sports clubs and teams in Dudelange": {"type":"CATEG","tasks":[]},
     "Category:Women's football competitions in Luxembourg": {"type":"CATEG","tasks":[]},
     "Category:F91 Dudelange": {"type":"CATEG","tasks":[]},
-    "Category:FC Differdange 03 players": {"type":"CATEG","tasks":[]},
+    "Category:FC Differdange 03 players": {"type":"CATEG","tasks":[
+        ["DONE","SDESC"]
+    ]},
     "Category:FC Progrès Niederkorn players": {"type":"CATEG","tasks":[]},
     "Category:FC Swift Hesperange players": {"type":"CATEG","tasks":[]},
-    "1909–10 Luxembourg National Division": {"type":"SEASON","tasks":[]},
+    "1909–10 Luxembourg National Division": {"type":"SEASON","tasks":[
+        ["DONE","SDESC"],
+        ["NOTDONE","Fussball lux has a date for the final"],
+        ["NOTDONE","Final should be like a match, not a table?"],
+        ["NOTDONE","'_Final_ Tie-break' => 'Final'?"],
+        ["NOTDONE","Wasn't Galia an old name for Stade Dudelange?"],
+        ["NOTDONE","Chiers Rodange are not Rodange 91 - while the redirect make sense, it also doesn't"]
+    ]},
     "1910–11 Luxembourg National Division": {"type":"SEASON","tasks":[]},
     "1911–12 Luxembourg National Division": {"type":"SEASON","tasks":[]},
     "1913–14 Luxembourg National Division": {"type":"SEASON","tasks":[]},

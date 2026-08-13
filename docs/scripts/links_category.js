@@ -60,4 +60,8 @@ if ( ! knownLinks ) {
             }
         }
     });
+
+    if ( found === 0 ) {
+        console.log("%cNo new links found","background: #198754; color: white; padding: 2px 6px; border-radius: 4px; font-weight: bold;");
+    }
 }
