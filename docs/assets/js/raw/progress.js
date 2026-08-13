@@ -13,7 +13,8 @@ const ALLTASKS = {
     STADIUM: ["SDESC","SLIST","CDATE","PHOTO","LOMAP","CAPAC","GRASS","TENNT","STADB","HOSTD","COORD","TRANS","LINKS","LHERE","HYPHN","REFCK","TALKS","CATEG"],
     NATIONAL: ["SDESC","LINKS","TRANS","LHERE","CATEG","HYPHN","MANGR","REFCK","TALKS"],
     OTHER: ["SDESC","LINKS","TRANS","LHERE","CATEG","HYPHN","REFCK","TALKS"],
-    CATEG: ["SDESC","LINKS","LHERE"]
+    CATEG: ["SDESC","LINKS","LHERE"],
+    SEASON: ["SDESC","CATEG","FUSSB","HPYHN","LHERE","LINKS","REFCK","TALKS","TRANS","PLAYD","GOALS","TOPSC","TABLE","CMAPS","XINLX","XINAF","EUFOT","RSLTS","TEAMS","STATS"]
 };
 
 const TASKS_DESC = {
@@ -25,6 +26,7 @@ const TASKS_DESC = {
     CDATE: "Construction date(s)",
     CHAIR: "Current Chairman/President",
     CLIST: "Clubs in Luxembourg page listing",
+    CMAPS: "Map of Clubs",
     COORD: "Coordinates of location",
     DESTN: "Category: YYYY_disestablishments_in_Luxembourg",
     ESTIN: "Category: YYYY_establishments_in_Luxembourg",
@@ -32,6 +34,7 @@ const TASKS_DESC = {
     EUROP: "European record",
     FOUND: "Year founded",
     FUSSB: "Fussball-lux profile",
+    GOALS: "Goals scored count",
     GRASS: "Grass or artificial",
     HONOR: "Honours",
     HOSTD: "Hosted any international or UEFA or notable matches",
@@ -43,8 +46,10 @@ const TASKS_DESC = {
     MERGE: "Club mergers",
     MONDE: "Mondefootball.fr profile (eg https://www.mondefootball.fr/teams/te18512/spora-luxemburg/)",
     PHOTO: "Main photo",
+    PLAYD: "Games played total",
     PLYRS: "Category: CLUB_players",
     REFCK: "Load references into linkchecker",
+    RSLTS: "Results table matches standings table",
     RTLLU: "RTL profile (eg https://www.rtl.lu/sport/futtball/resultater/teams?c=381)",
     SEASN: "Current season",
     SDESC: "Short description alignment",
@@ -52,11 +57,17 @@ const TASKS_DESC = {
     SQUAD: "Load team into Squad checker",
     STADB: "StadiumDB.com reference",
     STADE: "Stadium",
+    STATS: "Infobox statistics",
+    TABLE: "Table formatting and colours",
     TALKS: "Any talk page messages",
+    TEAMS: "List of Teams/Stadiums/etc table",
     TENNT: "Current Tennant",
+    TOPSC: "Top Scorers list",
     TRANS: "Anything on LB+",
     URLWD: "URL in WikiData",
     WOMEN: "Women's team",
+    XINAF: "____ in Association Football > lists winner?",
+    XINLX: "____ in Luxembourg > lists winner?"
 };
 
 const randomTask = {
@@ -68,7 +79,8 @@ const randomTask = {
     STADIUM: {list:[]},
     NATIONAL: {list:[]},
     OTHER: {list:[]},
-    CATEG: {list:[]}
+    CATEG: {list:[]},
+    SEASON: {list:[]}
 };
 
 let thedata = null;
@@ -90,6 +102,8 @@ function render(data) {
     let doneOther = 0;
     let totalCateg = 0;
     let doneCateg = 0;
+    let totalSeason = 0;
+    let doneSeason = 0;
 
     Object.keys(data).forEach(page => {
         const item = data[page];
@@ -146,6 +160,10 @@ function render(data) {
             case "CATEG":
                 totalCateg += totalTasks;
                 doneCateg += totalDone;
+                break;
+            case "SEASON":
+                totalSeason += totalTasks;
+                doneSeason += totalDone;
                 break;
         }
         randomTask[pageType].list = [...randomTask[pageType].list,...notDoneList];
@@ -260,10 +278,11 @@ function render(data) {
     document.getElementById("pNational").appendChild(drawPercent(doneNational,totalNational));
     document.getElementById("pOther").appendChild(drawPercent(doneOther,totalOther));
     document.getElementById("pCateg").appendChild(drawPercent(doneCateg,totalCateg));
+    document.getElementById("pSeasons").appendChild(drawPercent(doneSeason,totalSeason));
 
     document.getElementById("pTotal").appendChild(drawPercent(
-        doneClub+doneLeague+doneStadium+doneNational+doneOther+doneCateg,
-        totalClub+totalLeague+totalStadium+totalNational+totalOther+totalCateg,
+        doneClub+doneLeague+doneStadium+doneNational+doneOther+doneCateg+doneSeason,
+        totalClub+totalLeague+totalStadium+totalNational+totalOther+totalCateg+totalSeason,
         {fixed:3}));
 
     parseCheckSquads();
