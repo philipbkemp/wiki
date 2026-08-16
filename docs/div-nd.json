@@ -15,5 +15,7 @@
     "VIC_MON=2-3",
     "WAL_PRO=0-1",
     "SWI_WIL=2-7",
-    "JEU_BIS=0-2"
+    "JEU_BIS=0-2",
+
+    "WIL_DIF=1-2"
 ]
