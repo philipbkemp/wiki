@@ -17,5 +17,12 @@
     "SWI_WIL=2-7",
     "JEU_BIS=0-2",
 
-    "WIL_DIF=1-2"
+    "WIL_DIF=1-2",
+    "UNA_JEU=1-0",
+    "MON_DUD=1-0",
+    "RUM_ROS=3-2",
+    "HOS_ETZ=5-1",
+    "KAE_WAL=1-2",
+    "BIS_PRO=0-4",
+    "RAC_SWI=5-0"
 ]
