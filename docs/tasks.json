@@ -102,7 +102,7 @@
         ["NOTDONE","Squad update schedule"],
         ["NOTDONE","Former coaches does not seem up to date based on info box. Missing Bensi from 24/25 season as well."],
         ["NOTDONE","All references work?"],
-        ["NOTDONE","External links +FLF"],
+        ["DONE","External links +FLF"],
         ["NOTDONE","Club of Pioneers has specific founding date"],
         ["NOTDONE","Club of Pioneers lists incorrect league. Needs updating for everyone?"],
         ["NOTDONE","TRA.ES+NL+BG+KK+BS+DE+LB: Notable former players"],
@@ -1142,7 +1142,8 @@
         ["NOTDONE","Is there anything out there on the internet about them?"],
         ["NOTDONE","Kit correct?"],
         ["DONE","Profiles on RTL, Fussball Lux, Fupa?"],
-        ["NOTDONE","Why link to just Hautcharage? I know the club redirects here, but linking to the town is odd"]
+        ["NOTDONE","Why link to just Hautcharage? I know the club redirects here, but linking to the town is odd"],
+        ["DONE","MERGE"]
     ]},
     "Union_05_Kayl-Tétange":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
@@ -1369,7 +1370,8 @@
         ["DONE","Ext link: https://www.flf.lu/tabellen-80253v4/leagues/960/seasons/212"],
         ["DONE","Ext link: https://www.flf.lu/tabellen-80253v4/leagues/961/seasons/212"],
         ["NOTDONE","Source/Ref for each of previous winners?"],
-        ["NOTDONE","Winners before 96/97 season?"]
+        ["NOTDONE","Winners before 96/97 season?"],
+        ["DONE","HYPHN"]
     ]},
     "Luxembourg_2._Division":{"type":"LEAGUE","tasks":[
         ["DONE","SDESC"],
@@ -1594,7 +1596,8 @@
         ["NOTDONE","No red box in map"],
         ["NOTDONE","World Stadiums reference is 404"],
         ["NOTDONE","Really small stub - what exists?"],
-        ["NOTDONE","Consistency with other 'stade municipal's"]
+        ["NOTDONE","Consistency with other 'stade municipal's"],
+        ["SKIP","HOSTD"]
     ]},
     "Stade_Municipal,_Pétange":{"type":"STADIUM","tasks":[
 
@@ -1727,7 +1730,8 @@
         ["NOTDONE","Why are there external links in the upcoming fixtures section?"],
         ["NOTDONE","Anything to copy from the men's team page?"],
         ["NOTDONE","Why is there RET, INJ, etc in the current squad? Those aren't used."],
-        ["NOTDONE","Worth listing stadium usage by count?"]
+        ["NOTDONE","Worth listing stadium usage by count?"],
+        ["DONE","TALKS"]
     ]},
     "Luxembourg_women's_national_under-17_football_team":{"type":"NATIONAL","tasks":[
         ["DONE","SDESC"],
@@ -1913,7 +1917,8 @@
         ["NOTDONE","Note about cup eligibility"],
         ["NOTDONE","Note about the Reserve Leagues"],
         ["NOTDONE","Once up and running, note about the youth leagues"],
-        ["NOTDONE","Once up and running, note about non-league youth levels"]
+        ["NOTDONE","Once up and running, note about non-league youth levels"],
+        ["DONE","HPYHN"]
     ]},
     "Luxembourg_national_football_team_results":{"type":"OTHER","tasks":[
 
@@ -2022,7 +2027,8 @@
 
     ]},
     "Category:Luxembourg Division of Honour players": {"type":"CATEG","tasks":[
-
+        ["DONE","SDESC"],
+        ["NOTDONE","Confirm players listed would have played in Division of Honour"]
     ]},
     "Category:Luxembourg men's international footballers": {"type":"CATEG","tasks":[
 
@@ -2093,7 +2099,8 @@
         ["NOTDONE","Final should be like a match, not a table?"],
         ["NOTDONE","'_Final_ Tie-break' => 'Final'?"],
         ["NOTDONE","Wasn't Galia an old name for Stade Dudelange?"],
-        ["NOTDONE","Chiers Rodange are not Rodange 91 - while the redirect make sense, it also doesn't"]
+        ["NOTDONE","Chiers Rodange are not Rodange 91 - while the redirect make sense, it also doesn't"],
+        ["SKIP","RSLTS"]
     ]},
     "1910–11 Luxembourg National Division": {"type":"SEASON","tasks":[
 
@@ -2120,6 +2127,9 @@
 
     ]},
     "1919–20 Luxembourg National Division": {"type":"SEASON","tasks":[
-
+        ["DONE","SDESC"],
+        ["NOTDONE","Citation for Results table"],
+        ["NOTDONE","Any promotions or relegations?"],
+        ["NOTDONE","Very stub"]
     ]}
 }

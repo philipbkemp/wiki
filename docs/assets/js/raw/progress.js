@@ -426,7 +426,7 @@ function renderLinkChecker(data) {
             if ( link.archive_status === "OKAY" ) {
                 linksPassed++;
             } else {
-                modalContent.check_links.push(["NOTDONE","Archive " + link.archive_status + " -> " + link.url + "<br/>Used on:<br/>- " + link.citations.join("<br />- ")]);
+                modalContent.check_links.push(["NOTDONE","Archive " + link.archive_status + " -> " + link.archive + "<br/>Used on:<br/>- " + link.citations.join("<br />- ")]);
             }
         } else if ( link.last_status === "OKAY" ) {
             linksPassed++;
