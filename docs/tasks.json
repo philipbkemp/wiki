@@ -1487,7 +1487,9 @@
         ["NOTDONE","Citation is archived, but not stated. Is there a current link?"],
         ["NOTDONE","So much stub - anything exists?"]
     ]},
-    "Stade_Am_Pëtz":{"type":"STADIUM","tasks":[]},
+    "Stade_Am_Pëtz":{"type":"STADIUM","tasks":[
+
+    ]},
     "Stade_An_Der_Trell":{"type":"STADIUM","tasks":[
         ["DONE","SDESC"],
         ["DONE","Redirection link for Erpeldange"],
@@ -1497,7 +1499,9 @@
         ["NOTDONE","Is the COVID Rules photo still relevant in a post-COVID world?"],
         ["SKIP","STADB"]
     ]},
-    "Stade_Communal,_Mondercange":{"type":"STADIUM","tasks":[]},
+    "Stade_Communal,_Mondercange":{"type":"STADIUM","tasks":[
+
+    ]},
     "Stade_de_la_Frontière":{"type":"STADIUM","tasks":[
         ["DONE","SDESC"],
         ["NOTDONE","Overlink of 'football' 'stadium' in intro"],
@@ -1516,7 +1520,9 @@
         ["NOTDONE","Source 2 is dead (5minutes.rtl.lu)?"],
         ["NOTDONE","Source 9 includes 'Lancement officiel', which is the category, not the title"]
     ]},
-    "Stade_Demy_Steichen":{"type":"STADIUM","tasks":[]},
+    "Stade_Demy_Steichen":{"type":"STADIUM","tasks":[
+
+    ]},
     "Stade_du_Thillenberg":{"type":"STADIUM","tasks":[
         ["DONE","SDESC"],
         ["NOTDONE","Red border seems to be misaligned?"],
@@ -1590,9 +1596,15 @@
         ["NOTDONE","Really small stub - what exists?"],
         ["NOTDONE","Consistency with other 'stade municipal's"]
     ]},
-    "Stade_Municipal,_Pétange":{"type":"STADIUM","tasks":[]},
-    "Stade_Municipal,_Rumelange":{"type":"STADIUM","tasks":[]},
-    "Stade_Municipal_de_la_Ville_de_Differdange":{"type":"STADIUM","tasks":[]},
+    "Stade_Municipal,_Pétange":{"type":"STADIUM","tasks":[
+
+    ]},
+    "Stade_Municipal,_Rumelange":{"type":"STADIUM","tasks":[
+
+    ]},
+    "Stade_Municipal_de_la_Ville_de_Differdange":{"type":"STADIUM","tasks":[
+
+    ]},
     "Stade_Rue_de_Lenningen":{"type":"STADIUM","tasks":[
         ["SKIP","SDESC"],
         ["DONE","Redirection to page with stadium's new name"]
@@ -1607,10 +1619,18 @@
         ["NOTDONE","Map doesn't have red border"],
         ["NOTDONE","Archived link to terrain goes to wrong page?"]
     ]},
-    "Stade_rue_Henri_Dunant":{"type":"STADIUM","tasks":[]},
-    "Stade_um_Bëchel":{"type":"STADIUM","tasks":[]},
-    "VictoriArena":{"type":"STADIUM","tasks":[]},
-    "Stade_Municipal,_Schifflange":{"type":"STADIUM","tasks":[]},
+    "Stade_rue_Henri_Dunant":{"type":"STADIUM","tasks":[
+
+    ]},
+    "Stade_um_Bëchel":{"type":"STADIUM","tasks":[
+
+    ]},
+    "VictoriArena":{"type":"STADIUM","tasks":[
+
+    ]},
+    "Stade_Municipal,_Schifflange":{"type":"STADIUM","tasks":[
+
+    ]},
     "Luxembourg_national_football_team":{"type":"NATIONAL","tasks":[
         ["DONE","SDESC"],
         ["DONE","Captain and head coach are still correct?"],
@@ -1785,7 +1805,6 @@
         ["NOTDONE","DE: Women's FIFA and UEFA Rankings"],
         ["NOTDONE","DE: Youth football section?"]
     ]},
-    "List_of_association_football_competitions":{"type":"OTHER","tasks":[]},
     "List_of_football_clubs_in_Luxembourg":{"type":"OTHER","tasks":[
         ["DONE","TRANS"],
         ["DONE","LHERE"],
@@ -1878,7 +1897,9 @@
         ["DONE","Found in 1908, but first President started in 1903? Profootball.lu says Max Metz started in 1908"],
         ["DONE","J. Geschwind - what's the J for?"]
     ]},
-    "Luxembourg_Football_League":{"type":"OTHER","tasks":[]},
+    "Luxembourg_Football_League":{"type":"OTHER","tasks":[
+
+    ]},
     "Luxembourg_football_league_system":{"type":"OTHER","tasks":[
         ["DONE","SDESC"],
         ["DONE","TRANS"],
@@ -1894,7 +1915,9 @@
         ["NOTDONE","Once up and running, note about the youth leagues"],
         ["NOTDONE","Once up and running, note about non-league youth levels"]
     ]},
-    "Luxembourg_national_football_team_results":{"type":"OTHER","tasks":[]},
+    "Luxembourg_national_football_team_results":{"type":"OTHER","tasks":[
+
+    ]},
     "Luxembourg_Women's_Cup":{"type":"OTHER","tasks":[
         ["DONE","SDESC"],
         ["NOTDONE","2004/05 season uses wrong hyphen"],
@@ -1917,7 +1940,9 @@
         ["DONE","Template:Luxembourg women's national football team results"],
         ["NOTDONE","Delete my draft pages"]
     ]},
-    "Luxembourg_women's_national_football_team_results_(2000–2019)":{"type":"OTHER","tasks":[]},
+    "Luxembourg_women's_national_football_team_results_(2000–2019)":{"type":"OTHER","tasks":[
+
+    ]},
     "Luxembourgish_Footballer_of_the_Year":{"type":"OTHER","tasks":[
         ["DONE","SDESC"],
         ["NOTDONE","No winner since 18/19 season? Don't forget template"],
@@ -1950,59 +1975,118 @@
         ["NOTDONE","Is this mentioned on Rangers' page?"],
         ["NOTDONE","Any players without pages now have pages?"],
         ["NOTDONE","'Liquidation and death' seems a bit harsh?"],
-        ["NOTDONE","1x Citation Needed"]
+        ["NOTDONE","1x Citation Needed"],
+        ["NOTDONE","Should this not be FC PN v FC R?"]
     ]},
-    "Category:2017–18_in_Luxembourgian_football": {"type":"CATEG","tasks":[]},
-    "Category:21st-century Luxembourgian sportsmen": {"type":"CATEG","tasks":[]},
-    "Category:Defunct football clubs in Luxembourg": {"type":"CATEG","tasks":[]},
-    "Category:Expatriate men's footballers in Luxembourg": {"type":"CATEG","tasks":[]},
-    "Category:Football clubs in Luxembourg": {"type":"CATEG","tasks":[]},
-    "Category:Football competitions in Luxembourg": {"type":"CATEG","tasks":[]},
-    "Category:Football leagues in Luxembourg": {"type":"CATEG","tasks":[]},
+    "Category:2017–18_in_Luxembourgian_football": {"type":"CATEG","tasks":[
+
+    ]},
+    "Category:21st-century Luxembourgian sportsmen": {"type":"CATEG","tasks":[
+
+    ]},
+    "Category:Defunct football clubs in Luxembourg": {"type":"CATEG","tasks":[
+
+    ]},
+    "Category:Expatriate men's footballers in Luxembourg": {"type":"CATEG","tasks":[
+
+    ]},
+    "Category:Football clubs in Luxembourg": {"type":"CATEG","tasks":[
+
+    ]},
+    "Category:Football competitions in Luxembourg": {"type":"CATEG","tasks":[
+
+    ]},
+    "Category:Football leagues in Luxembourg": {"type":"CATEG","tasks":[
+
+    ]},
     "Category:Football in Luxembourg": {"type":"CATEG","tasks":[
         ["DONE","SDESC"],
         ["DONE","LHERE"],
         ["DONE","LINKS"]
     ]},
-    "Category:French expatriate sportspeople in Luxembourg": {"type":"CATEG","tasks":[]},
-    "Category:International association football competitions hosted by Luxembourg": {"type":"CATEG","tasks":[]},
+    "Category:French expatriate sportspeople in Luxembourg": {"type":"CATEG","tasks":[
+
+    ]},
+    "Category:International association football competitions hosted by Luxembourg": {"type":"CATEG","tasks":[
+
+    ]},
     "Category:Lists of Luxembourgian sportspeople": {"type":"CATEG","tasks":[
         ["DONE","SDESC"],
         ["NOTDONE","Move to LuxembourgISH?"],
         ["DONE","LHERE"]
     ]},
-    "Category:Lists of Luxembourgian women": {"type":"CATEG","tasks":[]},
-    "Category:Lists of organisations based in Luxembourg": {"type":"CATEG","tasks":[]},
-    "Category:Lists of women's association football players by national team": {"type":"CATEG","tasks":[
+    "Category:Luxembourg Cup": {"type":"CATEG","tasks":[
+
+    ]},
+    "Category:Luxembourg Cup seasons": {"type":"CATEG","tasks":[
+
+    ]},
+    "Category:Luxembourg Division of Honour players": {"type":"CATEG","tasks":[
+
+    ]},
+    "Category:Luxembourg men's international footballers": {"type":"CATEG","tasks":[
+
+    ]},
+    "Category:Luxembourg men's under-21 international footballers": {"type":"CATEG","tasks":[
+
+    ]},
+    "Category:Luxembourg men's youth international footballers": {"type":"CATEG","tasks":[
+
+    ]},
+    "Category:Luxembourg National Division": {"type":"CATEG","tasks":[
+
+    ]},
+    "Category:Luxembourg National Division players": {"type":"CATEG","tasks":[
+
+    ]},
+    "Category:Luxembourg national youth football teams": {"type":"CATEG","tasks":[
+
+    ]},
+    "Category:Luxembourg Women's Cup": {"type":"CATEG","tasks":[
+
+    ]},
+    "Category:Luxembourg women's international footballers": {"type":"CATEG","tasks":[
+
+    ]},
+    "Category:Luxembourg women's national football teams": {"type":"CATEG","tasks":[
         ["SKIP","SDESC"]
     ]},
-    "Category:Luxembourg Cup": {"type":"CATEG","tasks":[]},
-    "Category:Luxembourg Cup seasons": {"type":"CATEG","tasks":[]},
-    "Category:Luxembourg Division of Honour players": {"type":"CATEG","tasks":[]},
-    "Category:Luxembourg men's international footballers": {"type":"CATEG","tasks":[]},
-    "Category:Luxembourg men's under-21 international footballers": {"type":"CATEG","tasks":[]},
-    "Category:Luxembourg men's youth international footballers": {"type":"CATEG","tasks":[]},
-    "Category:Luxembourg National Division": {"type":"CATEG","tasks":[]},
-    "Category:Luxembourg National Division players": {"type":"CATEG","tasks":[]},
-    "Category:Luxembourg national youth football teams": {"type":"CATEG","tasks":[]},
-    "Category:Luxembourg sport-related lists": {"type":"CATEG","tasks":[]},
-    "Category:Luxembourg Women's Cup": {"type":"CATEG","tasks":[]},
-    "Category:Luxembourg women's international footballers": {"type":"CATEG","tasks":[]},
-    "Category:Luxembourg women's national football teams": {"type":"CATEG","tasks":[["SKIP","SDESC"]]},
-    "Category:Luxembourgian expatriate men's footballers": {"type":"CATEG","tasks":[]},
-    "Category:Luxembourgian football biography stubs": {"type":"CATEG","tasks":[]},
-    "Category:Luxembourgian football competition stubs": {"type":"CATEG","tasks":[]},
-    "Category:Luxembourgian men's footballers": {"type":"CATEG","tasks":[]},
-    "Category:Men's footballers in Luxembourg by competition": {"type":"CATEG","tasks":[]},
-    "Category:Portuguese expatriate sportspeople in Luxembourg": {"type":"CATEG","tasks":[]},
-    "Category:Sports clubs and teams in Dudelange": {"type":"CATEG","tasks":[]},
-    "Category:Women's football competitions in Luxembourg": {"type":"CATEG","tasks":[]},
-    "Category:F91 Dudelange": {"type":"CATEG","tasks":[]},
+    "Category:Luxembourgian expatriate men's footballers": {"type":"CATEG","tasks":[
+
+    ]},
+    "Category:Luxembourgian football biography stubs": {"type":"CATEG","tasks":[
+
+    ]},
+    "Category:Luxembourgian football competition stubs": {"type":"CATEG","tasks":[
+
+    ]},
+    "Category:Luxembourgian men's footballers": {"type":"CATEG","tasks":[
+
+    ]},
+    "Category:Men's footballers in Luxembourg by competition": {"type":"CATEG","tasks":[
+
+    ]},
+    "Category:Portuguese expatriate sportspeople in Luxembourg": {"type":"CATEG","tasks":[
+
+    ]},
+    "Category:Sports clubs and teams in Dudelange": {"type":"CATEG","tasks":[
+
+    ]},
+    "Category:Women's football competitions in Luxembourg": {"type":"CATEG","tasks":[
+
+    ]},
+    "Category:F91 Dudelange": {"type":"CATEG","tasks":[
+
+    ]},
     "Category:FC Differdange 03 players": {"type":"CATEG","tasks":[
         ["DONE","SDESC"]
     ]},
-    "Category:FC Progrès Niederkorn players": {"type":"CATEG","tasks":[]},
-    "Category:FC Swift Hesperange players": {"type":"CATEG","tasks":[]},
+    "Category:FC Progrès Niederkorn players": {"type":"CATEG","tasks":[
+
+    ]},
+    "Category:FC Swift Hesperange players": {"type":"CATEG","tasks":[
+
+    ]},
     "1909–10 Luxembourg National Division": {"type":"SEASON","tasks":[
         ["DONE","SDESC"],
         ["NOTDONE","Fussball lux has a date for the final"],
@@ -2011,13 +2095,31 @@
         ["NOTDONE","Wasn't Galia an old name for Stade Dudelange?"],
         ["NOTDONE","Chiers Rodange are not Rodange 91 - while the redirect make sense, it also doesn't"]
     ]},
-    "1910–11 Luxembourg National Division": {"type":"SEASON","tasks":[]},
-    "1911–12 Luxembourg National Division": {"type":"SEASON","tasks":[]},
-    "1913–14 Luxembourg National Division": {"type":"SEASON","tasks":[]},
-    "1914–15 Luxembourg National Division": {"type":"SEASON","tasks":[]},
-    "1915–16 Luxembourg National Division": {"type":"SEASON","tasks":[]},
-    "1916–17 Luxembourg National Division": {"type":"SEASON","tasks":[]},
-    "1917–18 Luxembourg National Division": {"type":"SEASON","tasks":[]},
-    "1918–19 Luxembourg National Division": {"type":"SEASON","tasks":[]},
-    "1919–20 Luxembourg National Division": {"type":"SEASON","tasks":[]}
+    "1910–11 Luxembourg National Division": {"type":"SEASON","tasks":[
+
+    ]},
+    "1911–12 Luxembourg National Division": {"type":"SEASON","tasks":[
+
+    ]},
+    "1913–14 Luxembourg National Division": {"type":"SEASON","tasks":[
+
+    ]},
+    "1914–15 Luxembourg National Division": {"type":"SEASON","tasks":[
+
+    ]},
+    "1915–16 Luxembourg National Division": {"type":"SEASON","tasks":[
+
+    ]},
+    "1916–17 Luxembourg National Division": {"type":"SEASON","tasks":[
+
+    ]},
+    "1917–18 Luxembourg National Division": {"type":"SEASON","tasks":[
+
+    ]},
+    "1918–19 Luxembourg National Division": {"type":"SEASON","tasks":[
+
+    ]},
+    "1919–20 Luxembourg National Division": {"type":"SEASON","tasks":[
+
+    ]}
 }
