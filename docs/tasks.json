@@ -2131,5 +2131,10 @@
         ["NOTDONE","Citation for Results table"],
         ["NOTDONE","Any promotions or relegations?"],
         ["NOTDONE","Very stub"]
-    ]}
+    ]},
+    "1920–21 Luxembourg National Division":{"type":"SEASON","tasks":[]},
+    "2006–07 Luxembourg Cup":{"type":"CUPSEASON","tasks":[]},
+    "Béla Volentik":{"type":"PERSON","tasks":[]},
+    "Josef Frühwirth":{"type":"PERSON","tasks":[]},
+    "René Peters (footballer)":{"type":"PERSON","tasks":[]}
 }
