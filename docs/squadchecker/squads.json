@@ -4,8 +4,8 @@
     "url": "https://www.f91.lu/kader-90630v4",
     "redirect": "https://www.f91.lu/kader-90630v4/groups/50/seasons/220",
     "selector": "h4.mui-1tt7evh",
-    "last_check": "2026-08-05",
-    "last_status": "OKAY",
+    "last_check": "2026-08-22",
+    "last_status": "FAIL",
     "players": [
       "Rodrigo Goncalves Tavares",
       "Ivan Englaro",
@@ -46,6 +46,6 @@
       "Vin Schmit",
       "Alexis Rigoulot"
     ],
-    "last_reason": null
+    "last_reason": "Redirect mismatch: expected \"https://www.f91.lu/kader-90630v4/groups/50/seasons/220\", got \"https://www.f91.lu/kader-90630v4\""
   }
 ]
