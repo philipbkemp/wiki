@@ -1,5 +1,5 @@
 {
-    "Alliance_Dudelange":{"type":"CLUB","tasks":[
+    "Alliance Dudelange":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["SKIP","FOUND"],
         ["DONE","CLIST"],
@@ -17,7 +17,8 @@
         ["NOTDONE","History section doesn't link to seasons"],
         ["DONE","F91 Dudelange family tree template"],
         ["NOTDONE","Can anything from F91 page be added to history?"],
-        ["NOTDONE","Louis Reich was president - but isn't mentioned on his page"]
+        ["NOTDONE","Louis Reich was president - but isn't mentioned on his page"],
+        ["DONE","REFCK"]
     ]},
     "AS_Differdange":{"type":"CLUB","tasks":[
         ["SKIP","SDESC"],
@@ -210,7 +211,7 @@
         ["NOTDONE","Luxembourgish: History of the stadium - better on the stadium page as it exists?"],
         ["DONE","Other languages talk about both cup finals in the history section"]
     ]},
-    "F91_Dudelange":{"type":"CLUB","tasks":[
+    "F91 Dudelange":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
         ["DONE","CLIST"],
@@ -262,7 +263,8 @@
         ["NOTDONE","SV: Two-time League Cup winners? What competition is/was that?"],
         ["NOTDONE","Mentioned on Dudelange - check stat"],
         ["NOTDONE","Team won 'team of the year' a couple of times - worthy of note here?"],
-        ["DONE","ASOCE"]
+        ["DONE","ASOCE"],
+        ["DONE","SEASN"]
     ]},
     "F.C._Luxembourg_City":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
@@ -1399,7 +1401,7 @@
         ["DONE","What's the 'issue' in the talk page about? Archive link, I assume, as it's from 2018, it's good."],
         ["NOTDONE","Source/Ref for each of previous winners?"]
     ]},
-    "Luxembourg_Division_of_Honour":{"type":"LEAGUE","tasks":[
+    "Luxembourg Division of Honour":{"type":"LEAGUE","tasks":[
         ["DONE","SDESC"],
         ["DONE","TRANS"],
         ["DONE","https://www.flf.lu/tabellen-80253v4/leagues/11/seasons/216"],
@@ -1421,7 +1423,8 @@
         ["NOTDONE","LT: Has historical names for the division, but no sources - cite?"],
         ["DONE","Sticky header for winners table"],
         ["DONE","Winners table, no link to 'promotion groups' section"],
-        ["DONE","HYPHN"]
+        ["DONE","HYPHN"],
+        ["DONE","REFCK"]
     ]},
     "Luxembourg_National_Division":{"type":"LEAGUE","tasks":[
         ["DONE","SDESC"],
@@ -2031,7 +2034,7 @@
         ["NOTDONE","Confirm players listed would have played in Division of Honour"]
     ]},
     "Category:Luxembourg men's international footballers": {"type":"CATEG","tasks":[
-
+        ["DONE","SDESC"]
     ]},
     "Category:Luxembourg men's under-21 international footballers": {"type":"CATEG","tasks":[
 
