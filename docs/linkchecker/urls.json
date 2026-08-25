@@ -102,57 +102,73 @@
     "last_check": "2026-08-12"
   },
   {
-    "url":"https://clubee-storage-prod.s3.eu-central-1.amazonaws.com/4880/files/application/667c29057dfdb.pdf",
-    "citations": ["Luxembourg Division of Honour"],
-    "last_check":"2026-08-24",
-    "last_status":"MANUAL"
+    "url": "https://clubee-storage-prod.s3.eu-central-1.amazonaws.com/4880/files/application/667c29057dfdb.pdf",
+    "citations": [
+      "Luxembourg Division of Honour"
+    ],
+    "last_check": "2026-08-25",
+    "last_status": "OKAY"
   },
   {
-    "url":"https://clubee-websites-prod.s3.eu-central-1.amazonaws.com/4880/files/application/3W0MQE03499NR9X92H27AQKXDB.pdf",
-    "citations": ["Luxembourg Division of Honour"],
-    "last_check":"2026-08-24",
-    "last_status":"MANUAL"
+    "url": "https://clubee-websites-prod.s3.eu-central-1.amazonaws.com/4880/files/application/3W0MQE03499NR9X92H27AQKXDB.pdf",
+    "citations": [
+      "Luxembourg Division of Honour"
+    ],
+    "last_check": "2026-08-25",
+    "last_status": "OKAY"
   },
   {
-    "url":"https://www.fussball-lux.lu/Saison2025-2026.html",
-    "citations": ["Luxembourg Division of Honour"],
-    "last_check":"2026-08-24",
-    "last_status":"MANUAL"
+    "url": "https://www.fussball-lux.lu/Saison2025-2026.html",
+    "citations": [
+      "Luxembourg Division of Honour"
+    ],
+    "last_check": "2026-08-25",
+    "last_status": "OKAY"
   },
   {
-    "url":"https://www.flf.lu/La-FLF/Actualites/Informations-aux-clubs-de-la-FLF-%E2%80%93-crise-du-CO-(1).aspx",
-    "citations": ["Luxembourg Division of Honour"],
-    "last_check":"2026-08-24",
-    "last_status":"MANUAL",
+    "url": "https://www.flf.lu/La-FLF/Actualites/Informations-aux-clubs-de-la-FLF-%E2%80%93-crise-du-CO-(1).aspx",
+    "citations": [
+      "Luxembourg Division of Honour"
+    ],
+    "last_check": "2026-08-24",
+    "last_status": "MANUAL",
     "archive": "https://web.archive.org/web/20211225110603/https://www.flf.lu/La-FLF/Actualites/Informations-aux-clubs-de-la-FLF-%E2%80%93-crise-du-CO-(1).aspx",
-    "archive_status": "MANUAL",
-    "archive_check": "2026-08-24"
+    "archive_status": "ERROR: fetch failed",
+    "archive_check": "2026-08-25"
   },
   {
-    "url":"https://us.soccerway.com/national/luxembourg/promotion-dhonneur/20212022/regular-season/r64302/",
-    "citations": ["Luxembourg Division of Honour"],
-    "last_check":"2026-08-24",
-    "last_status":"MANUAL",
+    "url": "https://us.soccerway.com/national/luxembourg/promotion-dhonneur/20212022/regular-season/r64302/",
+    "citations": [
+      "Luxembourg Division of Honour"
+    ],
+    "last_check": "2026-08-24",
+    "last_status": "MANUAL",
     "archive": "https://web.archive.org/web/20241205131638/https://us.soccerway.com/national/luxembourg/promotion-dhonneur/20212022/regular-season/r64302/",
-    "archive_status": "MANUAL",
-    "archive_check": "2026-08-24"
+    "archive_status": "ERROR: fetch failed",
+    "archive_check": "2026-08-25"
   },
   {
-    "url":"https://www.rsssf.org/tablesl/lux2hist.html",
-    "citations": ["Luxembourg Division of Honour"],
-    "last_check":"2026-08-24",
-    "last_status":"MANUAL"
+    "url": "https://www.rsssf.org/tablesl/lux2hist.html",
+    "citations": [
+      "Luxembourg Division of Honour"
+    ],
+    "last_check": "2026-08-25",
+    "last_status": "OKAY"
   },
   {
-    "url":"https://www.rsssf.org/tablesl/luxhist.html",
-    "citations": ["Luxembourg Division of Honour"],
-    "last_check":"2026-08-24",
-    "last_status":"MANUAL"
+    "url": "https://www.rsssf.org/tablesl/luxhist.html",
+    "citations": [
+      "Luxembourg Division of Honour"
+    ],
+    "last_check": "2026-08-25",
+    "last_status": "OKAY"
   },
   {
-    "url":"https://www.fussball-lux.lu/Saison1988-1989.html",
-    "citations": ["Luxembourg Division of Honour"],
-    "last_check":"2026-08-24",
-    "last_status":"MANUAL"
+    "url": "https://www.fussball-lux.lu/Saison1988-1989.html",
+    "citations": [
+      "Luxembourg Division of Honour"
+    ],
+    "last_check": "2026-08-25",
+    "last_status": "OKAY"
   }
 ]
