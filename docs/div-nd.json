@@ -33,5 +33,14 @@
     "VIC_WIL=4-0",
     "DIF_RAC=3-0",
     "SWI_HOS=0-2",
-    "ETZ_KAE=0-1"
+    "ETZ_KAE=0-1",
+
+    "ETZ_WAL=0-5",
+    "KAE_SWI=6-0",
+    "HOS_DIF=0-2",
+    "RAC_VIC=2-2",
+    "WIL_DUD=1-2",
+    "RUM_JEU=2-5",
+    "MON_PRO=2-1",
+    "UNA_BIS=2-1"
 ]

@@ -15,5 +15,14 @@
     "KOE_FEU=1-4",
     "MER_BVL=0-1",
     "URB_ROD=0-3",
-    "BER_LUX=1-2"
+    "BER_LUX=1-2",
+
+    "BER_AVB=1-1",
+    "LUX_URB=0-1",
+    "ROD_MER=3-1",
+    "BVL_KOE=1-0",
+    "FEU_BET=1-1",
+    "JEC_MND=4-0",
+    "LOR_UTP=3-3",
+    "FOL_MAM=0-0"
 ]
