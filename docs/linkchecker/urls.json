@@ -133,8 +133,8 @@
     "last_check": "2026-08-24",
     "last_status": "MANUAL",
     "archive": "https://web.archive.org/web/20211225110603/https://www.flf.lu/La-FLF/Actualites/Informations-aux-clubs-de-la-FLF-%E2%80%93-crise-du-CO-(1).aspx",
-    "archive_status": "OKAY",
-    "archive_check": "2026-08-30"
+    "archive_status": "ERROR: fetch failed",
+    "archive_check": "2026-08-31"
   },
   {
     "url": "https://us.soccerway.com/national/luxembourg/promotion-dhonneur/20212022/regular-season/r64302/",
@@ -144,8 +144,8 @@
     "last_check": "2026-08-24",
     "last_status": "MANUAL",
     "archive": "https://web.archive.org/web/20241205131638/https://us.soccerway.com/national/luxembourg/promotion-dhonneur/20212022/regular-season/r64302/",
-    "archive_status": "OKAY",
-    "archive_check": "2026-08-30"
+    "archive_status": "ERROR: fetch failed",
+    "archive_check": "2026-08-31"
   },
   {
     "url": "https://www.rsssf.org/tablesl/lux2hist.html",
