@@ -144,8 +144,8 @@
     "last_check": "2026-08-24",
     "last_status": "MANUAL",
     "archive": "https://web.archive.org/web/20241205131638/https://us.soccerway.com/national/luxembourg/promotion-dhonneur/20212022/regular-season/r64302/",
-    "archive_status": "OKAY",
-    "archive_check": "2026-09-05"
+    "archive_status": "ERROR: fetch failed",
+    "archive_check": "2026-09-06"
   },
   {
     "url": "https://www.rsssf.org/tablesl/lux2hist.html",
