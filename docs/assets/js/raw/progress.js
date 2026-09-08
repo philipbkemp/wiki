@@ -15,8 +15,8 @@ const ALLTASKS = {
     OTHER: ["SDESC","LINKS","TRANS","LHERE","CATEG","HYPHN","REFCK","TALKS"],
     CATEG: ["SDESC","LINKS","LHERE"],
     SEASON: ["SDESC","CATEG","FUSSB","HPYHN","LHERE","LINKS","REFCK","TALKS","TRANS","PLAYD","GOALS","TOPSC","TABLE","CMAPS","XINLX","XINAF","EUFOT","RSLTS","TEAMS","STATS","INLXF"],
-    PERSON: ["SDESC","CATEG","FUSSB","HYPHN","HONOR","PHOTO","REFCK","TALKS","TRANS","BIRTH","DEATH","CLUBP","ICAPS","IGOAL","MSTAT","GONFT","SCRWY","EUFOT","GOWFN"],
-    CUPSEASON: ["SDESC","CATEG","FUSSB","HYPHN","REFCK","TALKS","TRANS","DHCKY","CTBLS","CTIER","QSFNL","FINAL","INLXF"]
+    PERSON: ["SDESC","CATEG","FUSSB","HYPHN","HONOR","PHOTO","REFCK","TALKS","TRANS","BIRTH","DEATH","CLUBP","ICAPS","IGOAL","MSTAT","GONFT","SCRWY","EUFOT","GOWFN","MONDE"],
+    CUPSEASON: ["SDESC","CATEG","FUSSB","HYPHN","REFCK","TALKS","TRANS","DHCKY","CTBLS","CTIER","QSFNL","FINAL","INLXF","STATS"]
 };
 
 const TASKS_DESC = {
@@ -58,7 +58,7 @@ const TASKS_DESC = {
     LOMAP: "Location map",
     MANGR: "Current manager",
     MERGE: "Club mergers",
-    MONDE: "Mondefootball.fr profile (eg https://www.mondefootball.fr/teams/te18512/spora-luxemburg/)",
+    MONDE: "{{worldfootball}} profile - eg https://www.worldfootball.net/te18517/",
     MSTAT: "Manager statistics table?",
     PHOTO: "Main photo",
     PLAYD: "Games played total",

@@ -453,7 +453,7 @@
         ["NOTDONE","They got to a cup final in 04/05 according to Fussball lux for a 'mini' honours section?"],
         ["NOTDONE","Last division/position needs listing"]
     ]},
-    "FC_Differdange_03":{"type":"CLUB","tasks":[
+    "FC Differdange 03":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
         ["DONE","CLIST"],
@@ -487,7 +487,8 @@
         ["NOTDONE","Source for staff / better as a table"],
         ["NOTDONE","Source for former managers"],
         ["NOTDONE","No former managers since 2019?"],
-        ["NOTDONE","TALK: Image issue from 2008"]
+        ["NOTDONE","TALK: Image issue from 2008"],
+        ["DONE","MONDE"]
     ]},
     "FC_Erpeldange_72":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
@@ -725,7 +726,7 @@
         ["NOTDONE","Anything to take from Football Club Chiers Rodange [fr]?"],
         ["NOTDONE","Anything to take from Football Club Racing Rodange [fr]?"]
     ]},
-    "FC_Schifflange_95":{"type":"CLUB","tasks":[
+    "FC Schifflange 95":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
         ["DONE","CLIST"],
@@ -747,7 +748,8 @@
         ["NOTDONE","Roster link is 404"],
         ["NOTDONE","History link is 404"],
         ["NOTDONE","Luxembourgish name?"],
-        ["DONE","Errors in template for kit highlighted when editing page. What/why?"]
+        ["DONE","Errors in template for kit highlighted when editing page. What/why?"],
+        ["DONE","SEASN"]
     ]},
     "FC_Swift_Hesperange":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
@@ -1534,7 +1536,7 @@
         ["NOTDONE","Stub - anything to write?"],
         ["NOTDONE","World Stadiums page is 404"]
     ]},
-    "Stade_Émile_Mayrisch":{"type":"STADIUM","tasks":[
+    "Stade Émile Mayrisch":{"type":"STADIUM","tasks":[
         ["DONE","SDESC"],
         ["NOTDONE","football, athletics, stadium - too many links?"],
         ["NOTDONE","Emile is LuxembourgISH"],
@@ -1544,7 +1546,7 @@
         ["NOTDONE","Source for original capacity?"],
         ["NOTDONE","Should Emile's article reference this?"]
     ]},
-    "Stade_François_Trausch":{"type":"STADIUM","tasks":[
+    "Stade François Trausch":{"type":"STADIUM","tasks":[
         ["DONE","SDESC"],
         ["NOTDONE","Overlink of FOOTBALL and STADIUM?"],
         ["NOTDONE","Use Mamer 32, not FC..."],
@@ -1552,7 +1554,7 @@
         ["NOTDONE","Link to club website is 404"],
         ["NOTDONE","Stub (but no stub template) so what exists?"]
     ]},
-    "Stade_Géitz":{"type":"STADIUM","tasks":[
+    "Stade Géitz":{"type":"STADIUM","tasks":[
         ["DONE","SDESC"],
         ["NOTDONE","Is the page still relevant? It's the OLD stadium of Wiltz"],
         ["NOTDONE","It used to be Wiltz's stadium - between what years?"],
@@ -1560,7 +1562,7 @@
         ["NOTDONE","Infobox is missing"],
         ["NOTDONE","It is now a housing estate/building development"],
         ["NOTDONE","Overlink of 'football' 'stadium' in introduction"],
-        ["NOTDONE","World Stadiums link is 404"]
+        ["DONE","World Stadiums link is 404"]
     ]},
     "Stade_Jos_Haupert":{"type":"STADIUM","tasks":[
         ["DONE","SDESC"],
@@ -1615,7 +1617,7 @@
         ["SKIP","SDESC"],
         ["DONE","Redirection to page with stadium's new name"]
     ]},
-    "Stade_Fernand_Weber":{"type":"STADIUM","tasks":[
+    "Stade Fernand Weber":{"type":"STADIUM","tasks":[
         ["DONE","SDESC"],
         ["DONE","COORD"],
         ["NOTDONE","Overlinking of football+stadium in intro"],
@@ -1637,7 +1639,7 @@
     "Stade_Municipal,_Schifflange":{"type":"STADIUM","tasks":[
 
     ]},
-    "Luxembourg_national_football_team":{"type":"NATIONAL","tasks":[
+    "Luxembourg national football team":{"type":"NATIONAL","tasks":[
         ["DONE","SDESC"],
         ["DONE","Captain and head coach are still correct?"],
         ["NOTDONE","Note on the caps page that Jans and Gerson are noted in the infobox here"],
@@ -1652,7 +1654,7 @@
         ["NOTDONE","Coaching history as table? Maybe with a W/D/L stat?"],
         ["SKIP","Players list has 'RET' - what's that, and should it be noted? // Retired - see the key below, it is already (when there are players)"],
         ["NOTDONE","Kevin D'Anzico doesn't have a page yet?"],
-        ["NOTDONE","Recent call-ups should expire (24/March/2025 for YBS)"],
+        ["SKIP","Recent call-ups should expire (24/March/2025 for YBS)"],
         ["DONE","Most capped players - link to full list? Correct? Reference on the list page"],
         ["NOTDONE","Head to Head record matches list of results?"],
         ["NOTDONE","Sources still okay or 404?"],
@@ -1926,9 +1928,9 @@
     "Luxembourg_national_football_team_results":{"type":"OTHER","tasks":[
 
     ]},
-    "Luxembourg_Women's_Cup":{"type":"OTHER","tasks":[
+    "Luxembourg Women's Cup":{"type":"OTHER","tasks":[
         ["DONE","SDESC"],
-        ["NOTDONE","2004/05 season uses wrong hyphen"],
+        ["DONE","2004/05 season uses wrong hyphen"],
         ["NOTDONE","Official site is a 404"],
         ["NOTDONE","Can all clubs link to #Women's_team?"],
         ["NOTDONE","Any additional information for winners table? Stadium, capacity, match report?"],
@@ -1937,7 +1939,8 @@
         ["NOTDONE","Table of finals should match men's tournament (width, sticky, etc)"],
         ["NOTDONE","History or description section to make it not stub level?"],
         ["NOTDONE","Infobox says 'Coupe des Dames' - but that's ot mentioned anywhere else."],
-        ["NOTDONE","'held by FLF' => 'organised by'?"]
+        ["NOTDONE","'held by FLF' => 'organised by'?"],
+        ["DONE","Use PSO instead of PENALTY SHOOT OUT tempalte"]
     ]},
     "Luxembourg_women's_national_football_team_results":{"type":"OTHER","tasks":[
         ["NOTDONE","All goalscorers correctly listed?"],
@@ -2005,7 +2008,7 @@
 
     ]},
     "Category:Football leagues in Luxembourg": {"type":"CATEG","tasks":[
-
+        ["DONE","SDESC"]
     ]},
     "Category:Football in Luxembourg": {"type":"CATEG","tasks":[
         ["DONE","SDESC"],
@@ -2076,7 +2079,7 @@
 
     ]},
     "Category:Portuguese expatriate sportspeople in Luxembourg": {"type":"CATEG","tasks":[
-
+        ["DONE","SDESC"]
     ]},
     "Category:Sports clubs and teams in Dudelange": {"type":"CATEG","tasks":[
 
@@ -2103,7 +2106,8 @@
         ["NOTDONE","'_Final_ Tie-break' => 'Final'?"],
         ["NOTDONE","Wasn't Galia an old name for Stade Dudelange?"],
         ["NOTDONE","Chiers Rodange are not Rodange 91 - while the redirect make sense, it also doesn't"],
-        ["SKIP","RSLTS"]
+        ["SKIP","RSLTS"],
+        ["SKIP","TOPSC"]
     ]},
     "1910–11 Luxembourg National Division": {"type":"SEASON","tasks":[
 
@@ -2136,8 +2140,27 @@
         ["NOTDONE","Very stub"]
     ]},
     "1920–21 Luxembourg National Division":{"type":"SEASON","tasks":[]},
-    "2006–07 Luxembourg Cup":{"type":"CUPSEASON","tasks":[]},
+    "2006–07 Luxembourg Cup":{"type":"CUPSEASON","tasks":[
+        ["DONE","SDESC"],
+        ["NOTDONE","F91 'are' the defending champions?"],
+        ["NOTDONE","Do we list the winner in the introduction?"],
+        ["NOTDONE","PSO template not used"],
+        ["NOTDONE","External link to FLF not labelled as archived"],
+        ["NOTDONE","Why the link to generic fblux page? Shouldn't the reference be enough?"],
+        ["NOTDONE","Final at 'neutral stadium' should be 'national stadium'"]
+    ]},
     "Béla Volentik":{"type":"PERSON","tasks":[]},
-    "Josef Frühwirth":{"type":"PERSON","tasks":[]},
-    "René Peters (footballer)":{"type":"PERSON","tasks":[]}
+    "Josef Frühwirth":{"type":"PERSON","tasks":[
+        ["DONE","SDESC"],
+        ["NOTDONE","Any stats for games/goals played?"],
+        ["NOTDONE","Mention his solitary cap?"],
+        ["NOTDONE","Any managerial stats?"],
+        ["NOTDONE","Any honours while he was any club?"],
+        ["NOTDONE","Profile at rapidarchiv is 404"],
+        ["NOTDONE","Is there a Spora Players category?"],
+        ["NOTDONE","Anything about him anywhere?"]
+    ]},
+    "René Peters (footballer)":{"type":"PERSON","tasks":[]},
+    "2026–27 Luxembourg Division of Honour": {"type":"SEASON","tasks":[]},
+    "Luxembourg-Cents": {"type":"STADIUM","tasks":[]}
 }
