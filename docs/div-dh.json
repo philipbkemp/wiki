@@ -24,5 +24,14 @@
     "FEU_BET=1-1",
     "JEC_MND=4-0",
     "LOR_UTP=3-3",
-    "FOL_MAM=0-0"
+    "FOL_MAM=0-0",
+
+    "MAM_LOR=0-0",
+    "AVB_FOL=1-2",
+    "UTP_JEC=5-3",
+    "MND_FEU=3-1",
+    "BET_BVL=4-1",
+    "KOE_ROD=0-2",
+    "MER_LUX=1-1",
+    "URB_BER=0-3"
 ]
