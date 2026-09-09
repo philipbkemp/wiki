@@ -16,7 +16,8 @@ const ALLTASKS = {
     CATEG: ["SDESC","LINKS","LHERE"],
     SEASON: ["SDESC","CATEG","FUSSB","HPYHN","LHERE","LINKS","REFCK","TALKS","TRANS","PLAYD","GOALS","TOPSC","TABLE","CMAPS","XINLX","XINAF","EUFOT","RSLTS","TEAMS","STATS","INLXF"],
     PERSON: ["SDESC","CATEG","FUSSB","HYPHN","HONOR","PHOTO","REFCK","TALKS","TRANS","BIRTH","DEATH","CLUBP","ICAPS","IGOAL","MSTAT","GONFT","SCRWY","EUFOT","GOWFN","MONDE"],
-    CUPSEASON: ["SDESC","CATEG","FUSSB","HYPHN","REFCK","TALKS","TRANS","DHCKY","CTBLS","CTIER","QSFNL","FINAL","INLXF","STATS"]
+    CUPSEASON: ["SDESC","CATEG","FUSSB","HYPHN","REFCK","TALKS","TRANS","DHCKY","CTBLS","CTIER","QSFNL","FINAL","INLXF","STATS"],
+    TEMPLATE: ["SDESC","DOCUM","TCLUS"],
 };
 
 const TASKS_DESC = {
@@ -37,6 +38,7 @@ const TASKS_DESC = {
     DEATH: "Death date? and Category:YYYY deaths",
     DESTN: "Category: YYYY_disestablishments_in_Luxembourg",
     DHCKY: "Disambiguate to Luxembourg Cup Ice Hockey? (see 2006-07 Luxembourg Cup",
+    DOCUM: "Documenation page",
     ESTIN: "Category: YYYY_establishments_in_Luxembourg",
     EUFOT: "EU Football profile (eg https://eu-football.info/_club.php?id=1166)",
     EUROP: "European record",
@@ -77,6 +79,7 @@ const TASKS_DESC = {
     STATS: "Infobox statistics",
     TABLE: "Table formatting and colours",
     TALKS: "Any talk page messages",
+    TCLUS: "Template Transclusion Check at https://templatetransclusioncheck.toolforge.org/?lang=en",
     TEAMS: "List of Teams/Stadiums/etc table",
     TENNT: "Current Tennant",
     TOPSC: "Top Scorers list",
@@ -100,6 +103,7 @@ const randomTask = {
     SEASON: {list:[]},
     PERSON: {list:[]},
     CUPSEASON: {list:[]},
+    TEMPLATE: {list:[]}
 };
 
 let thedata = null;
@@ -127,6 +131,8 @@ function render(data) {
     let donePerson = 0;
     let totalCupSeason = 0;
     let doneCupSeason = 0;
+    let totalTemplate = 0;
+    let doneTemplate = 0;
 
     Object.keys(data).forEach(page => {
         const item = data[page];
@@ -195,6 +201,10 @@ function render(data) {
             case "CUPSEASON":
                 totalCupSeason += totalTasks;
                 doneCupSeason += totalDone;
+                break;
+            case "TEMPLATE":
+                totalTemplate += totalTasks;
+                doneTemplate += totalDone;
                 break;
         }
         randomTask[pageType].list = [...randomTask[pageType].list,...notDoneList];
@@ -312,10 +322,11 @@ function render(data) {
     document.getElementById("pSeasons").appendChild(drawPercent(doneSeason,totalSeason));
     document.getElementById("pCups").appendChild(drawPercent(doneCupSeason,totalCupSeason));
     document.getElementById("pPeople").appendChild(drawPercent(donePerson,totalPerson));
+    document.getElementById("pTemplate").appendChild(drawPercent(doneTemplate,totalTemplate));
 
     document.getElementById("pTotal").appendChild(drawPercent(
-        doneClub+doneLeague+doneStadium+doneNational+doneOther+doneCateg+doneSeason+doneCupSeason+donePerson,
-        totalClub+totalLeague+totalStadium+totalNational+totalOther+totalCateg+totalSeason+totalCupSeason+totalPerson,
+        doneClub+doneLeague+doneStadium+doneNational+doneOther+doneCateg+doneSeason+doneCupSeason+donePerson+doneTemplate,
+        totalClub+totalLeague+totalStadium+totalNational+totalOther+totalCateg+totalSeason+totalCupSeason+totalPerson+totalTemplate,
         {fixed:3}));
 
     parseCheckSquads();

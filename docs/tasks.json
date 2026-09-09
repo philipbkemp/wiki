@@ -2162,5 +2162,10 @@
     ]},
     "René Peters (footballer)":{"type":"PERSON","tasks":[]},
     "2026–27 Luxembourg Division of Honour": {"type":"SEASON","tasks":[]},
-    "Luxembourg-Cents": {"type":"STADIUM","tasks":[]}
+    "Luxembourg-Cents": {"type":"STADIUM","tasks":[]},
+    "1921–22 Luxembourg Cup": {"type":"CUPSEASON","tasks":[]},
+    "2009–10 Luxembourg Cup": {"type":"CUPSEASON","tasks":[]},
+    "Category:CS Fola Esch players": {"type":"CATEG","tasks":[]},
+    "Laurent Jans":{"type":"PERSON","tasks":[]},
+    "Template:Luxembourg football league pyramid": {"type":"TEMPLATE","tasks":[]}
 }
