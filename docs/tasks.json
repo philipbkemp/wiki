@@ -71,7 +71,7 @@
         ["DONE","LHERE"],
         ["NOTDONE","Is it worthy of its own page?"]
     ]},
-    "CS_Fola_Esch":{"type":"CLUB","tasks":[
+    "CS Fola Esch":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["DONE","FOUND"],
         ["DONE","CLIST"],
@@ -96,7 +96,7 @@
         ["NOTDONE","Bullet list history should be sourced, and shouldn't be list?"],
         ["NOTDONE","Link to 'Double' doesn't go to Luxembourg. Also note it was the first one in Luxembourg."],
         ["DONE","1955 lean period - did they win the cup again?"],
-        ["NOTDONE","Luxembourg cup honours don't link to seasons"],
+        ["DONE","Luxembourg cup honours don't link to seasons"],
         ["DONE","Coefficient should have a title"],
         ["NOTDONE","European record correct?"],
         ["NOTDONE","European stats up to August 2021. List of matches up to 22/23 season. What's missing?"],
@@ -412,7 +412,7 @@
         ["NOTDONE","NL+DE: Huge history - what can be copied with sources?"],
         ["NOTDONE","DE: There is a comment about the nickname - gnomes?"]
     ]},
-    "FC_Blue_Boys_Muhlenbach":{"type":"CLUB","tasks":[
+    "FC Blue Boys Muhlenbach":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
         ["SKIP","FOUND"],
         ["DONE","CLIST"],
@@ -432,7 +432,8 @@
         ["NOTDONE","They merged with Hamm to form.... what? A new club, or were they absorbed?"],
         ["NOTDONE","Why does a defunct club have an active players list?"],
         ["DONE","No external links section"],
-        ["NOTDONE","Are all 'what links here' going to the right page? Should they go instead to Lustianos?"]
+        ["NOTDONE","Are all 'what links here' going to the right page? Should they go instead to Lustianos?"],
+        ["SKIP","HONOR"]
     ]},
     "FC_CeBra_01":{"type":"CLUB","tasks":[
         ["DONE","SDESC"],
@@ -1333,7 +1334,7 @@
         ["NOTDONE","Review WikiData page at https://www.wikidata.org/wiki/Q602911#P856"],
         ["NOTDONE","DE+ES: History"]
     ]},
-    "Dames_Ligue_1":{"type":"LEAGUE","tasks":[
+    "Dames Ligue 1":{"type":"LEAGUE","tasks":[
         ["DONE","SDESC"],
         ["DONE","TRANS"],
         ["DONE","Introduction text - rework / borrow from National Division?"],
@@ -1351,7 +1352,7 @@
         ["NOTDONE","Is there specific page in /match subsite of FLF like Div 1-3 of the men's?"],
         ["NOTDONE","Is there a Dames Ligue 2 etc?"],
         ["NOTDONE","References women's champions league - should there be a 'lux women's clubs in europe' page?"],
-        ["NOTDONE","Should have the 'Luxembourg' prefix?"],
+        ["DONE","Should have the 'Luxembourg' prefix? (edit: move request made)"],
         ["NOTDONE","Source for winners table"],
         ["NOTDONE","Map of current clubs"],
         ["NOTDONE","Progres Listed as niederKorn and niederCorn - K or C?"],
@@ -1359,7 +1360,8 @@
         ["NOTDONE","DE: Has previous seasons - could that go somewhere?"],
         ["NOTDONE","LT: Details changes for 24-25 season onwards"],
         ["NOTDONE","Other languages mention (in passing) that the winner doesn't always compete in Europe. Can this be checked/cited?"],
-        ["NOTDONE","Performance by town/canton table?"]
+        ["NOTDONE","Performance by town/canton table?"],
+        ["DONE","Propose a potential page move to 'Luxembourg Women's Ligue 1'"]
     ]},
     "Luxembourg_1._Division":{"type":"LEAGUE","tasks":[
         ["DONE","SDESC"],
@@ -1426,7 +1428,8 @@
         ["DONE","Sticky header for winners table"],
         ["DONE","Winners table, no link to 'promotion groups' section"],
         ["DONE","HYPHN"],
-        ["DONE","REFCK"]
+        ["DONE","REFCK"],
+        ["DONE","TALKS"]
     ]},
     "Luxembourg_National_Division":{"type":"LEAGUE","tasks":[
         ["DONE","SDESC"],
@@ -2064,7 +2067,9 @@
         ["SKIP","SDESC"]
     ]},
     "Category:Luxembourgian expatriate men's footballers": {"type":"CATEG","tasks":[
-
+        ["DONE","SDESC"],
+        ["NOTDONE","As with many categories - ian=>ish?"],
+        ["NOTDONE","How to check if other players should be added here?"]
     ]},
     "Category:Luxembourgian football biography stubs": {"type":"CATEG","tasks":[
 
