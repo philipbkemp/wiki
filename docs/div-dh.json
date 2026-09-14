@@ -33,5 +33,14 @@
     "BET_BVL=4-1",
     "KOE_ROD=0-2",
     "MER_LUX=1-1",
-    "URB_BER=0-3"
+    "URB_BER=0-3",
+
+    "BER_MER=4-1",
+    "URB_AVB=2-2",
+    "LUX_KOE=3-3",
+    "ROD_BET=1-1",
+    "BVL_MND=2-2",
+    "FEU_UTP=5-3",
+    "JEC_MAM=3-3",
+    "LOR_FOL=1-0"
 ]
