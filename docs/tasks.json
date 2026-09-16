@@ -686,11 +686,13 @@
         ["NOTDONE","LT: Lithuanian has its own women's page: 'FC Progrès Niedercorn (moterys)'"],
         ["NOTDONE","History mentions runners-up in German Occupied tournament? Worth adding to Honours?"]
     ]},
-    "FC_Résidence_Walferdange":{"type":"CLUB","tasks":[
+    "FC Résidence Walferdange":{"type":"CLUB","tasks":[
+        ["DONE","SDESC"],
         ["DONE","Create page"],
-        ["NOTDONE","Get page approved before new season starts"],
+        ["DONE","Get page approved before new season starts"],
         ["NOTDONE","Link should be added on Walferdange Sports section once approved"],
-        ["DONE","TALKS"]
+        ["DONE","TALKS"],
+        ["NOTDONE","Review page to see what can be added"]
     ]},
     "FC_RM_Hamm_Benfica":{"type":"CLUB","tasks":[
         ["SKIP","SDESC"],
@@ -1817,7 +1819,8 @@
         ["NOTDONE","DE: Women's FIFA and UEFA Rankings"],
         ["NOTDONE","DE: Youth football section?"]
     ]},
-    "List_of_football_clubs_in_Luxembourg":{"type":"OTHER","tasks":[
+    "List of football clubs in Luxembourg":{"type":"OTHER","tasks":[
+        ["SKIP","SDESC"],
         ["DONE","TRANS"],
         ["DONE","LHERE"],
         ["DONE","LINKS"],
@@ -1945,14 +1948,16 @@
         ["NOTDONE","'held by FLF' => 'organised by'?"],
         ["DONE","Use PSO instead of PENALTY SHOOT OUT tempalte"]
     ]},
-    "Luxembourg_women's_national_football_team_results":{"type":"OTHER","tasks":[
+    "Luxembourg women's national football team results":{"type":"OTHER","tasks":[
+        ["SKIP","SDESC"],
         ["NOTDONE","All goalscorers correctly listed?"],
         ["NOTDONE","All results appear on opponents' lists?"],
         ["DONE","any missing players?"],
         ["DONE","Luxembourg women's national football team results (2000–2019)"],
         ["NOTDONE","Luxembourg women's national football team results (2020–present)"],
         ["DONE","Template:Luxembourg women's national football team results"],
-        ["NOTDONE","Delete my draft pages"]
+        ["NOTDONE","Delete my draft pages"],
+        ["NOTDONE","Overall record table?"]
     ]},
     "Luxembourg_women's_national_football_team_results_(2000–2019)":{"type":"OTHER","tasks":[
 
@@ -1975,7 +1980,8 @@
         ["NOTDONE","DE: Refers to a page on fussball-lux about it"],
         ["DONE","TRANS"]
     ]},
-    "Progrès_Niederkorn_2–0_Rangers":{"type":"OTHER","tasks":[
+    "Progrès Niederkorn 2–0 Rangers":{"type":"OTHER","tasks":[
+        ["SKIP","SDESC"],
         ["DONE","LHERE"],
         ["DONE","CATEG"],
         ["NOTDONE","Football in Luxembourg template"],
@@ -1990,7 +1996,7 @@
         ["NOTDONE","Any players without pages now have pages?"],
         ["NOTDONE","'Liquidation and death' seems a bit harsh?"],
         ["NOTDONE","1x Citation Needed"],
-        ["NOTDONE","Should this not be FC PN v FC R?"]
+        ["NOTDONE","Should this not be FC PN v R F.C.?"]
     ]},
     "Category:2017–18_in_Luxembourgian_football": {"type":"CATEG","tasks":[
 
