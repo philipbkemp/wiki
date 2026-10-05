@@ -50,5 +50,14 @@
     "MER_URB=0-1",
     "MAM_FEU=2-0",
     "BET_LUX=4-5",
-    "FOL_JEC=2-0"
+    "FOL_JEC=2-0",
+
+    "URB_KOE=1-3",
+    "MER_AVB=1-3",
+    "BER_BET=3-2",
+    "LUX_MND=0-1",
+    "ROD_UTP=2-3",
+    "BVL_MAM=1-2",
+    "FEU_FOL=1-2",
+    "JEC_LOR=0-6"
 ]
