@@ -69,5 +69,14 @@
     "PRO_RAC=0-0",
     "UNA_RUM=2-0",
     "WAL_MON=2-1",
-    "BIS_WIL=4-2"
+    "BIS_WIL=4-2",
+
+    "RAC_BIS=2-2",
+    "DIF_WAL=6-0",
+    "SWI_VIC=0-3",
+    "ETZ_DUD=1-3",
+    "KAE_JEU=4-1",
+    "HOS_PRO=0-2",
+    "WIL_UNA=0-2",
+    "RUM_MON=1-2"
 ]
