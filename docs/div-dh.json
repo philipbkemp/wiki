@@ -68,5 +68,7 @@
     "UTP_LUX=3-1",
     "MND_BER=0-1",
     "BET_URB=4-0",
-    "KOE_MER=3-1"
+    "KOE_MER=3-1",
+
+    "AVB_LOR=1-2"
 ]
