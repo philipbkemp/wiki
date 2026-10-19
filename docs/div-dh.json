@@ -70,5 +70,14 @@
     "BET_URB=4-0",
     "KOE_MER=3-1",
 
-    "AVB_LOR=1-2"
+    "AVB_LOR=1-2",
+
+    "KOE_AVB=2-1",
+    "MER_BET=0-3",
+    "URB_MND=3-3",
+    "BER_UTP=2-3",
+    "LUX_MAM=1-2",
+    "ROD_FOL=2-2",
+    "BVL_LOR=1-1",
+    "FEU_JEC=1-4"
 ]

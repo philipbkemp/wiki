@@ -78,5 +78,14 @@
     "KAE_JEU=4-1",
     "HOS_PRO=0-2",
     "WIL_UNA=0-2",
-    "RUM_MON=1-2"
+    "RUM_MON=1-2",
+
+    "PRO_KAE=1-2",
+    "WAL_RUM=3-3",
+    "MON_WIL=4-1",
+    "UNA_RAC=1-1",
+    "BIS_HOS=5-1",
+    "JEU_ETZ=1-0",
+    "DUD_SWI=5-0",
+    "VIC_DIF=3-5"
 ]
