@@ -87,5 +87,14 @@
     "BIS_HOS=5-1",
     "JEU_ETZ=1-0",
     "DUD_SWI=5-0",
-    "VIC_DIF=3-5"
+    "VIC_DIF=3-5",
+
+    "ETZ_PRO=2-0",
+    "KAE_BIS=1-2",
+    "DIF_DUD=2-1",
+    "HOS_UNA=0-2",
+    "VIC_WAL=4-1",
+    "SWI_JEU=0-3",
+    "RAC_MON=6-0",
+    "WIL_RUM=3-3"
 ]
