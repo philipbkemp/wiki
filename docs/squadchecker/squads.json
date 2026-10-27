@@ -4,8 +4,8 @@
     "url": "https://www.f91.lu/kader-90630v4",
     "redirect": "https://www.f91.lu/kader-90630v4/groups/50/seasons/220",
     "selector": "h4.mui-1tt7evh",
-    "last_check": "2026-10-11",
-    "last_status": "OKAY",
+    "last_check": "2026-10-27",
+    "last_status": "FAIL",
     "players": [
       "Rodrigo Goncalves Tavares",
       "Ivan Englaro",
@@ -47,6 +47,6 @@
       "Alexis Rigoulot",
       "Felix Göttlicher"
     ],
-    "last_reason": null
+    "last_reason": "Missing from page: Rodrigo Goncalves Tavares, Ivan Englaro, Diogo Monteiro De Oliveira, Leandro Da Silva Matos, Samuel Sansiviero Almeida, Eldin Latik, Valentino Tallarico, Charles Morren, Isaque Gavioli, Dzenis Novalic, Belmin Muratovic, Chris Stumpf, Wilson Kamavuaka, Enzo Fonseca Lima, Hanibal Solomon, Hugo Bove, Dylan Ferreira, Ralph Birchem, Rodrigue Dikaba, Claudio Englaro, Manuel Severino Santos, Claudio Lombardelli, Valentin Bove, Gédéon Dimbu Nsiala, Dylan Magalhaes Lucas, Mirza Rasiti, Joris Belgacem, Igor Teles Santos, Herman Moussaki, Redouane Boulbrachène, Conrad Azong, Bruno Correia Mendes Ramirez, Martim Elmano Mendes Marcelino, Leny Tela, Enzo Esposito, Ismaël Dumont, Vin Schmit, Alexis Rigoulot, Felix Göttlicher; Selector \"h4.mui-1tt7evh\" matched no elements - check it's still correct"
   }
 ]
