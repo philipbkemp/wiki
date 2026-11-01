@@ -88,5 +88,14 @@
     "JEC_BVL=1-3",
     "FOL_LUX=1-2",
     "UTP_URB=4-2",
-    "MND_MER=3-0"
+    "MND_MER=3-0",
+
+    "BET_AVB=0-2",
+    "KOE_MND=1-4",
+    "MER_UTP=2-1",
+    "URB_MAM=0-1",
+    "BER_FOL=0-1",
+    "LUX_LOR=0-1",
+    "ROD_JEC=4-0",
+    "BVL_FEU=0-0"
 ]

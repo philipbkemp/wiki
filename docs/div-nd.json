@@ -96,5 +96,13 @@
     "VIC_WAL=4-1",
     "SWI_JEU=0-3",
     "RAC_MON=6-0",
-    "WIL_RUM=3-3"
+    "WIL_RUM=3-3",
+
+    "JEU_DIF=0-3",
+    "DUD_VIC=3-0",
+    "BIS_ETZ=5-1",
+    "WAL_RAC=2-1",
+    "MON_HOS=2-1",
+    "UNA_KAE=2-1",
+    "PRO_SWI=3-0"
 ]
