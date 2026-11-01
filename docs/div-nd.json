@@ -101,7 +101,8 @@
     "JEU_DIF=0-3",
     "DUD_VIC=3-0",
     "BIS_ETZ=5-1",
-    "WAL_RAC=2-1",
+    "WAL_WIL=1-1",
+    "RUM_RAC=2-1",
     "MON_HOS=2-1",
     "UNA_KAE=2-1",
     "PRO_SWI=3-0"
