@@ -66,8 +66,8 @@
     "last_status": "OKAY",
     "last_check": "2026-07-21",
     "archive": "https://web.archive.org/web/20180831035057/http://f91.lu/index.php/club/philosophie",
-    "archive_status": "ERROR: HTTP 500",
-    "archive_check": "2026-11-07"
+    "archive_status": "OKAY",
+    "archive_check": "2026-11-08"
   },
   {
     "url": "https://www.flf.lu/u18-19-leiwen-346836v4",
