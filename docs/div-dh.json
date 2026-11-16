@@ -97,5 +97,14 @@
     "BER_FOL=0-1",
     "LUX_LOR=0-1",
     "ROD_JEC=4-0",
-    "BVL_FEU=0-0"
+    "BVL_FEU=0-0",
+
+    "FEU_ROD=0-4",
+    "UTP_KOE=2-1",
+    "AVB_BVL=0-2",
+    "JEC_LUX=1-0",
+    "LOR_BER=3-3",
+    "FOL_URB=7-0",
+    "MAM_MER=1-0",
+    "MND_BET=1-3"
 ]
