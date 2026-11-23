@@ -105,5 +105,14 @@
     "RUM_RAC=2-1",
     "MON_HOS=2-1",
     "UNA_KAE=2-1",
-    "PRO_SWI=3-0"
+    "PRO_SWI=3-0",
+
+    "SWI_BIS=0-4",
+    "DUD_WAL=2-2",
+    "RAC_WIL=3-1",
+    "HOS_RUM=4-4",
+    "KAE_MON=2-2",
+    "ETZ_UNA=0-2",
+    "DIF_PRO=4-4",
+    "VIC_JEU=3-2"
 ]

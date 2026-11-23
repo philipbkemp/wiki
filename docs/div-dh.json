@@ -106,5 +106,14 @@
     "LOR_BER=3-3",
     "FOL_URB=7-0",
     "MAM_MER=1-0",
-    "MND_BET=1-3"
+    "MND_BET=1-3",
+
+    "MND_AVB=2-1",
+    "ROD_BVL=3-2",
+    "LUX_FEU=3-3",
+    "BER_JEC=1-2",
+    "URB_LOR=2-5",
+    "MER_FOL=0-2",
+    "KOE_MAM=1-5",
+    "BET_UTP=2-0"
 ]
